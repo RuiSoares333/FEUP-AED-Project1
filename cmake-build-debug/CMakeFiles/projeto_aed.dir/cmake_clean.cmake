@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/projeto_aed.dir/Horario.cpp.obj"
+  "CMakeFiles/projeto_aed.dir/Transporte.cpp.obj"
   "CMakeFiles/projeto_aed.dir/main.cpp.obj"
   "libprojeto_aed.dll.a"
   "projeto_aed.exe"

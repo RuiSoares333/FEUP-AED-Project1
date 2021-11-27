@@ -80,6 +80,18 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="D:/Dropbox/Dropbox/Universidade/2-1/AED/projeto aed/Horario.cpp">
+			<Option target="projeto_aed"/>
+		</Unit>
+		<Unit filename="D:/Dropbox/Dropbox/Universidade/2-1/AED/projeto aed/Horario.h">
+			<Option target="projeto_aed"/>
+		</Unit>
+		<Unit filename="D:/Dropbox/Dropbox/Universidade/2-1/AED/projeto aed/Transporte.cpp">
+			<Option target="projeto_aed"/>
+		</Unit>
+		<Unit filename="D:/Dropbox/Dropbox/Universidade/2-1/AED/projeto aed/Transporte.h">
+			<Option target="projeto_aed"/>
+		</Unit>
 		<Unit filename="D:/Dropbox/Dropbox/Universidade/2-1/AED/projeto aed/main.cpp">
 			<Option target="projeto_aed"/>
 		</Unit>

@@ -141,6 +141,60 @@ projeto_aed/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\projeto_aed.dir\build.make CMakeFiles/projeto_aed.dir/build
 .PHONY : projeto_aed/fast
 
+Horario.obj: Horario.cpp.obj
+
+.PHONY : Horario.obj
+
+# target to build an object file
+Horario.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\projeto_aed.dir\build.make CMakeFiles/projeto_aed.dir/Horario.cpp.obj
+.PHONY : Horario.cpp.obj
+
+Horario.i: Horario.cpp.i
+
+.PHONY : Horario.i
+
+# target to preprocess a source file
+Horario.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\projeto_aed.dir\build.make CMakeFiles/projeto_aed.dir/Horario.cpp.i
+.PHONY : Horario.cpp.i
+
+Horario.s: Horario.cpp.s
+
+.PHONY : Horario.s
+
+# target to generate assembly for a file
+Horario.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\projeto_aed.dir\build.make CMakeFiles/projeto_aed.dir/Horario.cpp.s
+.PHONY : Horario.cpp.s
+
+Transporte.obj: Transporte.cpp.obj
+
+.PHONY : Transporte.obj
+
+# target to build an object file
+Transporte.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\projeto_aed.dir\build.make CMakeFiles/projeto_aed.dir/Transporte.cpp.obj
+.PHONY : Transporte.cpp.obj
+
+Transporte.i: Transporte.cpp.i
+
+.PHONY : Transporte.i
+
+# target to preprocess a source file
+Transporte.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\projeto_aed.dir\build.make CMakeFiles/projeto_aed.dir/Transporte.cpp.i
+.PHONY : Transporte.cpp.i
+
+Transporte.s: Transporte.cpp.s
+
+.PHONY : Transporte.s
+
+# target to generate assembly for a file
+Transporte.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\projeto_aed.dir\build.make CMakeFiles/projeto_aed.dir/Transporte.cpp.s
+.PHONY : Transporte.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -177,6 +231,12 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... projeto_aed
+	@echo ... Horario.obj
+	@echo ... Horario.i
+	@echo ... Horario.s
+	@echo ... Transporte.obj
+	@echo ... Transporte.i
+	@echo ... Transporte.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
