@@ -1,0 +1,37 @@
+Aviões:
+	-Matrícula
+	-Capacidade
+	-Plano de voo
+	-Queue de serviços
+	-Stack de serviços realizados
+
+Voos:
+	-Número de voo
+	-Data de partida
+	-Duração do voo
+	-aeroporto (O)
+	-aeroporto (D)
+	-Lista de passageiros
+
+Passageiros:
+	-bilhete
+
+Bagagens:
+
+
+Serviços:
+	-Tipo
+	-Data
+	-Funcionário responsável
+
+Bilhete:
+	-Bagagem (bool)
+
+Transporte:
+	-Tipo
+	-Distância ao aeroporto
+	-Horário
+
+Aeroporto:
+	-País e cidade
+	-Binary tree com locais transporte terrestres
