@@ -1,7 +1,3 @@
-//
-// Created by ASUS on 28/11/2021.
-//
-
 #ifndef PROJETO_AED_SERVICOS_H
 #define PROJETO_AED_SERVICOS_H
 
@@ -11,18 +7,21 @@
 
 using namespace std;
 enum tipoServico {MANUTENCAO, LIMPEZA};
-class servicos {
-    tipoServico tipo;
-    //date data;
-    Funcionario funcionario;
+
+class servico {
 
 public:
 //    servicos();
-    servicos(tipoServico tipo, Funcionario funcionario);
-    tipoServico getTipo();
-//    string getData();
-    Funcionario getFuncionario();
-    string write() const;
+    servico(tipoServico tipo, Funcionario funcionario); /// Construtor da classe servico
+    tipoServico getTipo(); /// Getter do tipo de serviço
+//    string getData(); /// Getter da data do serviço
+    Funcionario getFuncionario(); /// Getter do funcionário responsável pelo serviço
+    string write() const; /// Writter da classe servico
+
+private:
+    tipoServico tipo; /// Tipo de serviço que pode ser realizado (Manutenção/Limpeza)
+    //date data; /// Data em que o serviço é realizado
+    Funcionario funcionario; /// Funcionário responsável pelo serviço
 };
 
 
