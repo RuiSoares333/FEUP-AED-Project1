@@ -7,8 +7,7 @@ using namespace std;
 
 class Transporte {
 public:
-    //tipo tem de ser verificado como metro, comboio, autocarro antes da criacao do objeto
-    Transporte(int distancia, Horario horario, string tipo);
+    Transporte(int distancia, Horario horario, string tipo); //construtor, converte todas as strings tipo para lowercase e remove espacos, throws uma excecao quando o tipo é diferente de "metro", "comboio" ou "autocarro"
     void setDistancia(int distancia);
     int getDistancia();
     void setHorario(Horario horario);
