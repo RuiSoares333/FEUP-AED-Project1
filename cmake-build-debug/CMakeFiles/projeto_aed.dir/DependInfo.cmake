@@ -1,17 +1,16 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "CXX"
   )
-# The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_CXX
-  "D:/Dropbox/Dropbox/Universidade/2-1/AED/projeto aed/Horario.cpp" "D:/Dropbox/Dropbox/Universidade/2-1/AED/projeto aed/cmake-build-debug/CMakeFiles/projeto_aed.dir/Horario.cpp.obj"
-  "D:/Dropbox/Dropbox/Universidade/2-1/AED/projeto aed/Transporte.cpp" "D:/Dropbox/Dropbox/Universidade/2-1/AED/projeto aed/cmake-build-debug/CMakeFiles/projeto_aed.dir/Transporte.cpp.obj"
-  "D:/Dropbox/Dropbox/Universidade/2-1/AED/projeto aed/main.cpp" "D:/Dropbox/Dropbox/Universidade/2-1/AED/projeto aed/cmake-build-debug/CMakeFiles/projeto_aed.dir/main.cpp.obj"
-  )
-set(CMAKE_CXX_COMPILER_ID "GNU")
 
-# The include file search paths:
-set(CMAKE_CXX_TARGET_INCLUDE_PATH
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "D:/dropbox/Dropbox/Universidade/2-1/AED/projeto aed/Horario.cpp" "CMakeFiles/projeto_aed.dir/Horario.cpp.obj" "gcc" "CMakeFiles/projeto_aed.dir/Horario.cpp.obj.d"
+  "D:/dropbox/Dropbox/Universidade/2-1/AED/projeto aed/Transporte.cpp" "CMakeFiles/projeto_aed.dir/Transporte.cpp.obj" "gcc" "CMakeFiles/projeto_aed.dir/Transporte.cpp.obj.d"
+  "D:/dropbox/Dropbox/Universidade/2-1/AED/projeto aed/main.cpp" "CMakeFiles/projeto_aed.dir/main.cpp.obj" "gcc" "CMakeFiles/projeto_aed.dir/main.cpp.obj.d"
   )
 
 # Targets to which this target links.

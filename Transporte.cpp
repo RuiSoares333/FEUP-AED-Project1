@@ -1,6 +1,12 @@
 #include "Transporte.h"
+#include <algorithm>
 
 Transporte::Transporte(int distancia, Horario horario, string tipo) {
+    transform(tipo.begin(), tipo.end(), tipo.begin(), ::tolower);
+    remove(tipo.begin(), tipo.end(), ' ');
+
+    if(tipo != "metro" && tipo != "autocarro" && tipo != "comboio") throw "Transporte não é do tipo: carro, autocarro ou metro.";
+
     this->distancia = distancia;
     this->horario = horario;
     this->tipo = tipo;
