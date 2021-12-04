@@ -130,12 +130,12 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "Horario.cpp",
+			"path" : "Time.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "Horario.h",
+			"path" : "Time.h",
 			"sourceGroupIndex" : 1
 		}
 	],

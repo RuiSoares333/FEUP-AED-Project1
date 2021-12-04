@@ -6,7 +6,6 @@
 			[
 				{
 					"build" : ".",
-					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.19"
@@ -39,7 +38,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "projeto_aed::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-projeto_aed-Debug-7bde15a556ea9f9058d9.json",
+					"jsonFile" : "target-projeto_aed-Debug-3031692cd9555283f703.json",
 					"name" : "projeto_aed",
 					"projectIndex" : 0
 				}
@@ -49,12 +48,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "D:/dropbox/Dropbox/Universidade/2-1/AED/projeto aed/cmake-build-debug",
-		"source" : "D:/dropbox/Dropbox/Universidade/2-1/AED/projeto aed"
+		"build" : "D:/Dropbox/Dropbox/Universidade/2-1/AED/projeto aed/cmake-build-debug",
+		"source" : "D:/Dropbox/Dropbox/Universidade/2-1/AED/projeto aed"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 3
+		"minor" : 2
 	}
 }
