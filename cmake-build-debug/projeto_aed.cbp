@@ -80,7 +80,23 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+<<<<<<< HEAD
 		<Unit filename="C:/Users/PC/CLionProjects/projeto-aed/Aeroporto.cpp">
+=======
+		<Unit filename="D:/Dropbox/Dropbox/Universidade/2-1/AED/projeto aed/Time.cpp">
+			<Option target="projeto_aed"/>
+		</Unit>
+		<Unit filename="D:/Dropbox/Dropbox/Universidade/2-1/AED/projeto aed/Time.h">
+			<Option target="projeto_aed"/>
+		</Unit>
+		<Unit filename="D:/Dropbox/Dropbox/Universidade/2-1/AED/projeto aed/Transporte.cpp">
+			<Option target="projeto_aed"/>
+		</Unit>
+		<Unit filename="D:/Dropbox/Dropbox/Universidade/2-1/AED/projeto aed/Transporte.h">
+			<Option target="projeto_aed"/>
+		</Unit>
+		<Unit filename="D:/Dropbox/Dropbox/Universidade/2-1/AED/projeto aed/main.cpp">
+>>>>>>> transporte
 			<Option target="projeto_aed"/>
 		</Unit>
 		<Unit filename="C:/Users/PC/CLionProjects/projeto-aed/Aeroporto.h">

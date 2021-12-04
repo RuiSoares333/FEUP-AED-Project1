@@ -128,6 +128,7 @@ projeto_aed/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\projeto_aed.dir\build.make CMakeFiles/projeto_aed.dir/build
 .PHONY : projeto_aed/fast
 
+<<<<<<< HEAD
 Aeroporto.obj: Aeroporto.cpp.obj
 .PHONY : Aeroporto.obj
 
@@ -151,6 +152,63 @@ Aeroporto.s: Aeroporto.cpp.s
 Aeroporto.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\projeto_aed.dir\build.make CMakeFiles/projeto_aed.dir/Aeroporto.cpp.s
 .PHONY : Aeroporto.cpp.s
+=======
+Time.obj: Time.cpp.obj
+
+.PHONY : Time.obj
+
+# target to build an object file
+Time.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\projeto_aed.dir\build.make CMakeFiles/projeto_aed.dir/Time.cpp.obj
+.PHONY : Time.cpp.obj
+
+Time.i: Time.cpp.i
+
+.PHONY : Time.i
+
+# target to preprocess a source file
+Time.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\projeto_aed.dir\build.make CMakeFiles/projeto_aed.dir/Time.cpp.i
+.PHONY : Time.cpp.i
+
+Time.s: Time.cpp.s
+
+.PHONY : Time.s
+
+# target to generate assembly for a file
+Time.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\projeto_aed.dir\build.make CMakeFiles/projeto_aed.dir/Time.cpp.s
+.PHONY : Time.cpp.s
+
+Transporte.obj: Transporte.cpp.obj
+
+.PHONY : Transporte.obj
+
+# target to build an object file
+Transporte.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\projeto_aed.dir\build.make CMakeFiles/projeto_aed.dir/Transporte.cpp.obj
+.PHONY : Transporte.cpp.obj
+
+Transporte.i: Transporte.cpp.i
+
+.PHONY : Transporte.i
+
+# target to preprocess a source file
+Transporte.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\projeto_aed.dir\build.make CMakeFiles/projeto_aed.dir/Transporte.cpp.i
+.PHONY : Transporte.cpp.i
+
+Transporte.s: Transporte.cpp.s
+
+.PHONY : Transporte.s
+
+# target to generate assembly for a file
+Transporte.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\projeto_aed.dir\build.make CMakeFiles/projeto_aed.dir/Transporte.cpp.s
+.PHONY : Transporte.cpp.s
+
+main.obj: main.cpp.obj
+>>>>>>> transporte
 
 Passageiro.obj: Passageiro.cpp.obj
 .PHONY : Passageiro.obj
@@ -233,6 +291,7 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... projeto_aed
+<<<<<<< HEAD
 	@echo ... Aeroporto.obj
 	@echo ... Aeroporto.i
 	@echo ... Aeroporto.s
@@ -242,6 +301,14 @@ help:
 	@echo ... Voo.obj
 	@echo ... Voo.i
 	@echo ... Voo.s
+=======
+	@echo ... Time.obj
+	@echo ... Time.i
+	@echo ... Time.s
+	@echo ... Transporte.obj
+	@echo ... Transporte.i
+	@echo ... Transporte.s
+>>>>>>> transporte
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
