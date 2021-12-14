@@ -6,13 +6,13 @@
 #define PROJETO_AED_FUNCIONARIO_H
 
 #include <string>
+#include "Data.h"
 using namespace std;
 
 class Funcionario {
 
 public:
-//    Funcionario();
-    Funcionario(string nome, string morada, string contacto, string email); /// Construtor da classe Funcionario
+    Funcionario(string nome, string morada, string contacto, string email, Data data); /// Construtor da classe Funcionario
     string getNome() const; /// Getter do Nome do funcionário
     string getMorada() const; /// Getter da Morada do funcionário
     string getContacto() const; /// Getter do Contacto do funcionário
@@ -22,7 +22,7 @@ public:
 
 private:
     string nome; /// Nome do funcionário
-    //date dataNasc; /// Data de Nascimento do funcionário
+    Data dataNasc; /// Data de Nascimento do funcionário
     string morada; /// Morada do funcionário
     string contacto; /// Contacto do funcionário
     string email; /// Email do funcionário

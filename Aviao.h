@@ -48,6 +48,8 @@ public:
     queue<servico> getServicosAgendados() const;
     list<servico> getServicosFeitos() const;
 
+    string write()const;
+
 private:
     string matricula;
     int capacidade;

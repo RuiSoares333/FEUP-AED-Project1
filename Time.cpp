@@ -31,4 +31,5 @@ int Time::getMinuto() const{
 string Time::write() const{
     stringstream oss;
     oss << hora << ":" << minuto;
+    return oss.str();
 }

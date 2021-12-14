@@ -5,6 +5,12 @@
 #include "Data.h"
 #include <sstream>
 
+Data::Data() { // este construtor é um easter egg, procurem na internet
+    ano = 2014;
+    mes = 3;
+    dia = 8;
+    tempo = Time();
+}
 
 Data::Data(int ano, int mes, int dia, Time tempo) {
     this->ano = ano;

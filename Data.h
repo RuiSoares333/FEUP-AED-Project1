@@ -12,6 +12,7 @@ using namespace std;
 
 class Data {
 public:
+    Data();
     Data(int ano, int mes, int dia);
     Data(int ano, int mes, int dia, Time tempo);
 

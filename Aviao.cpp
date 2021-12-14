@@ -1,5 +1,6 @@
 #include <string>
 #include "Aviao.h"
+#include <sstream>
 using namespace std;
 
 
@@ -44,4 +45,10 @@ queue<servico> Aviao::getServicosAgendados() const{
 
 list<servico> Aviao::getServicosFeitos() const{
     return servicosFeitos;
+}
+
+string Aviao::write() const {
+    stringstream oss;
+    oss << "Matricula: " << matricula << " - Capacidade: " << capacidade;
+    return oss.str();
 }

@@ -8,11 +8,12 @@
 
 //Funcionario::Funcionario() {}
 
-Funcionario::Funcionario(string nome, string morada, string contacto, string email) {
+Funcionario::Funcionario(string nome, string morada, string contacto, string email, Data data) {
     this->nome = nome;
     this->morada = morada;
     this->contacto = contacto;
     this->email = email;
+    this->dataNasc = data;
 }
 
 string Funcionario::getNome() const {
