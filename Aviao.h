@@ -44,7 +44,7 @@ public:
     list<Voo> getPlanoVoo() const;
 
     ///
-    /// \return \param sericosAgendadosy    pp
+    /// \return \param sericosAgendados
     queue<servico> getServicosAgendados() const;
     list<servico> getServicosFeitos() const;
 
