@@ -26,3 +26,10 @@ int Time::getHora() const{
 int Time::getMinuto() const{
     return minuto;
 }
+
+bool const Time::operator<(const Time t2) const {
+    if(hora == t2.getHora()){
+        return minuto < t2.getMinuto();
+    }
+    return hora < t2.getHora();
+}
