@@ -44,8 +44,14 @@ bool Aeroporto::removeTransporte(Transporte transporte) {
 bool Aeroporto::saveFile() {
     int distancia, day, year, month, hora, minuto;
     string tipo;
+    ofstream save_all;
+
+    save_all.open("aeroporto_all_save.txt", ios_base::app);
+    save_all << nome << " " << cidade << " " << pais << endl;
+    save_all.close();
+
     ofstream save_stream;
-    save_stream.open(nome + "_" + cidade + "_" + pais + "_save.txt");
+    save_stream.open("aeroporto_"+nome + "_" + cidade + "_" + pais + "_save.txt");
     if(save_stream.is_open()){
         save_stream << nome << " " << cidade << " " << pais << endl;
 
@@ -72,20 +78,16 @@ bool Aeroporto::loadFile() {
     int distancia, day, year, month, hora, minuto;
     string tipo, nome, cidade, pais;
     ifstream load_stream;
-    load_stream.open(nome + "_" + cidade + "_" + pais + "_save.txt");
+    load_stream.open("aeroporto_"+ this->nome + "_" + this->cidade + "_" + this->pais + "_save.txt");
     if(load_stream.is_open()){
         load_stream >> nome >> cidade >> pais;
-        this->nome = nome;
-        this->cidade = cidade;
-        this->pais = pais;
 
         while(!load_stream.eof()){
             load_stream >> distancia >> tipo >> day >> month >> year >> hora >> minuto;
 
             Time time(hora, minuto);
             Date date(day, month, year);
-            Transporte transporte(distancia, time, tipo, date);
-            transportes.insert(transporte);
+            transportes.insert(Transporte(distancia, time, tipo, date));
         }
 
         load_stream.close();

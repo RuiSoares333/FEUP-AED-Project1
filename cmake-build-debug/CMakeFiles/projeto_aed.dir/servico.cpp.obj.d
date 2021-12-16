@@ -134,4 +134,5 @@ CMakeFiles/projeto_aed.dir/servico.cpp.obj: \
  D:/clion/CLion\ 2021.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/istream.tcc \
  D:/clion/CLion\ 2021.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/sstream.tcc \
  D:\dropbox\Dropbox\Universidade\2-1\AED\projeto\ aed\servico.h \
- D:\dropbox\Dropbox\Universidade\2-1\AED\projeto\ aed\Funcionario.h
+ D:\dropbox\Dropbox\Universidade\2-1\AED\projeto\ aed\Funcionario.h \
+ D:\dropbox\Dropbox\Universidade\2-1\AED\projeto\ aed\Date.h

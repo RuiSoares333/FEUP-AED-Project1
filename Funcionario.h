@@ -12,6 +12,9 @@ class Funcionario {
 
 public:
     Funcionario();
+
+    Funcionario(const string &nome, const string &morada, const string &contacto);
+
     Funcionario(string nome, string morada, string contacto);
     string getNome() const;
     string getMorada() const;

@@ -43,3 +43,5 @@ string Funcionario::write() const {
     oss << "Nome: " << nome << " -- Contacto: " << contacto;
     return oss.str();
 }
+
+Funcionario::Funcionario(){}
