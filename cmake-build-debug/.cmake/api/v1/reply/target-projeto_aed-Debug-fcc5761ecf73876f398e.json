@@ -63,7 +63,8 @@
 				9,
 				11,
 				15,
-				17
+				17,
+				19
 			]
 		}
 	],
@@ -108,7 +109,8 @@
 				9,
 				11,
 				15,
-				17
+				17,
+				19
 			]
 		},
 		{
@@ -124,7 +126,8 @@
 				13,
 				14,
 				16,
-				18
+				18,
+				20
 			]
 		}
 	],
@@ -232,6 +235,17 @@
 		{
 			"backtrace" : 1,
 			"path" : "servico.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "TransporteBagagem.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "TransporteBagagem.h",
 			"sourceGroupIndex" : 1
 		}
 	],

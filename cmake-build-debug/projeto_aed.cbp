@@ -118,6 +118,12 @@
 		<Unit filename="D:/dropbox/Dropbox/Universidade/2-1/AED/projeto aed/Transporte.h">
 			<Option target="projeto_aed"/>
 		</Unit>
+		<Unit filename="D:/dropbox/Dropbox/Universidade/2-1/AED/projeto aed/TransporteBagagem.cpp">
+			<Option target="projeto_aed"/>
+		</Unit>
+		<Unit filename="D:/dropbox/Dropbox/Universidade/2-1/AED/projeto aed/TransporteBagagem.h">
+			<Option target="projeto_aed"/>
+		</Unit>
 		<Unit filename="D:/dropbox/Dropbox/Universidade/2-1/AED/projeto aed/Voo.cpp">
 			<Option target="projeto_aed"/>
 		</Unit>

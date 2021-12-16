@@ -7,6 +7,7 @@ using namespace std;
 list<Aeroporto> aeroportos;
 
 bool loadAirports();
+bool saveAirports();
 
 int main() {
     return 0;
@@ -23,6 +24,18 @@ bool loadAirports(){
            aeroportos.push_back(aero);
        }
        return true;
+    }
+    return false;
+}
+
+bool saveAirports(){
+    ofstream saveStream;
+    saveStream.open("aeroporto_all_save.txt", ofstream ::trunc);
+    if(saveStream.is_open()){
+        for(Aeroporto aeroporto: aeroportos){
+            aeroporto.saveFile();
+        }
+        return true;
     }
     return false;
 }

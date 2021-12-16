@@ -272,6 +272,30 @@ Transporte.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\projeto_aed.dir\build.make CMakeFiles/projeto_aed.dir/Transporte.cpp.s
 .PHONY : Transporte.cpp.s
 
+TransporteBagagem.obj: TransporteBagagem.cpp.obj
+.PHONY : TransporteBagagem.obj
+
+# target to build an object file
+TransporteBagagem.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\projeto_aed.dir\build.make CMakeFiles/projeto_aed.dir/TransporteBagagem.cpp.obj
+.PHONY : TransporteBagagem.cpp.obj
+
+TransporteBagagem.i: TransporteBagagem.cpp.i
+.PHONY : TransporteBagagem.i
+
+# target to preprocess a source file
+TransporteBagagem.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\projeto_aed.dir\build.make CMakeFiles/projeto_aed.dir/TransporteBagagem.cpp.i
+.PHONY : TransporteBagagem.cpp.i
+
+TransporteBagagem.s: TransporteBagagem.cpp.s
+.PHONY : TransporteBagagem.s
+
+# target to generate assembly for a file
+TransporteBagagem.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\projeto_aed.dir\build.make CMakeFiles/projeto_aed.dir/TransporteBagagem.cpp.s
+.PHONY : TransporteBagagem.cpp.s
+
 Voo.obj: Voo.cpp.obj
 .PHONY : Voo.obj
 
@@ -371,6 +395,9 @@ help:
 	@echo ... Transporte.obj
 	@echo ... Transporte.i
 	@echo ... Transporte.s
+	@echo ... TransporteBagagem.obj
+	@echo ... TransporteBagagem.i
+	@echo ... TransporteBagagem.s
 	@echo ... Voo.obj
 	@echo ... Voo.i
 	@echo ... Voo.s

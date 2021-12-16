@@ -104,4 +104,16 @@ CMakeFiles/projeto_aed.dir/Passageiro.cpp.obj: \
  D:/clion/CLion\ 2021.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/charconv.h \
  D:/clion/CLion\ 2021.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/functional_hash.h \
  D:/clion/CLion\ 2021.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/hash_bytes.h \
- D:/clion/CLion\ 2021.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/basic_string.tcc
+ D:/clion/CLion\ 2021.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/basic_string.tcc \
+ D:/clion/CLion\ 2021.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/vector \
+ D:/clion/CLion\ 2021.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_uninitialized.h \
+ D:/clion/CLion\ 2021.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_vector.h \
+ D:/clion/CLion\ 2021.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_bvector.h \
+ D:/clion/CLion\ 2021.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/vector.tcc \
+ D:/clion/CLion\ 2021.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/list \
+ D:/clion/CLion\ 2021.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_list.h \
+ D:/clion/CLion\ 2021.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/allocated_ptr.h \
+ D:/clion/CLion\ 2021.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ext/aligned_buffer.h \
+ D:/clion/CLion\ 2021.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/list.tcc \
+ D:\dropbox\Dropbox\Universidade\2-1\AED\projeto\ aed\Bilhete.h \
+ D:\dropbox\Dropbox\Universidade\2-1\AED\projeto\ aed\Bagagem.h
