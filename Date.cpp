@@ -1,4 +1,5 @@
 #include "Date.h"
+#include "sstream"
 
 int Date::getDay() const {
     return day;
@@ -50,4 +51,10 @@ Date::Date() {
     this->day = 31;
     this->month = 12;
     this->year = 3000;
+}
+
+string Date::write() const {
+    stringstream oss;
+    oss << year << " " << month << " " << day;
+    return oss.str();
 }

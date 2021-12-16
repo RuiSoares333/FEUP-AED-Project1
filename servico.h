@@ -13,9 +13,17 @@ class servico {
 
 public:
     servico(tipoServico tipo, Funcionario funcionario, Date data);
+
+    // Getters
     tipoServico getTipo() const;
     Date getData() const;
     Funcionario getFuncionario() const;
+
+    // Setters
+    void setTipo(tipoServico novoTipo);
+    void setFuncionario(Funcionario funcionario);
+
+    // Writer
     string write() const ;
 
 private:
