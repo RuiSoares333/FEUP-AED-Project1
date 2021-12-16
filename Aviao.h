@@ -30,6 +30,8 @@ public:
 
     // Writer
     string write()const;
+    void saveFile();
+    void loadFile();
 
 private:
     string const matricula;

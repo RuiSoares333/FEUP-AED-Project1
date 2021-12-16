@@ -45,6 +45,6 @@ void servico::setTipo(tipoServico novoTipo) {
 /// \return de uma string com os atributos do funcionário -- serviço: Data
 string servico::write() const {
     stringstream oss;
-    oss << "Nome: " << funcionario.getNome() << "-- Serviço: " << tipo << "\n Data: " << "dataPlaceholder";
+    oss << funcionario.getNome() << tipo << data.write();
     return oss.str();
 }

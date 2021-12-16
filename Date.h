@@ -1,6 +1,9 @@
 #ifndef PROJETO_AED_DATE_H
 #define PROJETO_AED_DATE_H
 
+#include "string"
+
+using namespace std;
 
 class Date {
 private:
@@ -26,6 +29,8 @@ public:
     void setDate(int day, int month, int year);
     bool const operator<(const Date d2) const;
     bool const operator==(const Date d2) const;
+
+    string write() const;
 
 };
 
