@@ -4,6 +4,7 @@
 
 #include <string>
 #include "Funcionario.h"
+#include "Date.h"
 
 using namespace std;
 enum tipoServico {MANUTENCAO, LIMPEZA};
@@ -11,16 +12,15 @@ enum tipoServico {MANUTENCAO, LIMPEZA};
 class servico {
 
 public:
-//    servicos();
-    servico(tipoServico tipo, Funcionario funcionario); /// Construtor da classe servico
-    tipoServico getTipo(); /// Getter do tipo de serviço
-//    string getData(); /// Getter da data do serviço
-    Funcionario getFuncionario(); /// Getter do funcionário responsável pelo serviço
-    string write() const; /// Writter da classe servico
+    servico(tipoServico tipo, Funcionario funcionario, Date data);
+    tipoServico getTipo() const;
+    Date getData() const;
+    Funcionario getFuncionario() const;
+    string write() const ;
 
 private:
     tipoServico tipo; /// Tipo de serviço que pode ser realizado (Manutenção/Limpeza)
-    //date data; /// Data em que o serviço é realizado
+    Date data; /// Data em que o serviço é realizado
     Funcionario funcionario; /// Funcionário responsável pelo serviço
 };
 

@@ -5,34 +5,41 @@
 #include <sstream>
 #include "Funcionario.h"
 
-
-//Funcionario::Funcionario() {}
-
-Funcionario::Funcionario(string nome, string morada, string contacto, string email) {
+/// construtor completo da classe Funcionario
+/// \param nome
+/// \param morada
+/// \param contacto
+/// \param email
+/// \param data de nascimento
+Funcionario::Funcionario(string nome, string morada, string contacto) {
     this->nome = nome;
     this->morada = morada;
     this->contacto = contacto;
-    this->email = email;
 }
 
+///
+/// \return nome do funcionário
 string Funcionario::getNome() const {
     return nome;
 }
 
+///
+/// \return morada do funcionário
 string Funcionario::getMorada() const {
     return morada;
 }
 
+///
+/// \return contacto do funcionario
 string Funcionario::getContacto() const {
     return contacto;
 }
 
-string Funcionario::getEmail() const {
-    return email;
-}
 
+///
+/// \return os atributos de um funcionario como Nome: n -- Contacto: c
 string Funcionario::write() const {
     stringstream oss;
-    oss << "Nome: " << nome << "\n Age: " << morada << "\n Email: " << email;
+    oss << "Nome: " << nome << " -- Contacto: " << contacto;
     return oss.str();
 }
