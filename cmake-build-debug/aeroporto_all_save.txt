@@ -2,3 +2,4 @@ nome cidade pais
 nome Porto pais
 aeronome aerocidade aeropais
 outronome outracidade outropais
+aero aeroCidade aeroPais

@@ -11,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/projeto_aed.dir/Time.cpp.obj.d"
   "CMakeFiles/projeto_aed.dir/Transporte.cpp.obj"
   "CMakeFiles/projeto_aed.dir/Transporte.cpp.obj.d"
+  "CMakeFiles/projeto_aed.dir/TransporteBagagem.cpp.obj"
+  "CMakeFiles/projeto_aed.dir/TransporteBagagem.cpp.obj.d"
   "CMakeFiles/projeto_aed.dir/Voo.cpp.obj"
   "CMakeFiles/projeto_aed.dir/Voo.cpp.obj.d"
   "CMakeFiles/projeto_aed.dir/main.cpp.obj"
