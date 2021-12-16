@@ -10,52 +10,33 @@ using namespace std;
 
 class Aviao {
 public:
-    /// Construtor
-    /// \param matricula do aviao
-    /// \param capacidade de passageiros do aviao
+
     Aviao(string matricula, int capacidade);
-
-    ///
-    /// \param plano é uma lista de voos
-    /// é adicionado ao plano de voos todos os voos dentro da lista \param plano
-    void adicionarPlanoVoo(list<Voo> plano);
-
-    ///
-    /// \param v é um voo que vai ser adicionado à lista de voos planeados
-    void adicionarVoo(Voo v);
-
-    ///
-    /// \param servico é um serviço que vai ser adicionado à lista de serviços agendados
-    void adicionarServico(servico servico);
-
-    /// termina o serviço na front() da queue de serviços agendados
+    void adicionarPlanoVoo(list<Voo*> plano);
+    void adicionarVoo(Voo *v);
+    void adicionarServico(servico *servico);
     void terminarServico();
 
-    ///
-    /// \return \param matricula do avião
+    // Getters
     string getMatricula() const;
-
-    ///
-    /// \return \param capacidade do avião
     int getCapacidade() const;
+    list<Voo*> getPlanoVoo() const;
+    queue<servico*> getServicosAgendados() const;
+    list<servico*> getServicosFeitos() const;
 
-    ///
-    /// \return \param planoVoo que retorna os voos planeados
-    list<Voo> getPlanoVoo() const;
+    // Setters
+    void setPlanoVoo(list<Voo*> novoPlano);
+    void setServicosAgendados(queue<servico*> novosServicos);
 
-    ///
-    /// \return \param sericosAgendados
-    queue<servico> getServicosAgendados() const;
-    list<servico> getServicosFeitos() const;
-
+    // Writer
     string write()const;
 
 private:
-    string matricula;
-    int capacidade;
-    list<Voo> planoVoo;
-    queue<servico> servicosAgendados;
-    list<servico> servicosFeitos;
+    string const matricula;
+    int const capacidade;
+    list<Voo*> planoVoo;
+    queue<servico*> servicosAgendados;
+    list<servico*> servicosFeitos;
 };
 
 
