@@ -1,7 +1,7 @@
 #include "Transporte.h"
 #include <algorithm>
 
-Transporte::Transporte(int distancia, Time time, string tipo) {
+Transporte::Transporte(int distancia, Time time, string tipo, Date date){
     transform(tipo.begin(), tipo.end(), tipo.begin(), ::tolower);
     remove(tipo.begin(), tipo.end(), ' ');
 
@@ -10,30 +10,42 @@ Transporte::Transporte(int distancia, Time time, string tipo) {
     this->distancia = distancia;
     this->time = time;
     this->tipo = tipo;
+    this->date = date;
 }
 
 void Transporte::setDistancia(int distancia) {
     this->distancia = distancia;
 }
-int Transporte::getDistancia(){
+int Transporte::getDistancia() const{
     return distancia;
 }
 void Transporte::setTime(Time time) {
     this->time = time;
 }
-Time Transporte::getTime() {
+Time Transporte::getTime() const{
     return time;
 }
 void Transporte::setTipo(string tipo) {
     this->tipo = tipo;
 }
-string Transporte::getTipo() {
+string Transporte::getTipo() const{
     return tipo;
 }
 
-bool Transporte::operator<(Transporte t2) const{
-    if(time.getHora() == t2.getTime().getHora()){ //tem a mesma hora
-        return time.getMinuto() < t2.getTime().getMinuto(); //retorna true quando tem menor minuto
-    }
-    return time.getHora() < t2.getTime().getHora(); //quando as horas sao diferentes
+bool const Transporte::operator<(Transporte t2) const{
+    if(date == t2.getDate()) return time < t2.getTime();
+    return date < t2.getDate();
+}
+
+const Date &Transporte::getDate() const {
+    return date;
+}
+
+void Transporte::setDate(const Date &date) {
+    Transporte::date = date;
+}
+
+Transporte::Transporte(){
+    distancia = 9999;
+    tipo = "autocarro";
 }

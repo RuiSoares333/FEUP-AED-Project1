@@ -1,5 +1,4 @@
 #include "Time.h"
-#include <sstream>
 
 Time::Time(){
     hora = 00;
@@ -28,8 +27,9 @@ int Time::getMinuto() const{
     return minuto;
 }
 
-string Time::write() const{
-    stringstream oss;
-    oss << hora << ":" << minuto;
-    return oss.str();
+bool const Time::operator<(const Time t2) const {
+    if(hora == t2.getHora()){
+        return minuto < t2.getMinuto();
+    }
+    return hora < t2.getHora();
 }
