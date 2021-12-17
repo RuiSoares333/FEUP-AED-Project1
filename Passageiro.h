@@ -8,6 +8,7 @@
 #include <string>
 #include <vector>
 #include <list>
+#include <fstream>
 #include "Bilhete.h"
 #include "Bagagem.h"
 
@@ -15,6 +16,7 @@ using namespace std;
 
 class Passageiro {
 public:
+    Passageiro();
     Passageiro(string nome, int id, vector<Bilhete> bilhetes, vector<Bagagem> bagagens);
     string getNome () const;
     int getId () const;

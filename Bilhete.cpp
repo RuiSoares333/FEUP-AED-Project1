@@ -4,7 +4,11 @@
 
 #include "Bilhete.h"
 
-Bilhete::Bilhete() {}
+Bilhete::Bilhete() {
+    this->num = 0;
+    this->check_bagagem = false;
+    this->checkin = false;
+}
 
 Bilhete::Bilhete(int num, bool check_bagagem, bool checkin) {
     this->num = num;

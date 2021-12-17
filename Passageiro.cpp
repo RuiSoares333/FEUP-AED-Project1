@@ -3,6 +3,11 @@
 //
 #include "Passageiro.h"
 
+Passageiro::Passageiro() {
+    this->nome = "";
+    this->id = 0;
+}
+
 Passageiro::Passageiro(string nome, int id, vector<Bilhete> bilhetes, vector<Bagagem> bagagens) {
     this->nome = nome;
     this->id = id;

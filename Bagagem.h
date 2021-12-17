@@ -10,8 +10,15 @@ class Bagagem {
 public:
     Bagagem();
     Bagagem(float comprimento, float largura, float altura, float peso);
+    float getComprimento() const;
+    float getLargura() const;
+    float getAltura() const;
+    float getPeso() const;
 private:
-    float comprimento; //em centimetros
+    float comprimento;
+
+private:
+    //em centimetros
     float largura; //em centimetros
     float altura; //em centimetros
     float peso; //em kg
