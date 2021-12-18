@@ -10,13 +10,14 @@ using namespace std;
 
 class Aviao {
 public:
-
+    Aviao();
     Aviao(string matricula, int capacidade);
     void adicionarPlanoVoo(list<Voo> plano);
     void adicionarVoo(Voo v);
     void addServAgendado(servico servico);
     void terminarServico();
     void addServCompleto(servico s);
+    bool addPassageiro(int numVoo, Passageiro pass);
 
     // Getters
     string getMatricula() const;
@@ -32,15 +33,13 @@ public:
 
     // Writer
     string write()const;
-    bool saveFile();
-    bool loadFile();
 
 private:
     string const matricula;
-    int const capacidade;
     list<Voo> planoVoo;
     list<servico> servicosAgendados;
     list<servico> servicosFeitos;
+    int const capacidade;
 };
 
 

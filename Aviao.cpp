@@ -10,6 +10,17 @@ using namespace std;
 /// \param c capacidade de passageiros do aviao
 Aviao::Aviao(string m, int c): matricula(m), capacidade(c) {}
 
+bool Aviao::addPassageiro(int numVoo, Passageiro pass) {
+    for (Voo v : planoVoo) {
+        if (v.getNum() == numVoo) {
+            if (v.getPassageiros().size() < capacidade) {
+                v.addPassageiro(pass);
+                return true;
+            }
+            return false;
+        }
+    }
+}
 
 /// \param plano é uma lista de voos
 /// é adicionado ao plano de voos todos os voos dentro da lista \param plano

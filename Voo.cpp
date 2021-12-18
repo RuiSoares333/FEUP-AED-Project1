@@ -39,9 +39,8 @@ void Voo::setDuracao(int dur){
     duracaoVoo = dur;
 }
 
-bool Voo::addPassageiro(Passageiro& passageiro) {
+void Voo::addPassageiro(Passageiro &passageiro) {
     passageiros.push_back(passageiro);
-    return true;
 }
 
 bool Voo::removePassageiro(Passageiro& passageiro) {

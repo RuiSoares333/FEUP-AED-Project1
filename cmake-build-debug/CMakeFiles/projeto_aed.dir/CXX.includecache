@@ -6,47 +6,7 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/PC/projeto_aed/Aeroporto.h
-string
--
-fstream
--
-sys/stat.h
--
-Transporte.h
-C:/Users/PC/projeto_aed/Transporte.h
-bst.h
-C:/Users/PC/projeto_aed/bst.h
-binaryTree.h
-C:/Users/PC/projeto_aed/binaryTree.h
-
-C:/Users/PC/projeto_aed/Aviao.h
-string
--
-Voo.h
-C:/Users/PC/projeto_aed/Voo.h
-servico.h
-C:/Users/PC/projeto_aed/servico.h
-queue
--
-
 C:/Users/PC/projeto_aed/Bagagem.h
-
-C:/Users/PC/projeto_aed/BaseDados.cpp
-fstream
--
-BaseDados.h
-C:/Users/PC/projeto_aed/BaseDados.h
-
-C:/Users/PC/projeto_aed/BaseDados.h
-Aeroporto.h
-C:/Users/PC/projeto_aed/Aeroporto.h
-servico.h
-C:/Users/PC/projeto_aed/servico.h
-Aviao.h
-C:/Users/PC/projeto_aed/Aviao.h
-Voo.h
-C:/Users/PC/projeto_aed/Voo.h
 
 C:/Users/PC/projeto_aed/Bilhete.h
 
@@ -68,18 +28,6 @@ C:/Users/PC/projeto_aed/Bilhete.h
 Bagagem.h
 C:/Users/PC/projeto_aed/Bagagem.h
 
-C:/Users/PC/projeto_aed/Time.h
-
-C:/Users/PC/projeto_aed/Transporte.h
-string
--
-time.h
-C:/Users/PC/projeto_aed/Time.h
-Date.h
-C:/Users/PC/projeto_aed/Date.h
-Time.h
-C:/Users/PC/projeto_aed/Time.h
-
 C:/Users/PC/projeto_aed/TransporteBagagem.h
 Bagagem.h
 C:/Users/PC/projeto_aed/Bagagem.h
@@ -90,6 +38,12 @@ stack
 queue
 -
 
+C:/Users/PC/projeto_aed/Voo.cpp
+string
+-
+Voo.h
+C:/Users/PC/projeto_aed/Voo.h
+
 C:/Users/PC/projeto_aed/Voo.h
 string
 -
@@ -99,28 +53,6 @@ Passageiro.h
 C:/Users/PC/projeto_aed/Passageiro.h
 TransporteBagagem.h
 C:/Users/PC/projeto_aed/TransporteBagagem.h
-Date.h
-C:/Users/PC/projeto_aed/Date.h
-
-C:/Users/PC/projeto_aed/binaryTree.h
-iostream
--
-stack
--
-queue
--
-
-C:/Users/PC/projeto_aed/bst.h
-iostream
--
-stack
--
-queue
--
-
-C:/Users/PC/projeto_aed/servico.h
-string
--
 Date.h
 C:/Users/PC/projeto_aed/Date.h
 
