@@ -3,33 +3,35 @@
 
 
 #include <string>
-#include "Funcionario.h"
 #include "Date.h"
 
 using namespace std;
-enum tipoServico {MANUTENCAO, LIMPEZA};
 
 class servico {
 
 public:
-    servico(tipoServico tipo, Funcionario funcionario, Date data);
+    servico(int id, string tipo, string funcionario, Date data);
 
     // Getters
-    tipoServico getTipo() const;
+    string getTipo() const;
     Date getData() const;
-    Funcionario getFuncionario() const;
+    string getFuncionario() const;
+    int getID() const;
 
     // Setters
-    void setTipo(tipoServico novoTipo);
-    void setFuncionario(Funcionario funcionario);
+    void setTipo(string novoTipo);
+    void setFuncionario(string funcionario);
 
     // Writer
     string write() const ;
+    bool saveFile ();
+    bool loadFile ();
 
 private:
-    tipoServico tipo; /// Tipo de serviço que pode ser realizado (Manutenção/Limpeza)
+    int id;
+    string tipo; /// Tipo de serviço que pode ser realizado (Manutenção/Limpeza)
     Date data; /// Data em que o serviço é realizado
-    Funcionario funcionario; /// Funcionário responsável pelo serviço
+    string funcionario; /// Funcionário responsável pelo serviço
 };
 
 

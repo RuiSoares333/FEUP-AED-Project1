@@ -15,7 +15,6 @@ CMakeFiles/projeto_aed.dir/Aviao.cpp.obj: \
  ../Bagagem.h \
  ../Bilhete.h \
  ../Date.h \
- ../Funcionario.h \
  ../Passageiro.h \
  ../TransporteBagagem.h \
  ../Voo.h \
@@ -23,6 +22,22 @@ CMakeFiles/projeto_aed.dir/Aviao.cpp.obj: \
 CMakeFiles/projeto_aed.dir/Bagagem.cpp.obj: \
  ../Bagagem.cpp \
  ../Bagagem.h
+CMakeFiles/projeto_aed.dir/BaseDados.cpp.obj: \
+ ../Aeroporto.h \
+ ../Aviao.h \
+ ../Bagagem.h \
+ ../BaseDados.cpp \
+ ../BaseDados.h \
+ ../Bilhete.h \
+ ../Date.h \
+ ../Passageiro.h \
+ ../Time.h \
+ ../Transporte.h \
+ ../TransporteBagagem.h \
+ ../Voo.h \
+ ../binaryTree.h \
+ ../bst.h \
+ ../servico.h
 CMakeFiles/projeto_aed.dir/Bilhete.cpp.obj: \
  ../Bilhete.cpp \
  ../Bilhete.h
@@ -59,7 +74,9 @@ CMakeFiles/projeto_aed.dir/Voo.cpp.obj: \
  ../Voo.h
 CMakeFiles/projeto_aed.dir/main.cpp.obj: \
  ../Aeroporto.h \
+ ../Aviao.h \
  ../Bagagem.h \
+ ../BaseDados.h \
  ../Bilhete.h \
  ../Date.h \
  ../Passageiro.h \
@@ -69,9 +86,9 @@ CMakeFiles/projeto_aed.dir/main.cpp.obj: \
  ../Voo.h \
  ../binaryTree.h \
  ../bst.h \
- ../main.cpp
+ ../main.cpp \
+ ../servico.h
 CMakeFiles/projeto_aed.dir/servico.cpp.obj: \
  ../Date.h \
- ../Funcionario.h \
  ../servico.cpp \
  ../servico.h
