@@ -206,3 +206,17 @@ const list<Aviao> &BaseDados::getAvioes() const {
 const list<Voo> &BaseDados::getVoos() const {
     return voos;
 }
+
+void BaseDados::airportSort() {
+    aeroportos.sort();
+}
+
+void BaseDados::airportDraw() {
+    airportSort();
+    int spaces = 30;
+    cout <<setfill(' ') << setw(spaces) << "Nome" << setfill(' ') << setw(spaces) << "Cidade" << setfill(' ') << setw(spaces) << "Pais" << endl;
+    cout << string(3 * spaces, '=') << endl;
+    for(Aeroporto aeroporto: aeroportos){
+        cout << setfill(' ') << setw(spaces) << aeroporto.getNome() << setfill(' ') << setw(spaces) << aeroporto.getCidade() << setfill(' ') << setw(spaces) << aeroporto.getPais() << endl;
+    }
+}

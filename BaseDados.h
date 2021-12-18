@@ -9,6 +9,7 @@
 #include "servico.h"
 #include "Aviao.h"
 #include "Voo.h"
+#include <iomanip>
 
 class BaseDados {
 public:
@@ -32,6 +33,9 @@ public:
     void saveServicos();
     void saveAvioes();
     bool saveVoos();
+
+    void airportSort();
+    void airportDraw();
 private:
     list<Aeroporto> aeroportos;
     list<servico> servicos;
