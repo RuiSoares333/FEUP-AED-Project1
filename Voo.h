@@ -24,20 +24,17 @@ public:
     void setNum(int num);
     void setDuracao(int dur);
     void setData(Date data);
-    bool addPassageiro(Passageiro& passageiro); //adiciona passageiro ao voo, retorna true se possivel e false se voo já estiver cheio
+    void addPassageiro(Passageiro& passageiro); //adiciona passageiro ao voo, retorna true se possivel e false se voo já estiver cheio
     bool removePassageiro(Passageiro& passageiro); //remove passageiro do voo, retorna true se encontrou o passageiro senao false
     bool saveFile ();
     bool loadFile ();
 
 private:
     int numVoo;
-    Date dataPartida; //se houver classe data futuramente alterar
+    Date dataPartida;
     int duracaoVoo;
     list<Passageiro> passageiros;
     TransporteBagagem transporteBagagem;
-    //Aviao aviao; preciso do tamanho para verficar se dá para adicionar passageiro
-
-
 };
 
 
