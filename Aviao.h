@@ -18,6 +18,7 @@ public:
     void terminarServico();
     void addServCompleto(servico s);
     bool addPassageiro(int numVoo, Passageiro pass);
+    bool const operator < (Aviao a2) const;
 
     // Getters
     string getMatricula() const;

@@ -22,6 +22,9 @@ Voo::Voo(int numVoo, Date dataPartida, int duracaoVoo, list<Passageiro> passagei
     this->passageiros = passageiros;
     this->transporteBagagem = transporteBagagem;
 }
+bool const Voo::operator < (Voo v2) const {
+    return numVoo < v2.getNum();
+}
 /// Getter
 /// \return retorna o número de identificação do voo
 int Voo::getNum() const{

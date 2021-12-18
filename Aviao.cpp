@@ -26,6 +26,10 @@ bool Aviao::addPassageiro(int numVoo, Passageiro pass) {
     }
 }
 
+bool const Aviao::operator < (Aviao a2) const {
+    return matricula < a2.getMatricula();
+}
+
 /// \param plano é uma lista de voos
 /// é adicionado ao plano de voos todos os voos dentro da lista \param plano
 void Aviao::adicionarPlanoVoo(list<Voo> plano) {

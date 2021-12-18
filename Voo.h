@@ -10,6 +10,7 @@
 #include "Passageiro.h"
 #include "TransporteBagagem.h"
 #include "Date.h"
+#include "Aeroporto.h"
 
 using namespace std;
 
@@ -28,6 +29,7 @@ public:
     bool removePassageiro(Passageiro& passageiro); //remove passageiro do voo, retorna true se encontrou o passageiro senao false
     bool saveFile ();
     bool loadFile ();
+    bool const operator < (Voo v2) const;
 
 private:
     int numVoo;
