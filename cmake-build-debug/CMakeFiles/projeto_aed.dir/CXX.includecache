@@ -57,20 +57,14 @@ Aviao.h
 C:/Users/PC/projeto_aed/Aviao.h
 Voo.h
 C:/Users/PC/projeto_aed/Voo.h
-
-C:/Users/PC/projeto_aed/Bilhete.cpp
-Bilhete.h
-C:/Users/PC/projeto_aed/Bilhete.h
+iomanip
+-
 
 C:/Users/PC/projeto_aed/Bilhete.h
 
 C:/Users/PC/projeto_aed/Date.h
 string
 C:/Users/PC/projeto_aed/string
-
-C:/Users/PC/projeto_aed/Passageiro.cpp
-Passageiro.h
-C:/Users/PC/projeto_aed/Passageiro.h
 
 C:/Users/PC/projeto_aed/Passageiro.h
 string
@@ -97,10 +91,6 @@ Date.h
 C:/Users/PC/projeto_aed/Date.h
 Time.h
 C:/Users/PC/projeto_aed/Time.h
-
-C:/Users/PC/projeto_aed/TransporteBagagem.cpp
-TransporteBagagem.h
-C:/Users/PC/projeto_aed/TransporteBagagem.h
 
 C:/Users/PC/projeto_aed/TransporteBagagem.h
 Bagagem.h
@@ -129,6 +119,8 @@ TransporteBagagem.h
 C:/Users/PC/projeto_aed/TransporteBagagem.h
 Date.h
 C:/Users/PC/projeto_aed/Date.h
+Aeroporto.h
+C:/Users/PC/projeto_aed/Aeroporto.h
 
 C:/Users/PC/projeto_aed/binaryTree.h
 iostream

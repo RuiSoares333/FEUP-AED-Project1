@@ -23,6 +23,10 @@ public:
     void sortAvioes();
     void sortVoos();
 
+    void drawServicos() const;
+    void drawAvioes() const;
+    void drawVoos() const;
+
     const list <Aeroporto> &getAeroportos() const;
     const list <servico> &getServicos() const;
     const list <Aviao> &getAvioes() const;

@@ -12,10 +12,10 @@ Voo::Voo(){
 /// Constructor
 /// \param numVoo número de identificação do voo
 /// \param dataPartida data de partida do voo
-/// \param duracaoVoo duração do voo
+/// \param duracaoVoo duração do voo em horas
 /// \param passageiros lista dos passageiros que estão no voo
 /// \param transporteBagagem o transporte da bagagem (tapete e carrinho)
-Voo::Voo(int numVoo, Date dataPartida, int duracaoVoo, list<Passageiro> passageiros, TransporteBagagem transporteBagagem){
+Voo::Voo(int numVoo, Date dataPartida, float duracaoVoo, list<Passageiro> passageiros, TransporteBagagem transporteBagagem){
     this->numVoo = numVoo;
     this->dataPartida = dataPartida;
     this->duracaoVoo = duracaoVoo;
@@ -37,7 +37,7 @@ Date Voo::getData() const {
 }
 /// Getter
 /// \return retorna a duracao do voo
-int Voo::getDuracao() const {
+float Voo::getDuracao() const {
     return duracaoVoo;
 }
 /// Getter

@@ -31,6 +31,30 @@ void BaseDados::sortVoos() {
     voos.sort();
 }
 
+void BaseDados::drawServicos() const {
+    for (servico s : servicos) {
+        s.write();
+    }
+}
+
+void BaseDados::drawAvioes() const {
+    int spaces = 30;
+    cout << setfill(' ') << setw(spaces) << "Matricula" << setfill(' ') << setw(spaces) << "Capacidade" << endl;
+    cout << string(2 * spaces, '=') << endl;
+    for (Aviao a : avioes) {
+        cout << setfill(' ') << setw(spaces) << a.getMatricula() << setfill(' ') << setw(spaces) << a.getCapacidade() << endl;
+    }
+}
+
+void BaseDados::drawVoos() const {
+    int spaces = 30;
+    cout << setfill(' ') << setw(spaces) << "Numero do Voo" << setfill(' ') << setw(spaces) << "Data de partida" << setfill(' ') << setw(spaces) << "Duracao do voo" << endl;
+    cout << string (3*spaces, '=') << endl;
+    for (Voo v : voos) {
+        cout << setfill(' ') << setw(spaces) << v.getNum() << setfill(' ') << setw(spaces) << v.getData().write() << setfill(' ') << setw(spaces) << v.getDuracao() << endl;
+    }
+}
+
 bool BaseDados::loadAirports(){
     string nome, cidade, pais;
     ifstream loadStream;
