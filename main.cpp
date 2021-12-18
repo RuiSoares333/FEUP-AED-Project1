@@ -3,7 +3,7 @@
 int main() {
     BaseDados bd;
     bd.loadAll();
-    // menu
+    bd.transportDraw(bd.getAeroportos().front());
     bd.saveAll();
     return 0;
 }

@@ -31,6 +31,38 @@ void BaseDados::sortVoos() {
     voos.sort();
 }
 
+void BaseDados::transportDraw(const Aeroporto &aeroporto) {
+    BST<Transporte> transportes = aeroporto.getTransportes();
+    BSTItrIn<Transporte> it(transportes);
+    int spaces = 20;
+    cout << setfill(' ') << setw(spaces) << "DD/MM/YYYY" << setfill(' ') << setw(spaces) << "HH:MM" << setfill(' ')
+         << setw(spaces) << "Distancia(m)" << setfill(' ') << setw(spaces) << "Tipo" << endl;
+    cout << string(4 * spaces, '=') << endl;
+    while (!it.isAtEnd()) {
+        int distancia = it.retrieve().getDistancia();
+        string tipo = it.retrieve().getTipo();
+        int day = it.retrieve().getDate().getDay();
+        int month = it.retrieve().getDate().getMonth();
+        int year = it.retrieve().getDate().getYear();
+        int hora = it.retrieve().getTime().getHora();
+        int minuto = it.retrieve().getTime().getMinuto();
+
+        string day_s = to_string(day);
+        string month_s = to_string(month);
+
+        string date =
+                string(2 - day_s.length(), '0') + day_s + "/" + string(2 - month_s.length(), '0') + month_s + "/" +
+                to_string(year);
+
+        string hora_s = to_string(hora);
+        string minuto_s = to_string(minuto);
+        string time = string(2 - hora_s.length(), '0') + hora_s + ":" + string(2 - minuto_s.length(), '0') + minuto_s;
+        cout << setfill(' ') << setw(spaces) << date << setfill(' ') << setw(spaces) << time << setfill(' ')
+             << setw(spaces) << distancia << setfill(' ') << setw(spaces) << tipo << endl;
+        it.advance();
+    }
+}
+
 void BaseDados::drawServicos() const {
     for (servico s : servicos) {
         s.write();

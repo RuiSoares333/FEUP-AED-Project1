@@ -26,6 +26,7 @@ public:
     void drawServicos() const;
     void drawAvioes() const;
     void drawVoos() const;
+    void transportDraw(const Aeroporto &aeroporto);
 
     const list <Aeroporto> &getAeroportos() const;
     const list <servico> &getServicos() const;
