@@ -10,6 +10,10 @@ using namespace std;
 /// \param c capacidade de passageiros do aviao
 Aviao::Aviao(string m, int c): matricula(m), capacidade(c) {}
 
+///
+/// \param numVoo é o número de identificação do Voo
+/// \param pass é o passageiro para ser adicionado ao Voo
+/// \return true se o passageiro foi inserido no voo
 bool Aviao::addPassageiro(int numVoo, Passageiro pass) {
     for (Voo v : planoVoo) {
         if (v.getNum() == numVoo) {
@@ -35,6 +39,10 @@ void Aviao::adicionarVoo(Voo v) {
     planoVoo.push_back(v);
 }
 
+/// Comparator Key
+/// \param s1 serviço 1
+/// \param s2 serviço 2
+/// \return comparação entre s1 e s2 de acordo com as suas datas
 bool comparador(servico s1, servico s2){
     return s1.getData()<s2.getData();
 }
@@ -50,11 +58,11 @@ void Aviao::addServCompleto (servico s) {
     servicosAgendados.sort(comparador);
 }
 
-/// termina o serviço na front() da queue de serviços agendados
-/*void Aviao::terminarServico() {
+/// termina o serviço na front() da lista de serviços agendados
+void Aviao::terminarServico() {
     servicosFeitos.push_back(servicosAgendados.front());
-    servicosAgendados.pop();
-}*/
+    servicosAgendados.pop_front();
+}
 
 /// Getter
 /// \return \param matricula do avião
@@ -88,9 +96,9 @@ list<servico> Aviao::getServicosFeitos() const{
 
 
 /// Writer
-/// \return uma string com os atributos base do avião: Matricula Capacidade
+/// \return uma string com os atributos base do avião: Matricula - Capacidade - Numero de Voos Agendados
 string Aviao::write() const {
     stringstream oss;
-    oss << matricula << " " << capacidade;
+    oss << "Matricula: " << matricula << " - Capacidade: " << capacidade << " - Numero de Voos Agendados: " << planoVoo.size() << endl;
     return oss.str();
 }

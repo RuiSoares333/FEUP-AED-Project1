@@ -14,19 +14,19 @@ servico::servico(int id, string servico, string funcionario, Date data){
 }
 
 /// Getter
-/// \return tipo de servico
+/// \return \param tipo de servico
 string servico::getTipo() const{
     return tipo;
 }
 
 /// Getter
-/// \return funcionario encarregue do serviço
+/// \return \param funcionario encarregue do serviço
 string servico::getFuncionario() const {
     return funcionario;
 }
 
 /// Getter
-/// \return data agendada para a aplicação do serviço
+/// \return \param data agendada para a aplicação do serviço
 Date servico::getData() const {
     return data;
 }
@@ -50,25 +50,9 @@ void servico::setTipo(string novoTipo) {
 }
 
 ///// Writer
-///// \return de uma string com os atributos do funcionário -- serviço: Data
-//string servico::write() const {
-//    stringstream oss;
-//    oss << funcionario << tipo << data.write();
-//    return oss.str();
-//}
-
-/*bool servico::saveFile() {
-    ofstream save_all;
-
-    save_all.open("servicos_all_save.txt", ios_base::app);
-    save_all << id << endl;
-
-    save_all << id << " " << funcionario << " " << tipo << " " <<  data.getYear() << " " << data.getMonth() << " " << data.getDay() << endl;
-    save_all.close();
-    return true;
-
+///// \return de uma string com os atributos do ID - Funcionario - Tipo - YYYY-MM-DD
+string servico::write() const {
+    stringstream oss;
+    oss << "ID: " << id << " - Funcionario: " << funcionario << " - Tipo: "<< tipo << " - Data: " << data.getYear() << "-" << data.getMonth() << "-" << data.getDay() << endl;
+    return oss.str();
 }
-
-bool servico::loadFile() {
-
-}*/
