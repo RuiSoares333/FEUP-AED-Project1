@@ -87,7 +87,7 @@ string Aviao::write() const {
 }
 
 
-void Aviao::saveFile() {
+/*void Aviao::saveFile() {
     ofstream save_all;
 
     save_all.open("aviao_all_save.txt", ios_base::app);
@@ -114,4 +114,4 @@ void Aviao::saveFile() {
 
         save_stream.close();
     }
-}
+}*/

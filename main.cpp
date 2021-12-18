@@ -1,16 +1,49 @@
 #include <iostream>
 #include "Transporte.h"
 #include "Aeroporto.h"
+#include "Voo.h"
 #include <list>
 using namespace std;
 
 list<Aeroporto> aeroportos;
+list<Voo> voos;
 
 bool loadAirports();
 bool saveAirports();
+bool loadVoos();
+bool saveVoos();
 
 int main() {
+    loadVoos();
     return 0;
+}
+
+bool loadVoos() {
+    int numVoo;
+    ifstream load;
+    load.open("voo_all_save.txt");
+    if (load.is_open()) {
+        while (load >> numVoo) {
+            Voo voo;
+            voo.setNum(numVoo);
+            voo.loadFile();
+            voos.push_back(voo);
+        }
+        return true;
+    }
+    return false;
+}
+
+bool saveVoos() {
+    ofstream save;
+    save.open("voo_all_save.txt", ofstream::trunc);
+    if (save.is_open()) {
+        for (Voo voo : voos) {
+            voo.saveFile();
+        }
+        return true;
+    }
+    return false;
 }
 
 bool loadAirports(){

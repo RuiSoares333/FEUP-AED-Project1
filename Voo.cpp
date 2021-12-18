@@ -7,11 +7,10 @@
 
 Voo::Voo(){
     this->numVoo = 0;
-    this->dataPartida = "";
     this->duracaoVoo = 0;
 }
 
-Voo::Voo(int numVoo, string dataPartida, int duracaoVoo, list<Passageiro> passageiros, TransporteBagagem transporteBagagem){
+Voo::Voo(int numVoo, Date dataPartida, int duracaoVoo, list<Passageiro> passageiros, TransporteBagagem transporteBagagem){
     this->numVoo = numVoo;
     this->dataPartida = dataPartida;
     this->duracaoVoo = duracaoVoo;
@@ -21,7 +20,7 @@ Voo::Voo(int numVoo, string dataPartida, int duracaoVoo, list<Passageiro> passag
 int Voo::getNum() const{
     return numVoo;
 }
-string Voo::getData() const {
+Date Voo::getData() const {
     return dataPartida;
 }
 int Voo::getDuracao() const {
@@ -33,7 +32,7 @@ list<Passageiro> Voo::getPassageiros() const {
 void Voo::setNum(int num) {
     numVoo = num;
 }
-void Voo::setData(string data) {
+void Voo::setData(Date data) {
     dataPartida = data;
 }
 void Voo::setDuracao(int dur){
@@ -67,7 +66,7 @@ bool Voo::saveFile() {
     save_stream.open("voo_"+ to_string(this->numVoo) + "_save.txt");
     if(save_stream.is_open()){
 
-        save_stream << numVoo << " " << dataPartida << " " << duracaoVoo << endl;
+        save_stream << numVoo << " " << dataPartida.getDay() << " " << dataPartida.getMonth() << " " << dataPartida.getYear() << " " << duracaoVoo << endl;
         save_stream << transporteBagagem.getC() << " " << transporteBagagem.getN() << " " << transporteBagagem.getM() << endl;
 
         for (Passageiro pass : passageiros) {
@@ -86,14 +85,14 @@ bool Voo::saveFile() {
 }
 
 bool Voo::loadFile() {
-    int numVoo, duracaoVoo, c, n , m, id, numBilhete, numBagagens;
+    int numVoo, duracaoVoo, c, n , m, id, numBilhete, numBagagens, day, month, year;
     string nome;
-    string dataPartida; //se houver classe data futuramente alterar
+    Date dataPartida; //se houver classe data futuramente alterar
     list<Passageiro> passageiros;
     ifstream load_stream;
     load_stream.open("voo_"+ to_string(this->numVoo) + "_save.txt");
     if(load_stream.is_open()){
-        load_stream >> numVoo >> dataPartida >> duracaoVoo;
+        load_stream >> numVoo >> day >> month >> year >> duracaoVoo;
         load_stream >> c >> n >> m;
         TransporteBagagem transporteBagagem(c, n, m);
 
@@ -118,7 +117,7 @@ bool Voo::loadFile() {
             passageiros.push_back(passageiro);
         }
         this->numVoo = numVoo;
-        this->dataPartida = dataPartida;
+        this->dataPartida = Date(day, month, year);
         this->duracaoVoo = duracaoVoo;
         this->passageiros = passageiros;
         this->transporteBagagem = transporteBagagem;
