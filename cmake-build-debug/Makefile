@@ -272,30 +272,6 @@ Date.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\projeto_aed.dir\build.make CMakeFiles/projeto_aed.dir/Date.cpp.s
 .PHONY : Date.cpp.s
 
-Funcionario.obj: Funcionario.cpp.obj
-.PHONY : Funcionario.obj
-
-# target to build an object file
-Funcionario.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\projeto_aed.dir\build.make CMakeFiles/projeto_aed.dir/Funcionario.cpp.obj
-.PHONY : Funcionario.cpp.obj
-
-Funcionario.i: Funcionario.cpp.i
-.PHONY : Funcionario.i
-
-# target to preprocess a source file
-Funcionario.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\projeto_aed.dir\build.make CMakeFiles/projeto_aed.dir/Funcionario.cpp.i
-.PHONY : Funcionario.cpp.i
-
-Funcionario.s: Funcionario.cpp.s
-.PHONY : Funcionario.s
-
-# target to generate assembly for a file
-Funcionario.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\projeto_aed.dir\build.make CMakeFiles/projeto_aed.dir/Funcionario.cpp.s
-.PHONY : Funcionario.cpp.s
-
 Passageiro.obj: Passageiro.cpp.obj
 .PHONY : Passageiro.obj
 
@@ -491,9 +467,6 @@ help:
 	@echo ... Date.obj
 	@echo ... Date.i
 	@echo ... Date.s
-	@echo ... Funcionario.obj
-	@echo ... Funcionario.i
-	@echo ... Funcionario.s
 	@echo ... Passageiro.obj
 	@echo ... Passageiro.i
 	@echo ... Passageiro.s

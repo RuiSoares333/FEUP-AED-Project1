@@ -169,22 +169,9 @@ CMakeFiles/projeto_aed.dir/Date.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projeto_aed.dir/Date.cpp.s"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\PC\projeto_aed\Date.cpp -o CMakeFiles\projeto_aed.dir\Date.cpp.s
 
-CMakeFiles/projeto_aed.dir/Funcionario.cpp.obj: CMakeFiles/projeto_aed.dir/flags.make
-CMakeFiles/projeto_aed.dir/Funcionario.cpp.obj: ../Funcionario.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\PC\projeto_aed\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/projeto_aed.dir/Funcionario.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projeto_aed.dir\Funcionario.cpp.obj -c C:\Users\PC\projeto_aed\Funcionario.cpp
-
-CMakeFiles/projeto_aed.dir/Funcionario.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/projeto_aed.dir/Funcionario.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\PC\projeto_aed\Funcionario.cpp > CMakeFiles\projeto_aed.dir\Funcionario.cpp.i
-
-CMakeFiles/projeto_aed.dir/Funcionario.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projeto_aed.dir/Funcionario.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\PC\projeto_aed\Funcionario.cpp -o CMakeFiles\projeto_aed.dir\Funcionario.cpp.s
-
 CMakeFiles/projeto_aed.dir/servico.cpp.obj: CMakeFiles/projeto_aed.dir/flags.make
 CMakeFiles/projeto_aed.dir/servico.cpp.obj: ../servico.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\PC\projeto_aed\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/projeto_aed.dir/servico.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\PC\projeto_aed\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/projeto_aed.dir/servico.cpp.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projeto_aed.dir\servico.cpp.obj -c C:\Users\PC\projeto_aed\servico.cpp
 
 CMakeFiles/projeto_aed.dir/servico.cpp.i: cmake_force
@@ -197,7 +184,7 @@ CMakeFiles/projeto_aed.dir/servico.cpp.s: cmake_force
 
 CMakeFiles/projeto_aed.dir/TransporteBagagem.cpp.obj: CMakeFiles/projeto_aed.dir/flags.make
 CMakeFiles/projeto_aed.dir/TransporteBagagem.cpp.obj: ../TransporteBagagem.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\PC\projeto_aed\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/projeto_aed.dir/TransporteBagagem.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\PC\projeto_aed\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/projeto_aed.dir/TransporteBagagem.cpp.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projeto_aed.dir\TransporteBagagem.cpp.obj -c C:\Users\PC\projeto_aed\TransporteBagagem.cpp
 
 CMakeFiles/projeto_aed.dir/TransporteBagagem.cpp.i: cmake_force
@@ -210,7 +197,7 @@ CMakeFiles/projeto_aed.dir/TransporteBagagem.cpp.s: cmake_force
 
 CMakeFiles/projeto_aed.dir/Bagagem.cpp.obj: CMakeFiles/projeto_aed.dir/flags.make
 CMakeFiles/projeto_aed.dir/Bagagem.cpp.obj: ../Bagagem.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\PC\projeto_aed\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/projeto_aed.dir/Bagagem.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\PC\projeto_aed\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/projeto_aed.dir/Bagagem.cpp.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projeto_aed.dir\Bagagem.cpp.obj -c C:\Users\PC\projeto_aed\Bagagem.cpp
 
 CMakeFiles/projeto_aed.dir/Bagagem.cpp.i: cmake_force
@@ -223,7 +210,7 @@ CMakeFiles/projeto_aed.dir/Bagagem.cpp.s: cmake_force
 
 CMakeFiles/projeto_aed.dir/Bilhete.cpp.obj: CMakeFiles/projeto_aed.dir/flags.make
 CMakeFiles/projeto_aed.dir/Bilhete.cpp.obj: ../Bilhete.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\PC\projeto_aed\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/projeto_aed.dir/Bilhete.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\PC\projeto_aed\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/projeto_aed.dir/Bilhete.cpp.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projeto_aed.dir\Bilhete.cpp.obj -c C:\Users\PC\projeto_aed\Bilhete.cpp
 
 CMakeFiles/projeto_aed.dir/Bilhete.cpp.i: cmake_force
@@ -236,7 +223,7 @@ CMakeFiles/projeto_aed.dir/Bilhete.cpp.s: cmake_force
 
 CMakeFiles/projeto_aed.dir/BaseDados.cpp.obj: CMakeFiles/projeto_aed.dir/flags.make
 CMakeFiles/projeto_aed.dir/BaseDados.cpp.obj: ../BaseDados.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\PC\projeto_aed\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/projeto_aed.dir/BaseDados.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\PC\projeto_aed\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/projeto_aed.dir/BaseDados.cpp.obj"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projeto_aed.dir\BaseDados.cpp.obj -c C:\Users\PC\projeto_aed\BaseDados.cpp
 
 CMakeFiles/projeto_aed.dir/BaseDados.cpp.i: cmake_force
@@ -257,7 +244,6 @@ projeto_aed_OBJECTS = \
 "CMakeFiles/projeto_aed.dir/Transporte.cpp.obj" \
 "CMakeFiles/projeto_aed.dir/Time.cpp.obj" \
 "CMakeFiles/projeto_aed.dir/Date.cpp.obj" \
-"CMakeFiles/projeto_aed.dir/Funcionario.cpp.obj" \
 "CMakeFiles/projeto_aed.dir/servico.cpp.obj" \
 "CMakeFiles/projeto_aed.dir/TransporteBagagem.cpp.obj" \
 "CMakeFiles/projeto_aed.dir/Bagagem.cpp.obj" \
@@ -275,7 +261,6 @@ projeto_aed.exe: CMakeFiles/projeto_aed.dir/Passageiro.cpp.obj
 projeto_aed.exe: CMakeFiles/projeto_aed.dir/Transporte.cpp.obj
 projeto_aed.exe: CMakeFiles/projeto_aed.dir/Time.cpp.obj
 projeto_aed.exe: CMakeFiles/projeto_aed.dir/Date.cpp.obj
-projeto_aed.exe: CMakeFiles/projeto_aed.dir/Funcionario.cpp.obj
 projeto_aed.exe: CMakeFiles/projeto_aed.dir/servico.cpp.obj
 projeto_aed.exe: CMakeFiles/projeto_aed.dir/TransporteBagagem.cpp.obj
 projeto_aed.exe: CMakeFiles/projeto_aed.dir/Bagagem.cpp.obj
@@ -285,7 +270,7 @@ projeto_aed.exe: CMakeFiles/projeto_aed.dir/build.make
 projeto_aed.exe: CMakeFiles/projeto_aed.dir/linklibs.rsp
 projeto_aed.exe: CMakeFiles/projeto_aed.dir/objects1.rsp
 projeto_aed.exe: CMakeFiles/projeto_aed.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\PC\projeto_aed\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable projeto_aed.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\PC\projeto_aed\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable projeto_aed.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\projeto_aed.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

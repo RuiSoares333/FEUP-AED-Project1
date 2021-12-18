@@ -20,16 +20,6 @@ C:/Users/PC/projeto_aed/bst.h
 binaryTree.h
 C:/Users/PC/projeto_aed/binaryTree.h
 
-C:/Users/PC/projeto_aed/Aviao.cpp
-string
--
-Aviao.h
-C:/Users/PC/projeto_aed/Aviao.h
-sstream
--
-fstream
--
-
 C:/Users/PC/projeto_aed/Aviao.h
 string
 -
@@ -41,12 +31,6 @@ queue
 -
 
 C:/Users/PC/projeto_aed/Bagagem.h
-
-C:/Users/PC/projeto_aed/BaseDados.cpp
-fstream
--
-BaseDados.h
-C:/Users/PC/projeto_aed/BaseDados.h
 
 C:/Users/PC/projeto_aed/BaseDados.h
 Aeroporto.h
@@ -101,12 +85,6 @@ stack
 -
 queue
 -
-
-C:/Users/PC/projeto_aed/Voo.cpp
-string
--
-Voo.h
-C:/Users/PC/projeto_aed/Voo.h
 
 C:/Users/PC/projeto_aed/Voo.h
 string

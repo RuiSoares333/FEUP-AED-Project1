@@ -51,7 +51,10 @@ void BaseDados::drawVoos() const {
     cout << setfill(' ') << setw(spaces) << "Numero do Voo" << setfill(' ') << setw(spaces) << "Data de partida" << setfill(' ') << setw(spaces) << "Duracao do voo" << endl;
     cout << string (3*spaces, '=') << endl;
     for (Voo v : voos) {
-        cout << setfill(' ') << setw(spaces) << v.getNum() << setfill(' ') << setw(spaces) << v.getData().write() << setfill(' ') << setw(spaces) << v.getDuracao() << endl;
+        string day_s = to_string(v.getData().getDay());
+        string month_s = to_string(v.getData().getMonth());
+        string date = string(2-day_s.length(), '0') + day_s + "/" + string(2-month_s.length(), '0') + month_s +"/" + to_string(v.getData().getYear());
+        cout << setfill(' ') << setw(spaces) << v.getNum() << setfill(' ') << setw(spaces) << date << setfill(' ') << setw(spaces) << v.getDuracao() << endl;
     }
 }
 

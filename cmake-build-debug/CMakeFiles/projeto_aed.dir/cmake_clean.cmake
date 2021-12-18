@@ -5,7 +5,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/projeto_aed.dir/BaseDados.cpp.obj"
   "CMakeFiles/projeto_aed.dir/Bilhete.cpp.obj"
   "CMakeFiles/projeto_aed.dir/Date.cpp.obj"
-  "CMakeFiles/projeto_aed.dir/Funcionario.cpp.obj"
   "CMakeFiles/projeto_aed.dir/Passageiro.cpp.obj"
   "CMakeFiles/projeto_aed.dir/Time.cpp.obj"
   "CMakeFiles/projeto_aed.dir/Transporte.cpp.obj"

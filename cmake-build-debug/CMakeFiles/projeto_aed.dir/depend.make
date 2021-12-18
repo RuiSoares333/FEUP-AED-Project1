@@ -49,9 +49,6 @@ CMakeFiles/projeto_aed.dir/Bilhete.cpp.obj: \
 CMakeFiles/projeto_aed.dir/Date.cpp.obj: \
  ../Date.cpp \
  ../Date.h
-CMakeFiles/projeto_aed.dir/Funcionario.cpp.obj: \
- ../Funcionario.cpp \
- ../Funcionario.h
 CMakeFiles/projeto_aed.dir/Passageiro.cpp.obj: \
  ../Bagagem.h \
  ../Bilhete.h \
