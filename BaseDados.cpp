@@ -179,3 +179,19 @@ bool BaseDados::saveVoos() {
     }
     return false;
 }
+
+const list<Aeroporto> &BaseDados::getAeroportos() const {
+    return aeroportos;
+}
+
+const list<servico> &BaseDados::getServicos() const {
+    return servicos;
+}
+
+const list<Aviao> &BaseDados::getAvioes() const {
+    return avioes;
+}
+
+const list<Voo> &BaseDados::getVoos() const {
+    return voos;
+}

@@ -18,8 +18,8 @@ public:
     void setCheckin(bool checkin);
 private:
     int num;
-    bool check_bagagem; //true se tiver bagagem, falso se nao
-    bool checkin; //true se for check-in automatico, caso contrario false
+    bool check_bagagem;
+    bool checkin;
 };
 
 
