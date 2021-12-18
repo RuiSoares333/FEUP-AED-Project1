@@ -1,46 +1,88 @@
 
 #include "Aeroporto.h"
 
+
+/// Construtor
+/// \param nome
+/// \param pais
+/// \param cidade
+/// \inicializa uma BST de objetos Transporte vazia
 Aeroporto::Aeroporto(string nome, string pais, string cidade):transportes(Transporte()){
     this->nome = nome;
     this->pais = pais;
     this->cidade = cidade;
 }
+
+/// Getter
+/// \return \param nome do aeroporto
 string Aeroporto::getNome() const {
     return nome;
 }
+
+/// Getter
+/// \return \param país onde o aeroporto se encontra
 string Aeroporto::getPais() const {
     return pais;
 }
+
+/// Getter
+/// \return \param cidade onde o aeroporto se encontra
 string Aeroporto::getCidade() const {
     return cidade;
 }
+
+/// Setter
+/// \param nome
+/// \muda o nome do aeroporto
 void Aeroporto::setNome(string nome) {
     this->nome = nome;
 }
+
+/// Setter
+/// \param pais
+/// \muda o país onde o aeroporto se encontra
 void Aeroporto::setPais(string pais) {
     this->pais = pais;
 }
+
+/// Setter
+/// \param cidade
+/// \muda a cidade onde o aeroporto se encontra
 void Aeroporto::setCidade(string cidade) {
     this->cidade = cidade;
 }
 
+/// Getter
+/// \return \param transportes (uma cópia da BST de objetos Transporte do aeroporto)
 const BST<Transporte> &Aeroporto::getTransportes() const {
     return transportes;
 }
 
+/// Setter
+/// \param BST de objetos Transporte
+/// \muda a arvore que contem os transportes do aeroporto
 void Aeroporto::setTransportes(const BST<Transporte> &transportes) {
     this->transportes = transportes;
 }
 
+/// \parâmetro Objeto da classe Transporte
+/// \adiciona um transporte ao aeroporto
+/// \adiciona uma objeto da classe Transporte à BST do aeroporto
 bool Aeroporto::insertTransporte(Transporte transporte) {
     return transportes.insert(transporte);
 }
 
+/// parâmetro Objeto da classe Transporte
+/// \remove o transporte do aeroporto
+/// \remove da BST do aeroporto o Objeto da classe Transporte que vem como parâmetro
 bool Aeroporto::removeTransporte(Transporte transporte) {
     return transportes.remove(transporte);
 }
 
+/// adiciona o nome, a cidade e o país ao "aeroporto_all_save".txt
+/// \guarda no ficheiro "aeroporto_{nome}_{cidade}_{país}_save.txt" as informações
+/// \do aeroporto e dos transportes guardados na sua BST
+/// \return false se não conseguir abrir o ficheiro, ou se não o conseguir criar
 bool Aeroporto::saveFile() {
     int distancia, day, year, month, hora, minuto;
     string tipo;
@@ -74,6 +116,9 @@ bool Aeroporto::saveFile() {
     else return false;
 }
 
+/// procura o ficherio "aeroporto_{nome}_{cidade}_{país}_save.txt" que corresponde ao objeto
+/// \atualiza os parametros do objeto para aqueles guardados no ficheiro
+/// \cria objetos da classe Transporte com os parâmetros em cada linha e adiciona-os" à BST do aeroporto
 bool Aeroporto::loadFile() {
     int distancia, day, year, month, hora, minuto;
     string tipo, nome, cidade, pais;
