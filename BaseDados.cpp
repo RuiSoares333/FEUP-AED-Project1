@@ -107,7 +107,7 @@ void BaseDados::loadAvioes() {
                 int idSer;
                 loadStream >> idSer;
                 for(auto s : servicos){
-                    if(s.getID() == idSer) a.getServicosAgendados().push(&s);
+                    if(s.getID() == idSer) a.addServAgendado(s);
                 }
             }
 
@@ -115,7 +115,7 @@ void BaseDados::loadAvioes() {
                 int idSer;
                 loadStream >> idSer;
                 for(auto s : servicos){
-                    if(s.getID() == idSer) a.getServicosFeitos().push_back(&s);
+                    if(s.getID() == idSer) a.addServCompleto(s);
                 }
             }
             avioes.push_back(a);
@@ -135,14 +135,13 @@ void BaseDados::saveAvioes(){
         for(auto av : avioes){
             save_all << av.getMatricula() << " " << av.getCapacidade() << " " << av.getPlanoVoo().size() << " " << av.getServicosAgendados().size() << " " << av.getServicosFeitos().size() << endl;
             for(auto voo : av.getPlanoVoo()){
-                save_all << voo->getNum() << endl;
+                save_all << voo.getNum() << endl;
             }
-            while(!av.getServicosAgendados().empty()){
-                save_all << av.getServicosAgendados().front()->getID() << endl;
-                av.getServicosAgendados().pop();
+            for (servico s : av.getServicosAgendados()) {
+                save_all << s.getID() << endl;
             }
             for(auto ser : av.getServicosFeitos()){
-                save_all << ser->getID() << endl;
+                save_all << ser.getID() << endl;
             }
         }
     }
