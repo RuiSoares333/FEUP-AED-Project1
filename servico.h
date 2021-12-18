@@ -18,6 +18,8 @@ public:
     string getFuncionario() const;
     int getID() const;
 
+    bool const operator < (servico s2) const;
+
     // Setters
     void setTipo(string novoTipo);
     void setFuncionario(string funcionario);

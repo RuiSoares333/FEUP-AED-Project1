@@ -13,6 +13,10 @@ servico::servico(int id, string servico, string funcionario, Date data){
     this->data = data;
 }
 
+bool const servico::operator <(servico s2) const {
+    return id < s2.getID();
+}
+
 /// Getter
 /// \return tipo de servico
 string servico::getTipo() const{

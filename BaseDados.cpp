@@ -19,6 +19,17 @@ void BaseDados::saveAll() {
     saveAvioes();
 }
 
+void BaseDados::sortServicos() {
+    servicos.sort();
+}
+
+void BaseDados::sortAvioes() {
+    avioes.sort();
+}
+
+void BaseDados::sortVoos() {
+    voos.sort();
+}
 
 bool BaseDados::loadAirports(){
     string nome, cidade, pais;
