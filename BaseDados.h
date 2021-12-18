@@ -18,6 +18,11 @@ public:
     void loadAvioes();
     bool loadVoos();
 
+    const list <Aeroporto> &getAeroportos() const;
+    const list <servico> &getServicos() const;
+    const list <Aviao> &getAvioes() const;
+    const list <Voo> &getVoos() const;
+
     void saveAll();
     bool saveAirports();
     void saveServicos();
