@@ -140,3 +140,11 @@ bool Aeroporto::loadFile() {
     }
     else return false;
 }
+
+bool const Aeroporto::operator<(const Aeroporto &a2) const {
+    if(pais == a2.getPais()){
+        if(cidade == a2.getCidade()) return nome < a2.getNome();
+        return cidade < a2.getCidade();
+    }
+    return pais < a2.getPais();
+}
