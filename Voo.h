@@ -17,10 +17,10 @@ using namespace std;
 class Voo {
 public:
     Voo();
-    Voo(int numVoo, Date dataPartida, int duracaoVoo, list<Passageiro> passageiros, TransporteBagagem transporteBagagem);
+    Voo(int numVoo, Date dataPartida, float duracaoVoo, list<Passageiro> passageiros, TransporteBagagem transporteBagagem);
     int getNum() const;
     Date getData() const ;
-    int getDuracao() const;
+    float getDuracao() const;
     list<Passageiro> getPassageiros() const;
     void setNum(int num);
     void setDuracao(int dur);
@@ -34,7 +34,7 @@ public:
 private:
     int numVoo;
     Date dataPartida;
-    int duracaoVoo;
+    float duracaoVoo;
     list<Passageiro> passageiros;
     TransporteBagagem transporteBagagem;
 };

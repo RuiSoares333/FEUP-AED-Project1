@@ -55,24 +55,8 @@ void servico::setTipo(string novoTipo) {
 
 ///// Writer
 ///// \return de uma string com os atributos do funcionário -- serviço: Data
-//string servico::write() const {
-//    stringstream oss;
-//    oss << funcionario << tipo << data.write();
-//    return oss.str();
-//}
-
-/*bool servico::saveFile() {
-    ofstream save_all;
-
-    save_all.open("servicos_all_save.txt", ios_base::app);
-    save_all << id << endl;
-
-    save_all << id << " " << funcionario << " " << tipo << " " <<  data.getYear() << " " << data.getMonth() << " " << data.getDay() << endl;
-    save_all.close();
-    return true;
-
+string servico::write() const {
+    stringstream oss;
+    oss << funcionario << tipo << data.write();
+    return oss.str();
 }
-
-bool servico::loadFile() {
-
-}*/

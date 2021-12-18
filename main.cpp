@@ -3,7 +3,7 @@
 int main() {
     BaseDados bd;
     bd.loadAll();
-    // menu
     bd.saveAll();
+    bd.drawVoos();
     return 0;
 }

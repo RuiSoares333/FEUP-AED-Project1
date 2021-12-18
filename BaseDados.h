@@ -9,6 +9,7 @@
 #include "servico.h"
 #include "Aviao.h"
 #include "Voo.h"
+#include <iomanip>
 
 class BaseDados {
 public:
@@ -21,6 +22,10 @@ public:
     void sortServicos();
     void sortAvioes();
     void sortVoos();
+
+    void drawServicos() const;
+    void drawAvioes() const;
+    void drawVoos() const;
 
     const list <Aeroporto> &getAeroportos() const;
     const list <servico> &getServicos() const;
