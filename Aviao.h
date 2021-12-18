@@ -12,21 +12,22 @@ class Aviao {
 public:
 
     Aviao(string matricula, int capacidade);
-    void adicionarPlanoVoo(list<Voo*> plano);
+    void adicionarPlanoVoo(list<Voo> plano);
     void adicionarVoo(Voo v);
-    void adicionarServico(servico servico);
+    void addServAgendado(servico servico);
     void terminarServico();
+    void addServCompleto(servico s);
 
     // Getters
     string getMatricula() const;
     int getCapacidade() const;
-    list<Voo*> getPlanoVoo() const;
-    queue<servico*> getServicosAgendados() const;
-    list<servico*> getServicosFeitos() const;
+    list<Voo> getPlanoVoo() const;
+    list<servico> getServicosAgendados() const;
+    list<servico> getServicosFeitos() const;
 
     // Setters
     void setPlanoVoo(list<Voo> novoPlano);
-    void setServicosAgendados(queue<servico> novosServicos);
+    void setServicosAgendados(list<servico> novosServicos);
     void setServicosCompletos(list<servico> novosServicos);
 
     // Writer
@@ -37,9 +38,9 @@ public:
 private:
     string const matricula;
     int const capacidade;
-    list<Voo*> planoVoo;
-    queue<servico*> servicosAgendados;
-    list<servico*> servicosFeitos;
+    list<Voo> planoVoo;
+    list<servico> servicosAgendados;
+    list<servico> servicosFeitos;
 };
 
 
