@@ -58,7 +58,7 @@ bool Voo::removePassageiro(Passageiro& passageiro) {
 bool Voo::saveFile() {
     ofstream save_all;
 
-    save_all.open("voos_all_save.txt", ios_base::app);
+    save_all.open("voo_all_save.txt", ios_base::app);
     save_all << numVoo << endl;;
     save_all.close();
 
@@ -66,7 +66,7 @@ bool Voo::saveFile() {
     save_stream.open("voo_"+ to_string(this->numVoo) + "_save.txt");
     if(save_stream.is_open()){
 
-        save_stream << numVoo << " " << dataPartida.getDay() << " " << dataPartida.getMonth() << " " << dataPartida.getYear() << " " << duracaoVoo << endl;
+        save_stream << numVoo << " " << dataPartida.getDay() << " " << dataPartida.getMonth() << " " << dataPartida.getYear() << " " << duracaoVoo << " " << passageiros.size() << endl;
         save_stream << transporteBagagem.getC() << " " << transporteBagagem.getN() << " " << transporteBagagem.getM() << endl;
 
         for (Passageiro pass : passageiros) {
@@ -85,22 +85,20 @@ bool Voo::saveFile() {
 }
 
 bool Voo::loadFile() {
-    int numVoo, duracaoVoo, c, n , m, id, numBilhete, numBagagens, day, month, year;
+    int c, n , m, id, numBilhetes, numBagagens, day, month, year, numPass;
     string nome;
-    Date dataPartida; //se houver classe data futuramente alterar
-    list<Passageiro> passageiros;
     ifstream load_stream;
     load_stream.open("voo_"+ to_string(this->numVoo) + "_save.txt");
     if(load_stream.is_open()){
-        load_stream >> numVoo >> day >> month >> year >> duracaoVoo;
+        load_stream >> this->numVoo >> day >> month >> year >> this->duracaoVoo >> numPass;
+        this->dataPartida = Date(day, month, year);
         load_stream >> c >> n >> m;
-        TransporteBagagem transporteBagagem(c, n, m);
-
-        while(!load_stream.eof()){
+        this->transporteBagagem = TransporteBagagem(c, n, m);
+        for (size_t i = 0; i < numPass; i++){
             vector<Bilhete> bilhetes;
             vector<Bagagem> bagagens;
-            load_stream >> id >> nome >> numBilhete >> numBagagens;
-            for (size_t i = 0; i < numBilhete; i++) {
+            load_stream >> id >> nome >> numBilhetes >> numBagagens;
+            for (size_t i = 0; i < numBilhetes; i++) {
                 int numBil;
                 bool checkBagagem, checkin;
                 load_stream >> numBil >> checkBagagem >> checkin;
@@ -114,13 +112,8 @@ bool Voo::loadFile() {
                 bagagens.push_back(bagagem);
             }
             Passageiro passageiro(nome, id, bilhetes, bagagens);
-            passageiros.push_back(passageiro);
+            this->passageiros.push_back(passageiro);
         }
-        this->numVoo = numVoo;
-        this->dataPartida = Date(day, month, year);
-        this->duracaoVoo = duracaoVoo;
-        this->passageiros = passageiros;
-        this->transporteBagagem = transporteBagagem;
         load_stream.close();
         return true;
     }

@@ -98,6 +98,12 @@
 		<Unit filename="C:/Users/PC/projeto_aed/Bagagem.h">
 			<Option target="projeto_aed"/>
 		</Unit>
+		<Unit filename="C:/Users/PC/projeto_aed/BaseDados.cpp">
+			<Option target="projeto_aed"/>
+		</Unit>
+		<Unit filename="C:/Users/PC/projeto_aed/BaseDados.h">
+			<Option target="projeto_aed"/>
+		</Unit>
 		<Unit filename="C:/Users/PC/projeto_aed/Bilhete.cpp">
 			<Option target="projeto_aed"/>
 		</Unit>

@@ -5,7 +5,7 @@ Transporte::Transporte(int distancia, Time time, string tipo, Date date){
     transform(tipo.begin(), tipo.end(), tipo.begin(), ::tolower);
     remove(tipo.begin(), tipo.end(), ' ');
 
-    if(tipo != "metro" && tipo != "autocarro" && tipo != "comboio") throw "Transporte não é do tipo: carro, autocarro ou metro.";
+    if(tipo != "metro" && tipo != "autocarro" && tipo != "comboio") throw ("Transporte não é do tipo: carro, autocarro ou metro.");
 
     this->distancia = distancia;
     this->time = time;
@@ -26,6 +26,11 @@ Time Transporte::getTime() const{
     return time;
 }
 void Transporte::setTipo(string tipo) {
+    transform(tipo.begin(), tipo.end(), tipo.begin(), ::tolower);
+    remove(tipo.begin(), tipo.end(), ' ');
+
+    if(tipo != "metro" && tipo != "autocarro" && tipo != "comboio") throw ("Transporte não é do tipo: carro, autocarro ou metro.");
+
     this->tipo = tipo;
 }
 string Transporte::getTipo() const{

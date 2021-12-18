@@ -13,8 +13,8 @@ public:
 
     Aviao(string matricula, int capacidade);
     void adicionarPlanoVoo(list<Voo*> plano);
-    void adicionarVoo(Voo *v);
-    void adicionarServico(servico *servico);
+    void adicionarVoo(Voo v);
+    void adicionarServico(servico servico);
     void terminarServico();
 
     // Getters
@@ -25,13 +25,14 @@ public:
     list<servico*> getServicosFeitos() const;
 
     // Setters
-    void setPlanoVoo(list<Voo*> novoPlano);
-    void setServicosAgendados(queue<servico*> novosServicos);
+    void setPlanoVoo(list<Voo> novoPlano);
+    void setServicosAgendados(queue<servico> novosServicos);
+    void setServicosCompletos(list<servico> novosServicos);
 
     // Writer
     string write()const;
-    void saveFile();
-    void loadFile();
+    bool saveFile();
+    bool loadFile();
 
 private:
     string const matricula;

@@ -200,6 +200,30 @@ Bagagem.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\projeto_aed.dir\build.make CMakeFiles/projeto_aed.dir/Bagagem.cpp.s
 .PHONY : Bagagem.cpp.s
 
+BaseDados.obj: BaseDados.cpp.obj
+.PHONY : BaseDados.obj
+
+# target to build an object file
+BaseDados.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\projeto_aed.dir\build.make CMakeFiles/projeto_aed.dir/BaseDados.cpp.obj
+.PHONY : BaseDados.cpp.obj
+
+BaseDados.i: BaseDados.cpp.i
+.PHONY : BaseDados.i
+
+# target to preprocess a source file
+BaseDados.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\projeto_aed.dir\build.make CMakeFiles/projeto_aed.dir/BaseDados.cpp.i
+.PHONY : BaseDados.cpp.i
+
+BaseDados.s: BaseDados.cpp.s
+.PHONY : BaseDados.s
+
+# target to generate assembly for a file
+BaseDados.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\projeto_aed.dir\build.make CMakeFiles/projeto_aed.dir/BaseDados.cpp.s
+.PHONY : BaseDados.cpp.s
+
 Bilhete.obj: Bilhete.cpp.obj
 .PHONY : Bilhete.obj
 
@@ -458,6 +482,9 @@ help:
 	@echo ... Bagagem.obj
 	@echo ... Bagagem.i
 	@echo ... Bagagem.s
+	@echo ... BaseDados.obj
+	@echo ... BaseDados.i
+	@echo ... BaseDados.s
 	@echo ... Bilhete.obj
 	@echo ... Bilhete.i
 	@echo ... Bilhete.s
