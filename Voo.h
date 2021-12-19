@@ -22,10 +22,12 @@ public:
     Date getData() const ;
     float getDuracao() const;
     list<Passageiro> getPassageiros() const;
+    void setPassageiros(list<Passageiro> passageiros);
+    void setTB(TransporteBagagem t);
     void setNum(int num);
     void setDuracao(int dur);
     void setData(Date data);
-    void addPassageiro(Passageiro& passageiro); //adiciona passageiro ao voo, retorna true se possivel e false se voo já estiver cheio
+    void addPassageiro(Passageiro& passageiro);
     bool removePassageiro(Passageiro& passageiro); //remove passageiro do voo, retorna true se encontrou o passageiro senao false
     bool saveFile ();
     bool loadFile ();
