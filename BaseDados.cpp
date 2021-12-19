@@ -63,18 +63,12 @@ void BaseDados::transportDraw(const Aeroporto &aeroporto) {
     }
 }
 
-void BaseDados::drawServicos() const {
-    for (servico s : servicos) {
-        s.write();
-    }
-}
-
 void BaseDados::drawAvioes() const {
     int spaces = 30;
-    cout << setfill(' ') << setw(spaces) << "Matricula" << setfill(' ') << setw(spaces) << "Capacidade" << endl;
-    cout << string(2 * spaces, '=') << endl;
+    cout << setfill(' ') << setw(spaces) << "Matricula" << setfill(' ') << setw(spaces) << "Capacidade"  << setfill(' ') << setw(spaces) << "Voos"  << setfill(' ') << setw(spaces) << "S. Agendados"  << endl;
+    cout << string(4 * spaces, '=') << endl;
     for (Aviao a : avioes) {
-        cout << setfill(' ') << setw(spaces) << a.getMatricula() << setfill(' ') << setw(spaces) << a.getCapacidade() << endl;
+        cout << setfill(' ') << setw(spaces) << a.getMatricula() << setfill(' ') << setw(spaces) << a.getCapacidade() << setfill(' ') << setw(spaces) << a.getPlanoVoo().size()<< setfill(' ') << setw(spaces) << a.getServicosAgendados().size() << endl;
     }
 }
 
