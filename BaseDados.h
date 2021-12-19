@@ -29,8 +29,12 @@ public:
     // Drawers
     void drawServicos() const;
     void drawAvioes() const;
+//    void drawAvioesCap() const;
+//    void drawAvioesVoo() const;
+    void drawAvioesSerAg() const;
+    void drawAvioesSerTer() const;
     void drawVoos() const;
-    void transportDraw(const Aeroporto &aeroporto);
+    void transportDraw(Aeroporto &aeroporto);
     void airportDraw();
 
     // Getters
@@ -56,8 +60,8 @@ public:
     // Removers
     bool removeAirport(Aeroporto aeroporto);
     void removeAviao(string matricula);
-    bool removeVoo(Voo v);
-    bool removeTransporte(Aeroporto aeroporto, Transporte transporte);
+    bool removeVoo(int numVoo);
+    bool removeTransporte(Aeroporto &aeroporto, Transporte transporte);
 
     // Updaters
     bool updateAirport(Aeroporto aeroporto, string nome, string cidade, string pais);
@@ -65,7 +69,7 @@ public:
     bool updateAviaoVoo(string matricula, Voo voo); //sem querer apaguei isto srry - lucas no worries - rui
     bool updateAviaoServicoCriar(string matricula, servico ser);
     bool updateAviaoServicoTerminar(string matricula);
-    bool updateVoo(int numVoo_s, int numVoo_p, Date data, float duracao, list<Passageiro> passageiros, TransporteBagagem t);
+    bool updateVoo(int numVoo_s, int numVoo_p, Date data, float duracao, TransporteBagagem t);
 
 private:
     list<Aeroporto> aeroportos;
