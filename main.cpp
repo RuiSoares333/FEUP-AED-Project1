@@ -29,7 +29,7 @@ void showSubMenuCRUD(){
 
 bool respostaExit(){
     char resposta;
-    cout << "Deseja Realmente sair? S-Sim/ N-Nao" << endl;
+    cout << "Deseja Realmente Sair? S-Sim/ N-Nao" << endl;
     cin >> resposta;
     if(resposta == 'S' or resposta == 's' or resposta == '1' or resposta == 'Y' or resposta == 'y'){
         return false;
@@ -254,12 +254,13 @@ void subMenuCreate(BaseDados &bd){
 void avioesShow(BaseDados &bd){
     cout << "Como Pretende Visualizar os Avioes?\n1. Matricula\n2. Capacidade\n3. Numero de Voos Planeados\n4. Numero de Servicos Agendados\n5. Numero de Servicos Planeados" << endl;
     char input;
+    cin >> input;
     switch(input){
         case '2':
-//            bd.drawAvioesCap();
+            bd.drawAvioesCap();
             break;
         case '3':
-//            bd.drawAvioesVoo();
+            bd.drawAvioesVoo();
             break;
         case '4':
             bd.drawAvioesSerAg();
@@ -268,13 +269,21 @@ void avioesShow(BaseDados &bd){
             bd.drawAvioesSerTer();
             break;
         default:
-            bd.drawAvioes();
+            bd.drawAvioes(bd.getAvioes());
             break;
     }
 }
 
 void voosShow(BaseDados &bd) {
-//    cout << "
+    cout << "Pretende ordenar os voos por qual atributo?\n1. Numero do voo\n2. Data de Partida\n3. Duracao do voo\n4. Numero de passageiros" << endl;
+    char input;
+    switch(input) {
+        case '1':
+            bd.drawVoos(bd.getVoos());
+            break;
+        case '2':
+            bd.drawVoosData();
+    }
 }
 
 void subMenuRead(BaseDados &bd){
@@ -287,10 +296,10 @@ void subMenuRead(BaseDados &bd){
                 bd.airportDraw();
                 break;
             case '2':
-                bd.drawAvioes();
+                avioesShow(bd);
                 break;
             case '3':
-                bd.drawVoos();
+                voosShow(bd);
                 break;
             case '4': {
                 string nome, cidade, pais;
@@ -356,17 +365,17 @@ void updateAviao(BaseDados &bd, string matricula){
         }
     } while (input != 'N');
 
-//    do{
-//        cout << "Completar Servico? S-Sim/ N-Nao" << endl;
-//        cin >> input;
-//        if(input == 'S'){
-//            if(bd.updateAviaoServicoTerminar(matricula)){
-//                cout << "Servico Terminado!" << endl;
-//            } else {
-//                cout << "Erro! Nao foi possivel atualizar o parametro!" << endl;
-//            }
-//        }
-//    } while (input != 'N');
+    do{
+        cout << "Completar Servico? S-Sim/ N-Nao" << endl;
+        cin >> input;
+        if(input == 'S'){
+            if(bd.updateAviaoServicoTerminar(matricula)){
+                cout << "Servico Terminado!" << endl;
+            } else {
+                cout << "Erro! Nao foi possivel atualizar o parametro!" << endl;
+            }
+        }
+    } while (input != 'N');
 
 }
 
@@ -578,19 +587,31 @@ void removeVoo(BaseDados &bd) {
 void subMenuDelete(BaseDados &bd){
     char input;
     do{
-        showSubMenuCRUD();
+        showSubMenuCRUD1();
         cin >> input;
         string matricula;
         switch (input) {
             case '1':
                 removeAirport(bd);
-//                updateAeroporto(bd); mete aqui o que precisares, lucas //rui
                 break;
             case '2':
                 removeAviao(bd);
                 break;
             case '3':
                 removeVoo(bd);
+                break;
+            case '4':
+                string nome, cidade, pais;
+                cout << "Qual o nome do aeroporto de onde quer remover o transportes" << endl;
+                cin.ignore();
+                getline(cin, nome, '\n');
+                cout << "Por favor, insira a cidade onde se encontra o aeroporto" << endl;
+                getline(cin, cidade, '\n');
+                cout << "Por favor, insira o pais onde se encontra o aeroporto" << endl;
+                getline(cin, pais, '\n');
+                Aeroporto aero(nome, pais, cidade);
+
+                removeTransporte(bd, aero);
                 break;
         }
     } while(input != '0');
