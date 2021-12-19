@@ -32,14 +32,15 @@ bool respostaExit(){
 
 
 // -------------------------------------------- CREATE -----------------------------------------------------------------
-void createAeroporto(BaseDados based) {
+void createAeroporto(BaseDados &based) {
     string nome, cidade, pais;
     cout << "Por favor, insira o nome do aeroporto" << endl;
-    cin >> nome;
+    cin.ignore();
+    getline(cin, nome, '\n');
     cout << "Por favor, insira a cidade onde se encontra o aeroporto" << endl;
-    cin >> cidade;
-    cout << "Por favor, insira o país onde se encontra o aeroporto" << endl;
-    cin >> pais;
+    getline(cin, cidade, '\n');
+    cout << "Por favor, insira o pais onde se encontra o aeroporto" << endl;
+    getline(cin, pais, '\n');
     Aeroporto aero(nome, pais, cidade);
     based.addAirport(aero);
     based.airportSort();
@@ -85,7 +86,7 @@ servico createServico(){
     return s;
 }
 
-Voo createVoo(BaseDados bd) {
+Voo createVoo(BaseDados &bd) {
     int numVoo, day, month, year, c, n, m;
     float duracaoVoo;
     list<Passageiro> passageiros;
@@ -175,7 +176,7 @@ Voo createVoo(BaseDados bd) {
     return v1;
 }
 
-void createAviao(BaseDados bd){
+void createAviao(BaseDados &bd){
     string matricula; int capacidade; char input;
     cout << "Por favor, insira a Matricula do Aviao." << endl;
     cin >> matricula;
@@ -206,7 +207,7 @@ void createAviao(BaseDados bd){
 }
 
 
-void subMenuCreate(BaseDados bd){
+void subMenuCreate(BaseDados &bd){
     char input;
     do{
         showSubMenuCRUD();
@@ -229,7 +230,7 @@ void subMenuCreate(BaseDados bd){
 
 // ---------------------------------------------- READ -----------------------------------------------------------------
 
-void subMenuRead(BaseDados bd){
+void subMenuRead(BaseDados &bd){
     char input;
     do{
         showSubMenuCRUD();
@@ -250,7 +251,7 @@ void subMenuRead(BaseDados bd){
 
 
 // -------------------------------------------- UPDATE -----------------------------------------------------------------
-void updateAeroporto(BaseDados bd, Aeroporto aeroporto){
+void updateAeroporto(BaseDados &bd, Aeroporto aeroporto){
     string nome, cidade, pais;
     cout << "Vai ser pedido para inserir o novo nome, cidade e pais do aeroporto. Se não desejar alterar um destes deve inserir '-'" << endl;
     cout << "Qual o novo nome do aeroporto?" << endl;
@@ -266,7 +267,7 @@ void updateAeroporto(BaseDados bd, Aeroporto aeroporto){
     bd.airportSort();
 }
 
-void updateAviao(BaseDados bd, string matricula){
+void updateAviao(BaseDados &bd, string matricula){
 
     char input;
     do{
@@ -309,7 +310,7 @@ void updateAviao(BaseDados bd, string matricula){
 
 }
 
-void updateTransporte(BaseDados bd, Aeroporto aeroporto, Transporte transporte) {
+void updateTransporte(BaseDados &bd, Aeroporto aeroporto, Transporte transporte) {
     int distancia, hora, minuto, dia, mes, ano;
     string tipo;
     char sep;
@@ -336,7 +337,7 @@ void updateTransporte(BaseDados bd, Aeroporto aeroporto, Transporte transporte) 
     else cout << "Erro! Transporte não alterado." << endl;
 }
 
-void updateVoo(BaseDados bd) {
+void updateVoo(BaseDados &bd) {
     int numVoo_s, numVoo_p, dia, mes, ano;
     cout << "Insira o numero do voo que pretende alterar: ";
     cin >> numVoo_s;
@@ -407,7 +408,7 @@ void updateVoo(BaseDados bd) {
     }while(input != 'N');
 }
 
-void subMenuUpdate(BaseDados bd){
+void subMenuUpdate(BaseDados &bd){
     char input;
     do{
         showSubMenuCRUD();
@@ -453,7 +454,7 @@ void removeTransporte(BaseDados based, Aeroporto aero){
     else cout << "Erro! É possível que o transporte ou o aeroporto não existam." << endl;
 }
 
-void removeAirport(BaseDados bd){
+void removeAirport(BaseDados &bd){
     string nome, pais, cidade;
     cout << "Insira as caracteristicas do aeroporto que quer remover \n Se existir será removido" << endl;
     cout << "Qual o nome do aeroporto?" << endl;
@@ -470,14 +471,14 @@ void removeAirport(BaseDados bd){
     bd.airportSort();
 }
 
-void removeAviao(BaseDados bd){
+void removeAviao(BaseDados &bd){
     string matricula;
     cout << "Insira a Matricula do Aviao que quer Remover." << endl;
     cin >> matricula;
     bd.removeAviao(matricula);
 }
 
-void subMenuDelete(BaseDados bd){
+void subMenuDelete(BaseDados &bd){
     char input;
     do{
         showSubMenuCRUD();
