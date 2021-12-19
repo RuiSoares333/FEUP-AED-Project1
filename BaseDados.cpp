@@ -3,6 +3,7 @@
 //
 
 #include <fstream>
+#include <algorithm>
 #include "BaseDados.h"
 
 void BaseDados::loadAll() {
@@ -31,14 +32,21 @@ void BaseDados::sortVoos() {
     voos.sort();
 }
 
-void BaseDados::transportDraw(const Aeroporto &aeroporto) {
+void BaseDados::transportDraw(Aeroporto &aeroporto) {
+    list<Aeroporto>::iterator ite;
+    for (ite = aeroportos.begin(); ite != aeroportos.end(); ite++) {
+        if ((*ite) == aeroporto) {
+            aeroporto.setTransportes((*ite).getTransportes());
+        }
+    }
     BST<Transporte> transportes = aeroporto.getTransportes();
     BSTItrIn<Transporte> it(transportes);
     int spaces = 20;
     cout << setfill(' ') << setw(spaces) << "DD/MM/YYYY" << setfill(' ') << setw(spaces) << "HH:MM" << setfill(' ')
          << setw(spaces) << "Distancia(m)" << setfill(' ') << setw(spaces) << "Tipo" << endl;
     cout << string(4 * spaces, '=') << endl;
-    while (!it.isAtEnd()) {
+
+    while (!(it.isAtEnd())) {
         int distancia = it.retrieve().getDistancia();
         string tipo = it.retrieve().getTipo();
         int day = it.retrieve().getDate().getDay();
@@ -63,6 +71,7 @@ void BaseDados::transportDraw(const Aeroporto &aeroporto) {
     }
 }
 
+
 void BaseDados::drawAvioes() const {
     int spaces = 30;
     cout << setfill(' ') << setw(spaces) << "Matricula" << setfill(' ') << setw(spaces) << "Capacidade"  << setfill(' ') << setw(spaces) << "Voos"  << setfill(' ') << setw(spaces) << "S. Agendados"  << endl;
@@ -71,6 +80,26 @@ void BaseDados::drawAvioes() const {
         cout << setfill(' ') << setw(spaces) << a.getMatricula() << setfill(' ') << setw(spaces) << a.getCapacidade() << setfill(' ') << setw(spaces) << a.getPlanoVoo().size()<< setfill(' ') << setw(spaces) << a.getServicosAgendados().size() << endl;
     }
 }
+
+bool sortAvioesCap(Aviao *a1, Aviao *a2){
+    if(a1->getCapacidade() == a2->getCapacidade()){
+        return a1->getMatricula() < a2->getMatricula();
+    }
+    return a1->getCapacidade() < a2->getCapacidade();
+}
+
+//void BaseDados::drawAvioesCap() const{
+//    list<Aviao> auxlist = avioes;
+//    sort(auxlist.begin(),  auxlist.end(), sortAvioesCap);
+//}
+
+//void BaseDados::drawAvioesVoo() const{
+//    list<Aviao> auxlist = avioes;
+//    sort(auxlist.begin(),  auxlist.end(), sortAvioesCap);
+//}
+
+void BaseDados::drawAvioesSerAg() const{}
+void BaseDados::drawAvioesSerTer() const{}
 
 void BaseDados::drawVoos() const {
     int spaces = 30;
@@ -291,16 +320,17 @@ bool BaseDados::removeAirport(Aeroporto aeroporto) { //remove a primeria instanc
 }
 
 bool BaseDados::addTransporte(Aeroporto aeroporto, Transporte trans){
-    for (Aeroporto aero : aeroportos){
-        if(aero == aeroporto) {
-            bool check = aero.insertTransporte(trans);
+    list<Aeroporto>::iterator it;
+    for(it = aeroportos.begin(); it != aeroportos.end(); it++){
+        if((*it)==aeroporto){
+            bool check = (*it).insertTransporte(trans);
             return check;
         }
     }
     return false;
 }
 
-bool BaseDados::removeTransporte(Aeroporto aeroporto, Transporte transporte) {
+bool BaseDados::removeTransporte(Aeroporto &aeroporto, Transporte transporte) {
     bool check = aeroporto.removeTransporte(transporte);
     return check;
 }
@@ -310,10 +340,10 @@ void BaseDados::addVoo(Voo v) {
     sortVoos();
 }
 
-bool BaseDados::removeVoo(Voo v) {
+bool BaseDados::removeVoo(int numVoo) {
     list<Voo>::iterator it;
     for (it = voos.begin(); it != voos.end(); it ++) {
-        if (it->getNum() == v.getNum()) {
+        if (it->getNum() == numVoo) {
             voos.erase(it);
             return true;
         }
@@ -361,22 +391,23 @@ bool BaseDados::updateAviaoServicoCriar(string matricula, servico ser) {
     return false;
 }
 
-bool BaseDados::updateAviaoServicoTerminar(string matricula) {
-    for(auto av: avioes){
-        if(av.getMatricula() == matricula){
-            av.terminarServico();
-        }
-    }
-}
+//bool BaseDados::updateAviaoServicoTerminar(string matricula) {
+//    for(auto av: avioes){
+//        if(av.getMatricula() == matricula){
+//            av.terminarServico();
+//        }
+//    }
+//}
 
-bool BaseDados::updateVoo(int numVoo_s, int numVoo_p, Date data, float duracao, list<Passageiro> passageiros, TransporteBagagem t) {
-    for (Voo v : voos) {
-        if (v.getNum() == numVoo_s) {
-            v.setNum(numVoo_p);
-            v.setData(data);
-            v.setDuracao(duracao);
-            v.setPassageiros(passageiros);
-            v.setTB(t);
+bool BaseDados::updateVoo(int numVoo_s, int numVoo_p, Date data, float duracao, TransporteBagagem t) {
+    list<Voo>::iterator iter;
+    for (iter = voos.begin(); iter != voos.end(); iter++) {
+        if (iter->getNum() == numVoo_s) {
+            list<Passageiro> passageiros = iter->getPassageiros();
+            voos.erase(iter);
+            Voo v1(numVoo_p, data, duracao, passageiros, t);
+            voos.push_back(v1);
+            voos.sort();
             return true;
         }
     }
@@ -385,11 +416,14 @@ bool BaseDados::updateVoo(int numVoo_s, int numVoo_p, Date data, float duracao, 
 
 bool BaseDados::updateAirport(Aeroporto aeroporto, string nome, string cidade, string pais) {
     for(Aeroporto aero: aeroportos){
-        if(aero == aeroporto){
-            if(nome != "-") aero.setNome(nome);
-            if(cidade != "-") aero.setCidade(cidade);
-            if(pais != "-") aero.setPais(pais);
-            return true;
+        list<Aeroporto>::iterator it;
+        for(it = aeroportos.begin(); it!= aeroportos.end(); it++){
+            if(*it == aeroporto){
+                if(nome != "-") (*it).setNome(nome);
+                if(cidade != "-") (*it).setCidade(cidade);
+                if(pais != "-") (*it).setPais(pais);
+                return true;
+            }
         }
     }
     return false;
