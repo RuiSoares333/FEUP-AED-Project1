@@ -250,19 +250,19 @@ bool BaseDados::saveVoos() {
     return false;
 }
 
-const list<Aeroporto> &BaseDados::getAeroportos() const {
+list<Aeroporto> BaseDados::getAeroportos() const {
     return aeroportos;
 }
 
-const list<servico> &BaseDados::getServicos() const {
+list<servico> BaseDados::getServicos() const {
     return servicos;
 }
 
-const list<Aviao> &BaseDados::getAvioes() const {
+list<Aviao> BaseDados::getAvioes() const {
     return avioes;
 }
 
-const list<Voo> &BaseDados::getVoos() const {
+list<Voo> BaseDados::getVoos() const {
     return voos;
 }
 
@@ -278,4 +278,140 @@ void BaseDados::airportDraw() {
     for(Aeroporto aeroporto: aeroportos){
         cout << setfill(' ') << setw(spaces) << aeroporto.getNome() << setfill(' ') << setw(spaces) << aeroporto.getCidade() << setfill(' ') << setw(spaces) << aeroporto.getPais() << endl;
     }
+}
+
+void BaseDados::addAirport(Aeroporto aeroporto) {
+    aeroportos.push_back(aeroporto);
+    airportSort();
+}
+
+bool BaseDados::removeAirport(Aeroporto aeroporto) { //remove a primeria instancia desse aeroporto
+    list<Aeroporto>::iterator it;
+    for(it = aeroportos.begin(); it != aeroportos.end(); it++){
+        if((*it)==aeroporto){
+            aeroportos.erase(it);
+            return true;
+        }
+    }
+    return false;
+}
+
+bool BaseDados::addTransporte(Aeroporto aeroporto, Transporte trans){
+    for (Aeroporto aero : aeroportos){
+        if(aero == aeroporto) {
+            bool check = aero.insertTransporte(trans);
+            return check;
+        }
+    }
+    return false;
+}
+
+bool BaseDados::removeTransporte(Aeroporto aeroporto, Transporte transporte) {
+    bool check = aeroporto.removeTransporte(transporte);
+    return check;
+}
+
+void BaseDados::addVoo(Voo v) {
+    voos.push_back(v);
+    sortVoos();
+}
+
+bool BaseDados::removeVoo(Voo v) {
+    list<Voo>::iterator it;
+    for (it = voos.begin(); it != voos.end(); it ++) {
+        if (it->getNum() == v.getNum()) {
+            voos.erase(it);
+            return true;
+        }
+    }
+    return false;
+}
+
+void BaseDados::addAviao(Aviao a) {
+    avioes.push_back(a);
+    sortAvioes();
+}
+
+void BaseDados::removeAviao(string matricula) {
+    list<Aviao>::iterator it;
+    for (it = avioes.begin(); it != avioes.end(); it ++) {
+        if (it->getMatricula() == matricula) {
+            avioes.erase(it);
+            break;
+        }
+    }
+}
+
+void BaseDados::addServico(servico s) {
+    servicos.push_back(s);
+    sortServicos();
+}
+
+bool BaseDados::updateAviaoVoo(string matricula, Voo voo) {
+    for(auto av : avioes){
+        if(av.getMatricula() == matricula){
+            av.adicionarVoo(voo);
+            return true;
+        }
+    }
+    return false;
+}
+
+bool BaseDados::updateAviaoServicoCriar(string matricula, servico ser) {
+    for(auto av: avioes){
+        if(av.getMatricula() == matricula){
+            av.addServAgendado(ser);
+            return true;
+        }
+    }
+    return false;
+}
+
+bool BaseDados::updateAviaoServicoTerminar(string matricula) {
+    for(auto av: avioes){
+        if(av.getMatricula() == matricula){
+            av.terminarServico();
+        }
+    }
+}
+
+bool BaseDados::updateVoo(int numVoo_s, int numVoo_p, Date data, float duracao, list<Passageiro> passageiros, TransporteBagagem t) {
+    for (Voo v : voos) {
+        if (v.getNum() == numVoo_s) {
+            v.setNum(numVoo_p);
+            v.setData(data);
+            v.setDuracao(duracao);
+            v.setPassageiros(passageiros);
+            v.setTB(t);
+            return true;
+        }
+    }
+    return false;
+}
+
+bool BaseDados::updateAirport(Aeroporto aeroporto, string nome, string cidade, string pais) {
+    for(Aeroporto aero: aeroportos){
+        if(aero == aeroporto){
+            if(nome != "-") aero.setNome(nome);
+            if(cidade != "-") aero.setCidade(cidade);
+            if(pais != "-") aero.setPais(pais);
+            return true;
+        }
+    }
+    return false;
+}
+
+bool BaseDados::updateTransporte(Aeroporto aeroporto, Transporte transporte, int distancia, string tipo, Time time,
+                                 Date date) {
+    for(Aeroporto aero: aeroportos){
+        if(aero == aeroporto){
+            aero.removeTransporte(transporte);
+            transporte.setTipo(tipo);
+            transporte.setDate(date);
+            transporte.setDistancia(distancia);
+            transporte.setTime(time);
+            aero.insertTransporte(transporte);
+        }
+    }
+    return false;
 }
