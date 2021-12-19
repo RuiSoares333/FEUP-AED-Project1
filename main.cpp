@@ -12,6 +12,14 @@ void showSubMenu1(){
     cout << "0. Exit" << endl;
 }
 
+void showSubMenuCRUD1(){
+    cout << "1. Aeroporto" << endl;
+    cout << "2. Aviao" << endl;
+    cout << "3. Voo" << endl;
+    cout << "4. Transporte" << endl << endl;
+    cout << "0. Exit" << endl;
+}
+
 void showSubMenuCRUD(){
     cout << "1. Aeroporto" << endl;
     cout << "2. Aviao" << endl;
@@ -32,6 +40,8 @@ bool respostaExit(){
 
 
 // -------------------------------------------- CREATE -----------------------------------------------------------------
+Transporte createTransporte(BaseDados &based, Aeroporto &aero);
+
 void createAeroporto(BaseDados &based) {
     string nome, cidade, pais;
     cout << "Por favor, insira o nome do aeroporto" << endl;
@@ -42,29 +52,42 @@ void createAeroporto(BaseDados &based) {
     cout << "Por favor, insira o pais onde se encontra o aeroporto" << endl;
     getline(cin, pais, '\n');
     Aeroporto aero(nome, pais, cidade);
+
+    int count;
+    cout << "Quantos transportes deseja inserir no aeroporto?" << endl;
+    while(true){
+        cin >> count;
+        if(count < 1){
+            cout << "Necessario pelo menos 1 transporte. Por favor insira o numero de transportes outra vez:" << endl;
+        }
+        else break;
+    }
+    for(int i = 0; i < count; i++){
+        Transporte transporte = createTransporte(based, aero);
+        aero.insertTransporte(transporte);
+    }
+
     based.addAirport(aero);
     based.airportSort();
 }
 
-void createTransporte(BaseDados based, Aeroporto aero){
+Transporte createTransporte(BaseDados &based, Aeroporto &aero){
     string tipo;
     int distancia, hora, minuto, day, month, year;
-    char sep;
     cout << "Que tipo de transporte deseja adicionar? ('metro', 'autocarro', 'comboio')" << endl;
     cin >> tipo;
-    cout << "Insira a data do transporte. (dd/mm/yyyy)" << endl;
-    cin >> day >> sep >> month >> sep >> year;
-    cout << "Insira o tempo do transporte. (hh:mm)" << endl;
-    cin >> hora >> sep >> minuto;
-    cout << "Finalmente insira a distância do transporte ao aeroporto em metros." << endl;
+    cout << "Insira a data do transporte. (dd mm yyyy)" << endl;
+    cin >> day >> month >> year;
+    cout << "Insira o tempo do transporte. (hh mm)" << endl;
+    cin >> hora  >> minuto;
+    cout << "Finalmente insira a distancia do transporte ao aeroporto em metros." << endl;
     cin >> distancia;
 
     Date date(day, month, year);
     Time time(hora, minuto);
     Transporte transporte(distancia, time, tipo, date);
-    bool plswork = based.addTransporte(aero, transporte);
-    if(plswork) cout << "Transporte adicionado ao aeroporto com successo!" << endl;
-    else cout << "Transporte nao adicionado. É possível que o aeroporto não exista" << endl;
+
+    return transporte;
 }
 
 servico createServico(){
@@ -101,13 +124,13 @@ Voo createVoo(BaseDados &bd) {
     cout << "Insira a duracao do voo em horas: ";
     cin >> duracaoVoo;
     cout << endl;
-    cout << "Insira o número de carruagens do transporte: ";
+    cout << "Insira o numero de carruagens do transporte: ";
     cin >> c;
     cout << endl;
-    cout << "Insira o número de pilhas por carruagem: ";
+    cout << "Insira o numero de pilhas por carruagem: ";
     cin >> n;
     cout << endl;
-    cout << "Insira o número de malas por pilha: ";
+    cout << "Insira o numero de malas por pilha: ";
     cin >> m;
     cout << endl;
     TransporteBagagem transporteBagagem(c, n, m);
@@ -143,14 +166,13 @@ Voo createVoo(BaseDados &bd) {
                 cout << "Insira o comprimento, largura, altura (cm) e peso (kg) da bagagem: ";
                 cin >> comprimento >> largura >> altura >> peso;
                 bagagem.push_back(Bagagem(comprimento, largura, altura, peso));
-            }
-            else checkbag = false;
+            } else checkbag = false;
 
             bilhetes.push_back(Bilhete(numBil, checkbag, checkin));
             char inp;
-            do {
-                cout << "Pretende adicionar mais bilhetes a este passageiro? S-Sim/ N-Nao" << endl;
-                cin >> inp;
+            cout << "Pretende adicionar mais bilhetes a este passageiro? S-Sim/ N-Nao" << endl;
+            cin >> inp;
+            while (inp != 'N') {
                 cout << "Insira o numero do bilhete: ";
                 cin >> numBil;
                 cout << endl;
@@ -165,15 +187,14 @@ Voo createVoo(BaseDados &bd) {
                     cout << "Insira o comprimento, largura, altura (cm) e peso (kg) da bagagem: ";
                     cin >> comprimento >> largura >> altura >> peso;
                     bagagem.push_back(Bagagem(comprimento, largura, altura, peso));
-                }
-                else checkbag = false;
-            } while (inp != 'N');
+                } else checkbag = false;
+            }
             passageiros.push_back(Passageiro(nome, id, bilhetes, bagagem));
         }
     } while (input != 'N');
-    Voo v1(numVoo, dataPartida, duracaoVoo, passageiros, transporteBagagem);
-    bd.addVoo(v1);
-    return v1;
+        Voo v1(numVoo, dataPartida, duracaoVoo, passageiros, transporteBagagem);
+        bd.addVoo(v1);
+        return v1;
 }
 
 void createAviao(BaseDados &bd){
@@ -189,7 +210,7 @@ void createAviao(BaseDados &bd){
         cin >> input;
         if(input == 'S'){
             servico s = createServico();
-            a.addServAgendado(createServico());
+            a.addServAgendado(s);
             bd.addServico(s);
         }
     } while (input != 'N');
@@ -230,10 +251,36 @@ void subMenuCreate(BaseDados &bd){
 
 // ---------------------------------------------- READ -----------------------------------------------------------------
 
+void avioesShow(BaseDados &bd){
+    cout << "Como Pretende Visualizar os Avioes?\n1. Matricula\n2. Capacidade\n3. Numero de Voos Planeados\n4. Numero de Servicos Agendados\n5. Numero de Servicos Planeados" << endl;
+    char input;
+    switch(input){
+        case '2':
+//            bd.drawAvioesCap();
+            break;
+        case '3':
+//            bd.drawAvioesVoo();
+            break;
+        case '4':
+            bd.drawAvioesSerAg();
+            break;
+        case '5':
+            bd.drawAvioesSerTer();
+            break;
+        default:
+            bd.drawAvioes();
+            break;
+    }
+}
+
+void voosShow(BaseDados &bd) {
+//    cout << "
+}
+
 void subMenuRead(BaseDados &bd){
     char input;
     do{
-        showSubMenuCRUD();
+        showSubMenuCRUD1();
         cin >> input;
         switch (input) {
             case '1':
@@ -245,6 +292,19 @@ void subMenuRead(BaseDados &bd){
             case '3':
                 bd.drawVoos();
                 break;
+            case '4': {
+                string nome, cidade, pais;
+                cout << "Qual o nome do aeroporto de onde quer ver os transportes?" << endl;
+                cin.ignore();
+                getline(cin, nome, '\n');
+                cout << "Por favor, insira a cidade onde se encontra o aeroporto" << endl;
+                getline(cin, cidade, '\n');
+                cout << "Por favor, insira o pais onde se encontra o aeroporto" << endl;
+                getline(cin, pais, '\n');
+                Aeroporto aero(nome, pais, cidade);
+
+                bd.transportDraw(aero);
+            }
         }
     } while(input != '0');
 }
@@ -253,17 +313,17 @@ void subMenuRead(BaseDados &bd){
 // -------------------------------------------- UPDATE -----------------------------------------------------------------
 void updateAeroporto(BaseDados &bd, Aeroporto aeroporto){
     string nome, cidade, pais;
-    cout << "Vai ser pedido para inserir o novo nome, cidade e pais do aeroporto. Se não desejar alterar um destes deve inserir '-'" << endl;
+    cout << "Vai ser pedido para inserir o novo nome, cidade e pais do aeroporto. Se nao desejar alterar um destes deve inserir '-'" << endl;
     cout << "Qual o novo nome do aeroporto?" << endl;
     cin >> nome;
     cout << "Qual a nova cidade do aeroporto?" << endl;
     cin >> cidade;
-    cout << "Qual o novo país do aeroporto?" << endl;
+    cout << "Qual o novo pais do aeroporto?" << endl;
     cin >> pais;
 
     bool check = bd.updateAirport(aeroporto, nome, cidade, pais);
     if(check) cout << "Aeroporto atualizado com successo!" << endl;
-    else cout << "Erro! Não foi possível atualizar o aeroporto" << endl;
+    else cout << "Erro! Nao foi possivel atualizar o aeroporto" << endl;
     bd.airportSort();
 }
 
@@ -278,7 +338,7 @@ void updateAviao(BaseDados &bd, string matricula){
             if(bd.updateAviaoVoo(matricula, v)){
                 cout << "Voo Adicionado!" << endl;
             } else{
-                cout << "Erro! Não foi possível atualizar o parametro!" << endl;
+                cout << "Erro! Nao foi possivel atualizar o parametro!" << endl;
             }
         }
     } while (input != 'N');
@@ -291,22 +351,22 @@ void updateAviao(BaseDados &bd, string matricula){
             if(bd.updateAviaoServicoCriar(matricula, s)){
                 cout << "Servico Adicionado!" << endl;
             } else {
-                cout << "Erro! Não foi possível atualizar o parametro!" << endl;
+                cout << "Erro! Nao foi possivel atualizar o parametro!" << endl;
             }
         }
     } while (input != 'N');
 
-    do{
-        cout << "Completar Servico? S-Sim/ N-Nao" << endl;
-        cin >> input;
-        if(input == 'S'){
-            if(bd.updateAviaoServicoTerminar(matricula)){
-                cout << "Servico Terminado!" << endl;
-            } else {
-                cout << "Erro! Não foi possível atualizar o parametro!" << endl;
-            }
-        }
-    } while (input != 'N');
+//    do{
+//        cout << "Completar Servico? S-Sim/ N-Nao" << endl;
+//        cin >> input;
+//        if(input == 'S'){
+//            if(bd.updateAviaoServicoTerminar(matricula)){
+//                cout << "Servico Terminado!" << endl;
+//            } else {
+//                cout << "Erro! Nao foi possivel atualizar o parametro!" << endl;
+//            }
+//        }
+//    } while (input != 'N');
 
 }
 
@@ -316,13 +376,13 @@ void updateTransporte(BaseDados &bd, Aeroporto aeroporto, Transporte transporte)
     char sep;
     cout << "Vai ser pedido para inserir a nova distancia, o novo tipo, a nova data e o novo tempo do transporte."
          << endl;
-    cout << "Insira o novo tipo do transporte. Se não o pretender alterar insira '-'." << endl;
+    cout << "Insira o novo tipo do transporte. Se nao o pretender alterar insira '-'." << endl;
     cin >> tipo;
-    cout << "Insira a nova distância do transporte ao aeroporto. Se não o pretender alterar insira '0'." << endl;
+    cout << "Insira a nova distancia do transporte ao aeroporto. Se nao o pretender alterar insira '0'." << endl;
     cin >> distancia;
-    cout << "Insira a nova data do transporte no formato dd/mm/yyyy. Se não pretender alterar insira '00/00/0000'" << endl;
+    cout << "Insira a nova data do transporte no formato dd/mm/yyyy. Se nao pretender alterar insira '00/00/0000'" << endl;
     cin >> dia >> sep >> mes >> ano;
-    cout << "Insira a nova hora do transporte no formato hh:mm. Se não pretender alterar insira 24:00" << endl;
+    cout << "Insira a nova hora do transporte no formato hh:mm. Se nao pretender alterar insira 24:00" << endl;
     cin >> hora >> sep >> minuto;
 
     Time time(hora, minuto);
@@ -334,11 +394,12 @@ void updateTransporte(BaseDados &bd, Aeroporto aeroporto, Transporte transporte)
 
     bool check = bd.updateTransporte(aeroporto, transporte, distancia, tipo, time, date);
     if(check) cout << "Transporte alterado com successo!" << endl;
-    else cout << "Erro! Transporte não alterado." << endl;
+    else cout << "Erro! Transporte nao alterado." << endl;
 }
 
 void updateVoo(BaseDados &bd) {
-    int numVoo_s, numVoo_p, dia, mes, ano;
+    int numVoo_s, numVoo_p, dia, mes, ano, c, n, m;
+    float duracao;
     cout << "Insira o numero do voo que pretende alterar: ";
     cin >> numVoo_s;
     cout << endl;
@@ -348,9 +409,28 @@ void updateVoo(BaseDados &bd) {
     cout << "Qual o novo dia, mes e ano? ";
     cin >> dia >> mes >> ano;
     cout << endl;
+    Date d(dia, mes, ano);
+    cout << "Qual a nova duracao do voo? ";
+    cin >> duracao;
+    cout << endl;
+    cout << "Insira o novo numero de carruagens do transporte: ";
+    cin >> c;
+    cout << endl;
+    cout << "Insira o novo numero de pilhas por carruagem: ";
+    cin >> n;
+    cout << endl;
+    cout << "Insira o novo numero de malas por pilha: ";
+    cin >> m;
+    cout << endl;
+    TransporteBagagem t(c, n, m);
+    bd.updateVoo(numVoo_s, numVoo_p, d, duracao, t);
+}
+
+void updatePassageiros(BaseDados &bd) {
     char input;
+    list<Passageiro> passageiros;
     do {
-        cout << "Pretende adicionar passageiros ao voo? S-Sim/ N-Nao" << endl;
+        cout << "Pretende substituir os passageiros do voo? S-Sim/ N-Nao" << endl;
         cin >> input;
         if (input == 'S') {
             string nome;
@@ -385,9 +465,9 @@ void updateVoo(BaseDados &bd) {
 
             bilhetes.push_back(Bilhete(numBil, checkbag, checkin));
             char inp;
-            do {
-                cout << "Pretende adicionar mais bilhetes a este passageiro? S-Sim/ N-Nao" << endl;
-                cin >> inp;
+            cout << "Pretende adicionar mais bilhetes a este passageiro? S-Sim/ N-Nao" << endl;
+            cin >> inp;
+            while (inp != 'N') {
                 cout << "Insira o numero do bilhete: ";
                 cin >> numBil;
                 cout << endl;
@@ -403,9 +483,10 @@ void updateVoo(BaseDados &bd) {
                     cin >> comprimento >> largura >> altura >> peso;
                     bagagem.push_back(Bagagem(comprimento, largura, altura, peso));
                 } else checkbag = false;
-            } while (inp != 'N');
+            }
+            passageiros.push_back(Passageiro(nome, id, bilhetes, bagagem));
         }
-    }while(input != 'N');
+    } while (input != 'N');
 }
 
 void subMenuUpdate(BaseDados &bd){
@@ -415,9 +496,19 @@ void subMenuUpdate(BaseDados &bd){
         string matricula;
         cin >> input;
         switch (input) {
-            case '1':
-//                updateAeroporto(bd); mete aqui o que precisares, lucas //rui
+            case '1':{
+                string nome, cidade, pais;
+                cout << "Por favor, insira o nome do aeroporto" << endl;
+                cin.ignore();
+                getline(cin, nome, '\n');
+                cout << "Por favor, insira a cidade onde se encontra o aeroporto" << endl;
+                getline(cin, cidade, '\n');
+                cout << "Por favor, insira o pais onde se encontra o aeroporto" << endl;
+                getline(cin, pais, '\n');
+                Aeroporto aero(nome, pais, cidade);
+                updateAeroporto(bd, aero);
                 break;
+            }
             case '2':
                 cout << "Insira a Matricula do Aviao que quer alterar." << endl;
                 cin >> matricula;
@@ -432,18 +523,17 @@ void subMenuUpdate(BaseDados &bd){
 
 
 // -------------------------------------------- DELETE -----------------------------------------------------------------
-void removeTransporte(BaseDados based, Aeroporto aero){
+void removeTransporte(BaseDados &based, Aeroporto aero){
     string tipo;
     int distancia, hora, minuto, day, month, year;
-    char sep;
-    cout << "Insira as caracteristicas do transporte que quer remover \n Se existir será removido." << endl;
+    cout << "Insira as caracteristicas do transporte que quer remover \n Se existir sera removido." << endl;
     cout << "Que tipo de transporte deseja remover? ('metro', 'autocarro', 'comboio')" << endl;
     cin >> tipo;
-    cout << "Insira a data do transporte. (dd/mm/yyyy)" << endl;
-    cin >> day >> sep >> month >> sep >> year;
-    cout << "Insira o tempo do transporte. (hh:mm)" << endl;
-    cin >> hora >> sep >> minuto;
-    cout << "Finalmente insira a distância do transporte ao aeroporto em metros." << endl;
+    cout << "Insira a data do transporte. (dd mm yyyy)" << endl;
+    cin >> day >> month >> year;
+    cout << "Insira o tempo do transporte. (hh mm)" << endl;
+    cin >> hora >> minuto;
+    cout << "Finalmente insira a distancia do transporte ao aeroporto em metros." << endl;
     cin >> distancia;
 
     Date date(day, month, year);
@@ -451,23 +541,23 @@ void removeTransporte(BaseDados based, Aeroporto aero){
     Transporte transporte(distancia, time, tipo, date);
     bool check = based.removeTransporte(aero, transporte);
     if(check) cout << "Transporte removido do aeroporto com successo!" << endl;
-    else cout << "Erro! É possível que o transporte ou o aeroporto não existam." << endl;
+    else cout << "Erro! E possivel que o transporte ou o aeroporto nao existam." << endl;
 }
 
 void removeAirport(BaseDados &bd){
     string nome, pais, cidade;
-    cout << "Insira as caracteristicas do aeroporto que quer remover \n Se existir será removido" << endl;
+    cout << "Insira as caracteristicas do aeroporto que quer remover \n Se existir sera removido" << endl;
     cout << "Qual o nome do aeroporto?" << endl;
     cin >> nome;
     cout << "Qual a cidade onde o aeroporto se encontra?" << endl;
     cin >> cidade;
-    cout << "Qual o país onde o aeroporto se encontra?" << endl;
+    cout << "Qual o pais onde o aeroporto se encontra?" << endl;
     cin >> pais;
 
     Aeroporto aeroporto(nome, pais, cidade);
     bool check = bd.removeAirport(aeroporto);
     if(check) cout << "Aeroporto removido com successo!" << endl;
-    else cout << "Erro! É possível que o aeroporto não exista" << endl;
+    else cout << "Erro! E possivel que o aeroporto nao exista" << endl;
     bd.airportSort();
 }
 
@@ -478,6 +568,13 @@ void removeAviao(BaseDados &bd){
     bd.removeAviao(matricula);
 }
 
+void removeVoo(BaseDados &bd) {
+    int numVoo;
+    cout << "Insira o numero do voo que pretende remover" << endl;
+    cin >> numVoo;
+    bd.removeVoo(numVoo);
+}
+
 void subMenuDelete(BaseDados &bd){
     char input;
     do{
@@ -486,13 +583,14 @@ void subMenuDelete(BaseDados &bd){
         string matricula;
         switch (input) {
             case '1':
+                removeAirport(bd);
 //                updateAeroporto(bd); mete aqui o que precisares, lucas //rui
                 break;
             case '2':
                 removeAviao(bd);
                 break;
             case '3':
-                // johnny, faz o que tiveres que fazer
+                removeVoo(bd);
                 break;
         }
     } while(input != '0');
