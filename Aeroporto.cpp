@@ -68,14 +68,14 @@ void Aeroporto::setTransportes(const BST<Transporte> &transportes) {
 /// \parâmetro Objeto da classe Transporte
 /// \adiciona um transporte ao aeroporto
 /// \adiciona uma objeto da classe Transporte à BST do aeroporto
-bool Aeroporto::insertTransporte(Transporte transporte) {
+bool Aeroporto::insertTransporte(Transporte &transporte) {
     return transportes.insert(transporte);
 }
 
 /// parâmetro Objeto da classe Transporte
 /// \remove o transporte do aeroporto
 /// \remove da BST do aeroporto o Objeto da classe Transporte que vem como parâmetro
-bool Aeroporto::removeTransporte(Transporte transporte) {
+bool Aeroporto::removeTransporte(Transporte &transporte) {
     return transportes.remove(transporte);
 }
 
@@ -147,4 +147,13 @@ bool const Aeroporto::operator<(const Aeroporto &a2) const {
         return cidade < a2.getCidade();
     }
     return pais < a2.getPais();
+}
+bool const Aeroporto::operator==(const Aeroporto &a2) const{
+    if(nome == a2.getNome()){
+        if(cidade == a2.getCidade()){
+            return pais == a2.getPais();
+        }
+        return false;
+    }
+    return false;
 }
