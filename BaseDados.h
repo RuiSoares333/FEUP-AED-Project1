@@ -28,12 +28,13 @@ public:
 
     // Drawers
     void drawServicos() const;
-    void drawAvioes() const;
-//    void drawAvioesCap() const;
-//    void drawAvioesVoo() const;
+    void drawAvioes(list<Aviao> lista) const;
+    void drawAvioesCap() const;
+    void drawAvioesVoo() const;
     void drawAvioesSerAg() const;
     void drawAvioesSerTer() const;
-    void drawVoos() const;
+    void drawVoos(list<Voo> auxVoos) const;
+    void drawVoosData() const;
     void transportDraw(Aeroporto &aeroporto);
     void airportDraw();
 
