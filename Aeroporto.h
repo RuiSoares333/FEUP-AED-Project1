@@ -21,11 +21,12 @@ public:
     void setCidade(string cidade);
     const BST<Transporte> &getTransportes() const;
     void setTransportes(const BST<Transporte> &transportes);
-    bool insertTransporte(Transporte transporte);
-    bool removeTransporte(Transporte transporte);
+    bool insertTransporte(Transporte &transporte);
+    bool removeTransporte(Transporte &transporte);
     bool saveFile();
     bool loadFile();
     bool const operator<(const Aeroporto &a2) const;
+    bool const operator==(const Aeroporto &a2) const;
 
 private:
     string nome;
