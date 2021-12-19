@@ -78,6 +78,13 @@ bool Voo::removePassageiro(Passageiro& passageiro) {
     }
     return false;
 }
+void Voo::setPassageiros(list<Passageiro> passageiros) {
+    this->passageiros = passageiros;
+}
+
+void Voo::setTB(TransporteBagagem t) {
+    this->transporteBagagem = t;
+}
 /// Guarda o voo no devido ficheiro e adiciona-o ao ficheiro de todos os voos (voo_all_save.txt)
 /// \return true se foi possível abrir o ficheiro, caso contrário false
 bool Voo::saveFile() {
