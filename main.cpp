@@ -324,11 +324,12 @@ void updateAeroporto(BaseDados &bd, Aeroporto aeroporto){
     string nome, cidade, pais;
     cout << "Vai ser pedido para inserir o novo nome, cidade e pais do aeroporto. Se nao desejar alterar um destes deve inserir '-'" << endl;
     cout << "Qual o novo nome do aeroporto?" << endl;
-    cin >> nome;
+    cin.ignore();
+    getline(cin, nome, '\n');
     cout << "Qual a nova cidade do aeroporto?" << endl;
-    cin >> cidade;
+    getline(cin, cidade, '\n');
     cout << "Qual o novo pais do aeroporto?" << endl;
-    cin >> pais;
+    getline(cin, pais, '\n');
 
     bool check = bd.updateAirport(aeroporto, nome, cidade, pais);
     if(check) cout << "Aeroporto atualizado com successo!" << endl;
@@ -389,10 +390,10 @@ void updateTransporte(BaseDados &bd, Aeroporto aeroporto, Transporte transporte)
     cin >> tipo;
     cout << "Insira a nova distancia do transporte ao aeroporto. Se nao o pretender alterar insira '0'." << endl;
     cin >> distancia;
-    cout << "Insira a nova data do transporte no formato dd/mm/yyyy. Se nao pretender alterar insira '00/00/0000'" << endl;
-    cin >> dia >> sep >> mes >> ano;
-    cout << "Insira a nova hora do transporte no formato hh:mm. Se nao pretender alterar insira 24:00" << endl;
-    cin >> hora >> sep >> minuto;
+    cout << "Insira a nova data do transporte no formato DD MM YYYY. Se nao pretender alterar insira '00 00 0000'" << endl;
+    cin >> dia  >> mes >> ano;
+    cout << "Insira a nova hora do transporte no formato HH MM. Se nao pretender alterar insira 24 00" << endl;
+    cin >> hora >> minuto;
 
     Time time(hora, minuto);
     if (hora == 24) time = transporte.getTime();
@@ -501,7 +502,7 @@ void updatePassageiros(BaseDados &bd) {
 void subMenuUpdate(BaseDados &bd){
     char input;
     do{
-        showSubMenuCRUD();
+        showSubMenuCRUD1();
         string matricula;
         cin >> input;
         switch (input) {
@@ -526,6 +527,35 @@ void subMenuUpdate(BaseDados &bd){
             case '3':
                 updateVoo(bd);
                 break;
+            case '4':{
+                string nome, cidade, pais;
+                cout << "Qual o nome do aeroporto de onde quer atualizar o transportes" << endl;
+                cin.ignore();
+                getline(cin, nome, '\n');
+                cout << "Por favor, insira a cidade onde se encontra o aeroporto" << endl;
+                getline(cin, cidade, '\n');
+                cout << "Por favor, insira o pais onde se encontra o aeroporto" << endl;
+                getline(cin, pais, '\n');
+                Aeroporto aero(nome, pais, cidade);
+
+                int distancia, hora, minuto, dia, mes, ano;
+                string tipo;
+                cout << "Insira as caracteristicas do transporte que deseja alterar." << endl;
+                cout << "Insira o tipo do transporte." << endl;
+                cin >> tipo;
+                cout << "Insira a distancia." << endl;
+                cin >> distancia;
+                cout << "Insira a data no formato DD MM YYYY." << endl;
+                cin >> dia >> mes >> ano;
+                cout << "Insira a hora no formato HH MM" << endl;
+                cin >> hora >> minuto;
+                Time time(hora, minuto);
+                Date date(dia, mes, ano);
+                Transporte transporte(distancia, time, tipo, date);
+
+                updateTransporte(bd, aero, transporte);
+                break;
+            }
         }
     } while(input != '0');
 }

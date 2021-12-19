@@ -464,15 +464,13 @@ bool BaseDados::updateVoo(int numVoo_s, int numVoo_p, Date data, float duracao, 
 }
 
 bool BaseDados::updateAirport(Aeroporto aeroporto, string nome, string cidade, string pais) {
-    for(Aeroporto aero: aeroportos){
-        list<Aeroporto>::iterator it;
-        for(it = aeroportos.begin(); it!= aeroportos.end(); it++){
-            if(*it == aeroporto){
-                if(nome != "-") (*it).setNome(nome);
-                if(cidade != "-") (*it).setCidade(cidade);
-                if(pais != "-") (*it).setPais(pais);
-                return true;
-            }
+    list<Aeroporto>::iterator it;
+    for(it = aeroportos.begin(); it!= aeroportos.end(); it++){
+        if(*it == aeroporto){
+            if(nome != "-") (*it).setNome(nome);
+            if(cidade != "-") (*it).setCidade(cidade);
+            if(pais != "-") (*it).setPais(pais);
+            return true;
         }
     }
     return false;
@@ -480,6 +478,7 @@ bool BaseDados::updateAirport(Aeroporto aeroporto, string nome, string cidade, s
 
 bool BaseDados::updateTransporte(Aeroporto aeroporto, Transporte transporte, int distancia, string tipo, Time time,
                                  Date date) {
+    /*
     for(Aeroporto aero: aeroportos){
         if(aero == aeroporto){
             aero.removeTransporte(transporte);
@@ -490,5 +489,19 @@ bool BaseDados::updateTransporte(Aeroporto aeroporto, Transporte transporte, int
             aero.insertTransporte(transporte);
         }
     }
+     */
+    list<Aeroporto>::iterator it;
+    for(it = aeroportos.begin(); it!= aeroportos.end(); it++){
+        if(*it == aeroporto){
+            (*it).removeTransporte(transporte);
+            transporte.setTipo(tipo);
+            transporte.setDate(date);
+            transporte.setTime(time);
+            transporte.setDistancia(distancia);
+            (*it).insertTransporte(transporte);
+            return true;
+        }
+    }
+
     return false;
 }
