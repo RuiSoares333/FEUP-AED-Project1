@@ -65,6 +65,12 @@ void Voo::setDuracao(int dur){
 void Voo::addPassageiro(Passageiro &passageiro) {
     passageiros.push_back(passageiro);
 }
+
+void Voo::addListaPassageiro(list<Passageiro> passageiros) {
+    for (Passageiro pass : passageiros) {
+        addPassageiro(pass);
+    }
+}
 /// Remove um passageiro do voo
 /// \param passageiro a ser removido
 /// \return true se o passageiro estivesse presente no voo, false no caso contrário
