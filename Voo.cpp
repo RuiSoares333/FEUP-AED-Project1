@@ -15,12 +15,14 @@ Voo::Voo(){
 /// \param duracaoVoo duração do voo em horas
 /// \param passageiros lista dos passageiros que estão no voo
 /// \param transporteBagagem o transporte da bagagem (tapete e carrinho)
-Voo::Voo(int numVoo, Date dataPartida, float duracaoVoo, list<Passageiro> passageiros, TransporteBagagem transporteBagagem){
+Voo::Voo(int numVoo, Date dataPartida, float duracaoVoo, list<Passageiro> passageiros, TransporteBagagem transporteBagagem, Aeroporto origem, Aeroporto destino){
     this->numVoo = numVoo;
     this->dataPartida = dataPartida;
     this->duracaoVoo = duracaoVoo;
     this->passageiros = passageiros;
     this->transporteBagagem = transporteBagagem;
+    this->origem = origem;
+    this->destino = destino;
 }
 bool const Voo::operator < (Voo v2) const {
     return numVoo < v2.getNum();
@@ -84,10 +86,15 @@ bool Voo::removePassageiro(Passageiro& passageiro) {
     }
     return false;
 }
+
+/// Setter
+/// Muda o \param passageiros para uma nova lista de passageiros
 void Voo::setPassageiros(list<Passageiro> passageiros) {
     this->passageiros = passageiros;
 }
 
+/// Setter
+/// Muda o \param transporteBagagem para um novo \param t(TransporteBagagem)
 void Voo::setTB(TransporteBagagem t) {
     this->transporteBagagem = t;
 }
@@ -105,6 +112,8 @@ bool Voo::saveFile() {
     if(save_stream.is_open()){
 
         save_stream << numVoo << " " << dataPartida.getDay() << " " << dataPartida.getMonth() << " " << dataPartida.getYear() << " " << duracaoVoo << " " << passageiros.size() << endl;
+        save_stream << origem.getNome() << " " << origem.getCidade() << " " << origem.getPais() << endl;
+        save_stream << destino.getNome() << " " << destino.getCidade() << " " << destino.getPais() << endl;
         save_stream << transporteBagagem.getC() << " " << transporteBagagem.getN() << " " << transporteBagagem.getM() << endl;
 
         for (Passageiro pass : passageiros) {
@@ -125,12 +134,16 @@ bool Voo::saveFile() {
 /// \return true se o ficheiro pretendido existir, caso contrário false
 bool Voo::loadFile() {
     int c, n , m, id, numBilhetes, numBagagens, day, month, year, numPass;
-    string nome;
+    string nome, nomeO, cidadeO, paisO, nomeD, cidadeD, paisD;
     ifstream load_stream;
     load_stream.open("voo_"+ to_string(this->numVoo) + "_save.txt");
     if(load_stream.is_open()){
         load_stream >> this->numVoo >> day >> month >> year >> this->duracaoVoo >> numPass;
         this->dataPartida = Date(day, month, year);
+        load_stream >> nomeO >> cidadeO >> paisO;
+        this->origem = Aeroporto(nomeO, paisO, cidadeO);
+        load_stream >> nomeD >> cidadeD >> paisD;
+        this->destino = Aeroporto(nomeD, paisD, cidadeD);
         load_stream >> c >> n >> m;
         this->transporteBagagem = TransporteBagagem(c, n, m);
         for (size_t i = 0; i < numPass; i++){
@@ -157,4 +170,28 @@ bool Voo::loadFile() {
         return true;
     }
     else return false;
+}
+
+/// Getter
+/// \return \param origem
+Aeroporto Voo::getOrigem() const {
+    return origem;
+}
+
+/// Setter
+/// Muda o \param origem
+void Voo::setOrigem(const Aeroporto &origem) {
+    this->origem = origem;
+}
+
+/// Getter
+/// \return \param desino
+Aeroporto Voo::getDestino() const {
+    return destino;
+}
+
+/// Setter
+/// Muda o \param destino
+void Voo::setDestino(const Aeroporto &destino) {
+    this->destino = destino;
 }
