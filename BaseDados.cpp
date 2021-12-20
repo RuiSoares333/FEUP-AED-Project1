@@ -600,7 +600,7 @@ void BaseDados::airportSort() {
 /// Imprime todos os Aeroportos
 void BaseDados::airportDraw() {
     int input;
-    cout << "Como quer ordenar os aeroportos? \n1. Localização \n2. Nome" << endl;
+    cout << "Como quer ordenar os aeroportos? \n1. Localizacao \n2. Nome" << endl;
     while (true){
         cin >> input;
         if(input == 1 || input == 2) break;
