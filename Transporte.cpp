@@ -83,6 +83,8 @@ const Date &Transporte::getDate() const {
     return date;
 }
 
+/// Setter
+/// Muda o \param data para uma nova data
 void Transporte::setDate(const Date &date) {
     Transporte::date = date;
 }
