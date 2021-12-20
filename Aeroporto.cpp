@@ -127,12 +127,12 @@ bool Aeroporto::loadFile() {
     if(load_stream.is_open()){
         load_stream >> nome >> cidade >> pais;
 
-        while(!load_stream.eof()){
+        while(!(load_stream.eof())){
             load_stream >> distancia >> tipo >> day >> month >> year >> hora >> minuto;
-
             Time time(hora, minuto);
             Date date(day, month, year);
-            transportes.insert(Transporte(distancia, time, tipo, date));
+            Transporte transporte(distancia, time, tipo, date);
+            transportes.insert(transporte);
         }
 
         load_stream.close();
@@ -141,6 +141,8 @@ bool Aeroporto::loadFile() {
     else return false;
 }
 
+/// Operator
+/// Operador "<" de acordo com pais, cidade e nome, alfabeticamente
 bool const Aeroporto::operator<(const Aeroporto &a2) const {
     if(pais == a2.getPais()){
         if(cidade == a2.getCidade()) return nome < a2.getNome();
@@ -148,6 +150,9 @@ bool const Aeroporto::operator<(const Aeroporto &a2) const {
     }
     return pais < a2.getPais();
 }
+
+/// Operator
+/// Operador "==" de acordo com pais, cidade e nome
 bool const Aeroporto::operator==(const Aeroporto &a2) const{
     if(nome == a2.getNome()){
         if(cidade == a2.getCidade()){
@@ -156,4 +161,12 @@ bool const Aeroporto::operator==(const Aeroporto &a2) const{
         return false;
     }
     return false;
+}
+
+/// Constructor
+/// Construtor Vazio Com Valores Default
+Aeroporto::Aeroporto() :transportes(Transporte()){
+    nome = "zzzzzzzzzzzzzzzzzzz";
+    cidade = "zzzzzzzzzzzzzzzzzzzz";
+    pais = "zzzzzzzzzzzzzzzzzzzzzz";
 }
