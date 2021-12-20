@@ -21,11 +21,13 @@ bool Aviao::addPassageiro(int numVoo, Passageiro pass) {
                 v.addPassageiro(pass);
                 return true;
             }
-            return false;
         }
     }
+    return false;
 }
 
+/// Operator
+/// Operador "<" por matricula, alfabeticamente
 bool const Aviao::operator < (Aviao a2) const {
     return matricula < a2.getMatricula();
 }
@@ -57,8 +59,11 @@ void Aviao::addServAgendado(servico s){
     servicosAgendados.sort(comparador);
 }
 
+/// Adder
+/// Adiciona um \param servico à lista \param servicosCompletos
 void Aviao::addServCompleto (servico s) {
     servicosFeitos.push_back(s);
+    servicosFeitos.sort(comparador);
     servicosAgendados.sort(comparador);
 }
 
