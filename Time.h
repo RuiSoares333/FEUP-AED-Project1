@@ -13,6 +13,7 @@ public:
     int getHora() const;
     int getMinuto() const;
     bool const operator<(const Time t2) const;
+    bool const operator==(const Time t2) const;
 };
 
 
