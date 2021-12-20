@@ -35,8 +35,13 @@ public:
     void drawAvioesSerTer() const;
     void drawVoos(list<Voo> auxVoos) const;
     void drawVoosData() const;
+    void drawVoosDuracao() const;
+    void drawVoosPassageiros() const;
+    void drawParcialVoosData(Date d1, Date d2) const;
     void transportDraw(Aeroporto &aeroporto);
+    void transporteDrawParcial(Aeroporto &aeroporto, Date d1, Date d2, Time t1, Time t2);
     void airportDraw();
+    void servicosDraw(string tipo);
 
     // Getters
     list <Aeroporto> getAeroportos() const;
@@ -70,7 +75,7 @@ public:
     bool updateAviaoVoo(string matricula, Voo voo); //sem querer apaguei isto srry - lucas no worries - rui
     bool updateAviaoServicoCriar(string matricula, servico ser);
     bool updateAviaoServicoTerminar(string matricula);
-    bool updateVoo(int numVoo_s, int numVoo_p, Date data, float duracao, TransporteBagagem t);
+    bool updateVoo(int numVoo_s, int numVoo_p, Date data, float duracao, TransporteBagagem t, Aeroporto a1, Aeroporto a2, list<Passageiro> passageiros);
 
 private:
     list<Aeroporto> aeroportos;
