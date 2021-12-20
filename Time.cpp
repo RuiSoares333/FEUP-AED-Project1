@@ -62,3 +62,9 @@ bool const Time::operator<(const Time t2) const {
     }
     return hora < t2.getHora();
 }
+
+/// Operator
+/// Operador "==" que diz se 2 Tempos são iguais
+bool const Time::operator==(const Time t2) const{
+    return hora == t2.getHora() && minuto == t2.getMinuto();
+}
