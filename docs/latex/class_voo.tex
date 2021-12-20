@@ -1,0 +1,267 @@
+\hypertarget{class_voo}{}\doxysection{Voo Class Reference}
+\label{class_voo}\index{Voo@{Voo}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_voo_a609426279fa49ee0dd2758a20e1346cb}\label{class_voo_a609426279fa49ee0dd2758a20e1346cb}} 
+{\bfseries Voo} ()
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_voo_ae5df6a0b7bee376cb3f5921d23ed9413}{Voo}} (int num\+Voo, \mbox{\hyperlink{class_date}{Date}} data\+Partida, float duracao\+Voo, list$<$ \mbox{\hyperlink{class_passageiro}{Passageiro}} $>$ passageiros, \mbox{\hyperlink{class_transporte_bagagem}{Transporte\+Bagagem}} transporte\+Bagagem, \mbox{\hyperlink{class_aeroporto}{Aeroporto}} origem, \mbox{\hyperlink{class_aeroporto}{Aeroporto}} destino)
+\item 
+int \mbox{\hyperlink{class_voo_aaed24bffe2b69df53db4fb5692a11bf6}{get\+Num}} () const
+\item 
+\mbox{\hyperlink{class_date}{Date}} \mbox{\hyperlink{class_voo_ae06b1bebcbee31059dd942c86330025d}{get\+Data}} () const
+\item 
+float \mbox{\hyperlink{class_voo_a43fa5208ba0e516af45f086b966d3620}{get\+Duracao}} () const
+\item 
+list$<$ \mbox{\hyperlink{class_passageiro}{Passageiro}} $>$ \mbox{\hyperlink{class_voo_a5d704b7100fff5e771abc566b482d623}{get\+Passageiros}} () const
+\item 
+\mbox{\hyperlink{class_aeroporto}{Aeroporto}} \mbox{\hyperlink{class_voo_a07b4f2c7f15530224193680ede9dc170}{get\+Origem}} () const
+\item 
+\mbox{\hyperlink{class_aeroporto}{Aeroporto}} \mbox{\hyperlink{class_voo_ae49630ba53ada7f549abacb1c9c19228}{get\+Destino}} () const
+\item 
+void \mbox{\hyperlink{class_voo_a087f42ff92c26fb6988f9c794593f91e}{set\+Passageiros}} (list$<$ \mbox{\hyperlink{class_passageiro}{Passageiro}} $>$ passageiros)
+\item 
+void \mbox{\hyperlink{class_voo_a653feb400903ad7e2e6bd296c2b19e13}{set\+TB}} (\mbox{\hyperlink{class_transporte_bagagem}{Transporte\+Bagagem}} t)
+\item 
+void \mbox{\hyperlink{class_voo_a5dc10434da4923aaea0930e2313fe88a}{set\+Num}} (int num)
+\item 
+void \mbox{\hyperlink{class_voo_a5feb44985c62a3c72a4b4376f07e4b01}{set\+Duracao}} (int dur)
+\item 
+void \mbox{\hyperlink{class_voo_a7ce76dc3251a71874cf54d3846a492b9}{set\+Data}} (\mbox{\hyperlink{class_date}{Date}} data)
+\item 
+void \mbox{\hyperlink{class_voo_aaace02ea7b03b0cff1870cc1ed6f0830}{set\+Origem}} (const \mbox{\hyperlink{class_aeroporto}{Aeroporto}} \&origem)
+\item 
+void \mbox{\hyperlink{class_voo_a3f9035bd39adf33e605b144758ad18e5}{set\+Destino}} (const \mbox{\hyperlink{class_aeroporto}{Aeroporto}} \&destino)
+\item 
+void \mbox{\hyperlink{class_voo_abfa8525d477b48aa48b5744700c78655}{add\+Passageiro}} (\mbox{\hyperlink{class_passageiro}{Passageiro}} \&passageiro)
+\item 
+bool \mbox{\hyperlink{class_voo_abe41661053ef7e270fe702c3a2b2f817}{remove\+Passageiro}} (\mbox{\hyperlink{class_passageiro}{Passageiro}} \&passageiro)
+\item 
+\mbox{\Hypertarget{class_voo_a90810faacfd0b444859c0e73036df8a6}\label{class_voo_a90810faacfd0b444859c0e73036df8a6}} 
+void {\bfseries add\+Lista\+Passageiro} (list$<$ \mbox{\hyperlink{class_passageiro}{Passageiro}} $>$ passageiros)
+\item 
+bool \mbox{\hyperlink{class_voo_a876c8d80cc77cbc4f3f6229d33b9c71c}{save\+File}} ()
+\item 
+bool \mbox{\hyperlink{class_voo_a7bfec6f064827fc3ebe362b67040db5c}{load\+File}} ()
+\item 
+\mbox{\Hypertarget{class_voo_a6ab7b52afd0d519169d2875279bcbaf2}\label{class_voo_a6ab7b52afd0d519169d2875279bcbaf2}} 
+bool const {\bfseries operator$<$} (\mbox{\hyperlink{class_voo}{Voo}} v2) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_voo_ae5df6a0b7bee376cb3f5921d23ed9413}\label{class_voo_ae5df6a0b7bee376cb3f5921d23ed9413}} 
+\index{Voo@{Voo}!Voo@{Voo}}
+\index{Voo@{Voo}!Voo@{Voo}}
+\doxysubsubsection{\texorpdfstring{Voo()}{Voo()}}
+{\footnotesize\ttfamily Voo\+::\+Voo (\begin{DoxyParamCaption}\item[{int}]{num\+Voo,  }\item[{\mbox{\hyperlink{class_date}{Date}}}]{data\+Partida,  }\item[{float}]{duracao\+Voo,  }\item[{list$<$ \mbox{\hyperlink{class_passageiro}{Passageiro}} $>$}]{passageiros,  }\item[{\mbox{\hyperlink{class_transporte_bagagem}{Transporte\+Bagagem}}}]{transporte\+Bagagem,  }\item[{\mbox{\hyperlink{class_aeroporto}{Aeroporto}}}]{origem,  }\item[{\mbox{\hyperlink{class_aeroporto}{Aeroporto}}}]{destino }\end{DoxyParamCaption})}
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em num\+Voo} & número de identificação do voo \\
+\hline
+{\em data\+Partida} & data de partida do voo \\
+\hline
+{\em duracao\+Voo} & duração do voo em horas \\
+\hline
+{\em passageiros} & lista dos passageiros que estão no voo \\
+\hline
+{\em transporte\+Bagagem} & o transporte da bagagem (tapete e carrinho) \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_voo_abfa8525d477b48aa48b5744700c78655}\label{class_voo_abfa8525d477b48aa48b5744700c78655}} 
+\index{Voo@{Voo}!addPassageiro@{addPassageiro}}
+\index{addPassageiro@{addPassageiro}!Voo@{Voo}}
+\doxysubsubsection{\texorpdfstring{addPassageiro()}{addPassageiro()}}
+{\footnotesize\ttfamily void Voo\+::add\+Passageiro (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_passageiro}{Passageiro}} \&}]{passageiro }\end{DoxyParamCaption})}
+
+Adiciona um passageiro à lista de passageiros 
+\begin{DoxyParams}{Parameters}
+{\em passageiro} & novo passageiro a ser adicionado ao voo \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_voo_ae06b1bebcbee31059dd942c86330025d}\label{class_voo_ae06b1bebcbee31059dd942c86330025d}} 
+\index{Voo@{Voo}!getData@{getData}}
+\index{getData@{getData}!Voo@{Voo}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_date}{Date}} Voo\+::get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter \begin{DoxyReturn}{Returns}
+retorna a data de partida do voo 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_voo_ae49630ba53ada7f549abacb1c9c19228}\label{class_voo_ae49630ba53ada7f549abacb1c9c19228}} 
+\index{Voo@{Voo}!getDestino@{getDestino}}
+\index{getDestino@{getDestino}!Voo@{Voo}}
+\doxysubsubsection{\texorpdfstring{getDestino()}{getDestino()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_aeroporto}{Aeroporto}} Voo\+::get\+Destino (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em desino} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_voo_a43fa5208ba0e516af45f086b966d3620}\label{class_voo_a43fa5208ba0e516af45f086b966d3620}} 
+\index{Voo@{Voo}!getDuracao@{getDuracao}}
+\index{getDuracao@{getDuracao}!Voo@{Voo}}
+\doxysubsubsection{\texorpdfstring{getDuracao()}{getDuracao()}}
+{\footnotesize\ttfamily float Voo\+::get\+Duracao (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter \begin{DoxyReturn}{Returns}
+retorna a duracao do voo 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_voo_aaed24bffe2b69df53db4fb5692a11bf6}\label{class_voo_aaed24bffe2b69df53db4fb5692a11bf6}} 
+\index{Voo@{Voo}!getNum@{getNum}}
+\index{getNum@{getNum}!Voo@{Voo}}
+\doxysubsubsection{\texorpdfstring{getNum()}{getNum()}}
+{\footnotesize\ttfamily int Voo\+::get\+Num (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter \begin{DoxyReturn}{Returns}
+retorna o número de identificação do voo 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_voo_a07b4f2c7f15530224193680ede9dc170}\label{class_voo_a07b4f2c7f15530224193680ede9dc170}} 
+\index{Voo@{Voo}!getOrigem@{getOrigem}}
+\index{getOrigem@{getOrigem}!Voo@{Voo}}
+\doxysubsubsection{\texorpdfstring{getOrigem()}{getOrigem()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_aeroporto}{Aeroporto}} Voo\+::get\+Origem (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em origem} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_voo_a5d704b7100fff5e771abc566b482d623}\label{class_voo_a5d704b7100fff5e771abc566b482d623}} 
+\index{Voo@{Voo}!getPassageiros@{getPassageiros}}
+\index{getPassageiros@{getPassageiros}!Voo@{Voo}}
+\doxysubsubsection{\texorpdfstring{getPassageiros()}{getPassageiros()}}
+{\footnotesize\ttfamily list$<$ \mbox{\hyperlink{class_passageiro}{Passageiro}} $>$ Voo\+::get\+Passageiros (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter \begin{DoxyReturn}{Returns}
+retorna a lista de passageiros do voo 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_voo_a7bfec6f064827fc3ebe362b67040db5c}\label{class_voo_a7bfec6f064827fc3ebe362b67040db5c}} 
+\index{Voo@{Voo}!loadFile@{loadFile}}
+\index{loadFile@{loadFile}!Voo@{Voo}}
+\doxysubsubsection{\texorpdfstring{loadFile()}{loadFile()}}
+{\footnotesize\ttfamily bool Voo\+::load\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Lê um objeto do tipo voo de um ficheiro e preenche-\/o com todos os atributos \begin{DoxyReturn}{Returns}
+true se o ficheiro pretendido existir, caso contrário false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_voo_abe41661053ef7e270fe702c3a2b2f817}\label{class_voo_abe41661053ef7e270fe702c3a2b2f817}} 
+\index{Voo@{Voo}!removePassageiro@{removePassageiro}}
+\index{removePassageiro@{removePassageiro}!Voo@{Voo}}
+\doxysubsubsection{\texorpdfstring{removePassageiro()}{removePassageiro()}}
+{\footnotesize\ttfamily bool Voo\+::remove\+Passageiro (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_passageiro}{Passageiro}} \&}]{passageiro }\end{DoxyParamCaption})}
+
+Remove um passageiro do voo 
+\begin{DoxyParams}{Parameters}
+{\em passageiro} & a ser removido \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true se o passageiro estivesse presente no voo, false no caso contrário 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_voo_a876c8d80cc77cbc4f3f6229d33b9c71c}\label{class_voo_a876c8d80cc77cbc4f3f6229d33b9c71c}} 
+\index{Voo@{Voo}!saveFile@{saveFile}}
+\index{saveFile@{saveFile}!Voo@{Voo}}
+\doxysubsubsection{\texorpdfstring{saveFile()}{saveFile()}}
+{\footnotesize\ttfamily bool Voo\+::save\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Guarda o voo no devido ficheiro e adiciona-\/o ao ficheiro de todos os voos (voo\+\_\+all\+\_\+save.\+txt) \begin{DoxyReturn}{Returns}
+true se foi possível abrir o ficheiro, caso contrário false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_voo_a7ce76dc3251a71874cf54d3846a492b9}\label{class_voo_a7ce76dc3251a71874cf54d3846a492b9}} 
+\index{Voo@{Voo}!setData@{setData}}
+\index{setData@{setData}!Voo@{Voo}}
+\doxysubsubsection{\texorpdfstring{setData()}{setData()}}
+{\footnotesize\ttfamily void Voo\+::set\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_date}{Date}}}]{data }\end{DoxyParamCaption})}
+
+Setter 
+\begin{DoxyParams}{Parameters}
+{\em data} & passa a ser a nova data de partida do voo \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_voo_a3f9035bd39adf33e605b144758ad18e5}\label{class_voo_a3f9035bd39adf33e605b144758ad18e5}} 
+\index{Voo@{Voo}!setDestino@{setDestino}}
+\index{setDestino@{setDestino}!Voo@{Voo}}
+\doxysubsubsection{\texorpdfstring{setDestino()}{setDestino()}}
+{\footnotesize\ttfamily void Voo\+::set\+Destino (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_aeroporto}{Aeroporto}} \&}]{destino }\end{DoxyParamCaption})}
+
+Setter Muda o
+\begin{DoxyParams}{Parameters}
+{\em destino} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_voo_a5feb44985c62a3c72a4b4376f07e4b01}\label{class_voo_a5feb44985c62a3c72a4b4376f07e4b01}} 
+\index{Voo@{Voo}!setDuracao@{setDuracao}}
+\index{setDuracao@{setDuracao}!Voo@{Voo}}
+\doxysubsubsection{\texorpdfstring{setDuracao()}{setDuracao()}}
+{\footnotesize\ttfamily void Voo\+::set\+Duracao (\begin{DoxyParamCaption}\item[{int}]{dur }\end{DoxyParamCaption})}
+
+Setter 
+\begin{DoxyParams}{Parameters}
+{\em dur} & passa a ser a nova duração do voo \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_voo_a5dc10434da4923aaea0930e2313fe88a}\label{class_voo_a5dc10434da4923aaea0930e2313fe88a}} 
+\index{Voo@{Voo}!setNum@{setNum}}
+\index{setNum@{setNum}!Voo@{Voo}}
+\doxysubsubsection{\texorpdfstring{setNum()}{setNum()}}
+{\footnotesize\ttfamily void Voo\+::set\+Num (\begin{DoxyParamCaption}\item[{int}]{num }\end{DoxyParamCaption})}
+
+Setter 
+\begin{DoxyParams}{Parameters}
+{\em num} & passa a ser o novo número identificador do voo \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_voo_aaace02ea7b03b0cff1870cc1ed6f0830}\label{class_voo_aaace02ea7b03b0cff1870cc1ed6f0830}} 
+\index{Voo@{Voo}!setOrigem@{setOrigem}}
+\index{setOrigem@{setOrigem}!Voo@{Voo}}
+\doxysubsubsection{\texorpdfstring{setOrigem()}{setOrigem()}}
+{\footnotesize\ttfamily void Voo\+::set\+Origem (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_aeroporto}{Aeroporto}} \&}]{origem }\end{DoxyParamCaption})}
+
+Setter Muda o
+\begin{DoxyParams}{Parameters}
+{\em origem} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_voo_a087f42ff92c26fb6988f9c794593f91e}\label{class_voo_a087f42ff92c26fb6988f9c794593f91e}} 
+\index{Voo@{Voo}!setPassageiros@{setPassageiros}}
+\index{setPassageiros@{setPassageiros}!Voo@{Voo}}
+\doxysubsubsection{\texorpdfstring{setPassageiros()}{setPassageiros()}}
+{\footnotesize\ttfamily void Voo\+::set\+Passageiros (\begin{DoxyParamCaption}\item[{list$<$ \mbox{\hyperlink{class_passageiro}{Passageiro}} $>$}]{passageiros }\end{DoxyParamCaption})}
+
+Setter Muda o
+\begin{DoxyParams}{Parameters}
+{\em passageiros} & para uma nova lista de passageiros \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_voo_a653feb400903ad7e2e6bd296c2b19e13}\label{class_voo_a653feb400903ad7e2e6bd296c2b19e13}} 
+\index{Voo@{Voo}!setTB@{setTB}}
+\index{setTB@{setTB}!Voo@{Voo}}
+\doxysubsubsection{\texorpdfstring{setTB()}{setTB()}}
+{\footnotesize\ttfamily void Voo\+::set\+TB (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_transporte_bagagem}{Transporte\+Bagagem}}}]{t }\end{DoxyParamCaption})}
+
+Setter Muda o
+\begin{DoxyParams}{Parameters}
+{\em transporte\+Bagagem} & para um novo\\
+\hline
+{\em t(\+Transporte\+Bagagem)} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+ASUS/\+Desktop/\+Rui/\+FACULDADE/\+FEUP/\+AED/projeto-\/aed-\/main (2)/projeto-\/aed-\/main/Voo.\+h\item 
+C\+:/\+Users/\+ASUS/\+Desktop/\+Rui/\+FACULDADE/\+FEUP/\+AED/projeto-\/aed-\/main (2)/projeto-\/aed-\/main/Voo.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,212 @@
+\hypertarget{class_aeroporto}{}\doxysection{Aeroporto Class Reference}
+\label{class_aeroporto}\index{Aeroporto@{Aeroporto}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_aeroporto_ae62fd0b924bfbd5bd35a5a7cb63ce06e}{Aeroporto}} (string nome, string pais, string cidade)
+\item 
+\mbox{\hyperlink{class_aeroporto_ae42f7700c5a73488a1c54f636312c6c8}{Aeroporto}} ()
+\item 
+string \mbox{\hyperlink{class_aeroporto_a23f806b5b9765396d4cdee50f0ce6ebd}{get\+Nome}} () const
+\item 
+string \mbox{\hyperlink{class_aeroporto_af54dce0996c1e9bf471a3ff1f41d995e}{get\+Pais}} () const
+\item 
+string \mbox{\hyperlink{class_aeroporto_a222a4ff75168f6cd658538739ca4cb36}{get\+Cidade}} () const
+\item 
+void \mbox{\hyperlink{class_aeroporto_add384df96b8a0e8440e77b2fb5c249fb}{set\+Nome}} (string nome)
+\item 
+void \mbox{\hyperlink{class_aeroporto_a153555fdbbb2f5a07798c86f205d5b00}{set\+Pais}} (string pais)
+\item 
+void \mbox{\hyperlink{class_aeroporto_a096dec4b9cd8bacc5c663a82810925f6}{set\+Cidade}} (string cidade)
+\item 
+const \mbox{\hyperlink{class_b_s_t}{BST}}$<$ \mbox{\hyperlink{class_transporte}{Transporte}} $>$ \& \mbox{\hyperlink{class_aeroporto_a05f249dc66dfc26318339073864d5af6}{get\+Transportes}} () const
+\item 
+void \mbox{\hyperlink{class_aeroporto_aa21f2099ed569a1b78ccaf72b6833736}{set\+Transportes}} (const \mbox{\hyperlink{class_b_s_t}{BST}}$<$ \mbox{\hyperlink{class_transporte}{Transporte}} $>$ \&transportes)
+\item 
+bool \mbox{\hyperlink{class_aeroporto_a7bb6e9709959fc4668414bd7dbd2cba7}{insert\+Transporte}} (\mbox{\hyperlink{class_transporte}{Transporte}} \&transporte)
+\item 
+bool \mbox{\hyperlink{class_aeroporto_ae63fa67e715533fa887021aa8029f263}{remove\+Transporte}} (\mbox{\hyperlink{class_transporte}{Transporte}} \&transporte)
+\item 
+bool \mbox{\hyperlink{class_aeroporto_a3264cd50bbbe9e88f9a5c5619fd0003b}{save\+File}} ()
+\item 
+bool \mbox{\hyperlink{class_aeroporto_aec225b3ff65c6b3e29a52bc341508dca}{load\+File}} ()
+\item 
+bool const \mbox{\hyperlink{class_aeroporto_abf2118ceaebedc77d9fa8266b20a63a6}{operator$<$}} (const \mbox{\hyperlink{class_aeroporto}{Aeroporto}} \&a2) const
+\item 
+bool const \mbox{\hyperlink{class_aeroporto_a9194a75edcfe72c88886c163e3b658fc}{operator==}} (const \mbox{\hyperlink{class_aeroporto}{Aeroporto}} \&a2) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_aeroporto_ae62fd0b924bfbd5bd35a5a7cb63ce06e}\label{class_aeroporto_ae62fd0b924bfbd5bd35a5a7cb63ce06e}} 
+\index{Aeroporto@{Aeroporto}!Aeroporto@{Aeroporto}}
+\index{Aeroporto@{Aeroporto}!Aeroporto@{Aeroporto}}
+\doxysubsubsection{\texorpdfstring{Aeroporto()}{Aeroporto()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Aeroporto\+::\+Aeroporto (\begin{DoxyParamCaption}\item[{string}]{nome,  }\item[{string}]{pais,  }\item[{string}]{cidade }\end{DoxyParamCaption})}
+
+Construtor 
+\begin{DoxyParams}{Parameters}
+{\em nome} & \\
+\hline
+{\em pais} & \\
+\hline
+{\em cidade} & \textbackslash{}inicializa uma \mbox{\hyperlink{class_b_s_t}{BST}} de objetos \mbox{\hyperlink{class_transporte}{Transporte}} vazia \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_aeroporto_ae42f7700c5a73488a1c54f636312c6c8}\label{class_aeroporto_ae42f7700c5a73488a1c54f636312c6c8}} 
+\index{Aeroporto@{Aeroporto}!Aeroporto@{Aeroporto}}
+\index{Aeroporto@{Aeroporto}!Aeroporto@{Aeroporto}}
+\doxysubsubsection{\texorpdfstring{Aeroporto()}{Aeroporto()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Aeroporto\+::\+Aeroporto (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Constructor Construtor Vazio Com Valores Default 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_aeroporto_a222a4ff75168f6cd658538739ca4cb36}\label{class_aeroporto_a222a4ff75168f6cd658538739ca4cb36}} 
+\index{Aeroporto@{Aeroporto}!getCidade@{getCidade}}
+\index{getCidade@{getCidade}!Aeroporto@{Aeroporto}}
+\doxysubsubsection{\texorpdfstring{getCidade()}{getCidade()}}
+{\footnotesize\ttfamily string Aeroporto\+::get\+Cidade (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em cidade} & onde o aeroporto se encontra \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_aeroporto_a23f806b5b9765396d4cdee50f0ce6ebd}\label{class_aeroporto_a23f806b5b9765396d4cdee50f0ce6ebd}} 
+\index{Aeroporto@{Aeroporto}!getNome@{getNome}}
+\index{getNome@{getNome}!Aeroporto@{Aeroporto}}
+\doxysubsubsection{\texorpdfstring{getNome()}{getNome()}}
+{\footnotesize\ttfamily string Aeroporto\+::get\+Nome (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em nome} & do aeroporto \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_aeroporto_af54dce0996c1e9bf471a3ff1f41d995e}\label{class_aeroporto_af54dce0996c1e9bf471a3ff1f41d995e}} 
+\index{Aeroporto@{Aeroporto}!getPais@{getPais}}
+\index{getPais@{getPais}!Aeroporto@{Aeroporto}}
+\doxysubsubsection{\texorpdfstring{getPais()}{getPais()}}
+{\footnotesize\ttfamily string Aeroporto\+::get\+Pais (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em país} & onde o aeroporto se encontra \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_aeroporto_a05f249dc66dfc26318339073864d5af6}\label{class_aeroporto_a05f249dc66dfc26318339073864d5af6}} 
+\index{Aeroporto@{Aeroporto}!getTransportes@{getTransportes}}
+\index{getTransportes@{getTransportes}!Aeroporto@{Aeroporto}}
+\doxysubsubsection{\texorpdfstring{getTransportes()}{getTransportes()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_b_s_t}{BST}}$<$ \mbox{\hyperlink{class_transporte}{Transporte}} $>$ \& Aeroporto\+::get\+Transportes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em transportes} & (uma cópia da \mbox{\hyperlink{class_b_s_t}{BST}} de objetos \mbox{\hyperlink{class_transporte}{Transporte}} do aeroporto) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_aeroporto_a7bb6e9709959fc4668414bd7dbd2cba7}\label{class_aeroporto_a7bb6e9709959fc4668414bd7dbd2cba7}} 
+\index{Aeroporto@{Aeroporto}!insertTransporte@{insertTransporte}}
+\index{insertTransporte@{insertTransporte}!Aeroporto@{Aeroporto}}
+\doxysubsubsection{\texorpdfstring{insertTransporte()}{insertTransporte()}}
+{\footnotesize\ttfamily bool Aeroporto\+::insert\+Transporte (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_transporte}{Transporte}} \&}]{transporte }\end{DoxyParamCaption})}
+
+\begin{DoxyParagraph}{âmetro Objeto da classe Transporte}
+\textbackslash{}adiciona um transporte ao aeroporto \textbackslash{}adiciona uma objeto da classe \mbox{\hyperlink{class_transporte}{Transporte}} à \mbox{\hyperlink{class_b_s_t}{BST}} do aeroporto 
+\end{DoxyParagraph}
+\mbox{\Hypertarget{class_aeroporto_aec225b3ff65c6b3e29a52bc341508dca}\label{class_aeroporto_aec225b3ff65c6b3e29a52bc341508dca}} 
+\index{Aeroporto@{Aeroporto}!loadFile@{loadFile}}
+\index{loadFile@{loadFile}!Aeroporto@{Aeroporto}}
+\doxysubsubsection{\texorpdfstring{loadFile()}{loadFile()}}
+{\footnotesize\ttfamily bool Aeroporto\+::load\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+procura o ficherio \char`\"{}aeroporto\+\_\+\{nome\}\+\_\+\{cidade\}\+\_\+\{país\}\+\_\+save.\+txt\char`\"{} que corresponde ao objeto \textbackslash{}atualiza os parametros do objeto para aqueles guardados no ficheiro \textbackslash{}cria objetos da classe \mbox{\hyperlink{class_transporte}{Transporte}} com os parâmetros em cada linha e adiciona-\/os"{} à \mbox{\hyperlink{class_b_s_t}{BST}} do aeroporto \mbox{\Hypertarget{class_aeroporto_abf2118ceaebedc77d9fa8266b20a63a6}\label{class_aeroporto_abf2118ceaebedc77d9fa8266b20a63a6}} 
+\index{Aeroporto@{Aeroporto}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Aeroporto@{Aeroporto}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool const Aeroporto\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_aeroporto}{Aeroporto}} \&}]{a2 }\end{DoxyParamCaption}) const}
+
+Operator Operador \char`\"{}$<$\char`\"{} de acordo com pais, cidade e nome, alfabeticamente \mbox{\Hypertarget{class_aeroporto_a9194a75edcfe72c88886c163e3b658fc}\label{class_aeroporto_a9194a75edcfe72c88886c163e3b658fc}} 
+\index{Aeroporto@{Aeroporto}!operator==@{operator==}}
+\index{operator==@{operator==}!Aeroporto@{Aeroporto}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool const Aeroporto\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_aeroporto}{Aeroporto}} \&}]{a2 }\end{DoxyParamCaption}) const}
+
+Operator Operador \char`\"{}==\char`\"{} de acordo com pais, cidade e nome \mbox{\Hypertarget{class_aeroporto_ae63fa67e715533fa887021aa8029f263}\label{class_aeroporto_ae63fa67e715533fa887021aa8029f263}} 
+\index{Aeroporto@{Aeroporto}!removeTransporte@{removeTransporte}}
+\index{removeTransporte@{removeTransporte}!Aeroporto@{Aeroporto}}
+\doxysubsubsection{\texorpdfstring{removeTransporte()}{removeTransporte()}}
+{\footnotesize\ttfamily bool Aeroporto\+::remove\+Transporte (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_transporte}{Transporte}} \&}]{transporte }\end{DoxyParamCaption})}
+
+parâmetro Objeto da classe \mbox{\hyperlink{class_transporte}{Transporte}} \textbackslash{}remove o transporte do aeroporto \textbackslash{}remove da \mbox{\hyperlink{class_b_s_t}{BST}} do aeroporto o Objeto da classe \mbox{\hyperlink{class_transporte}{Transporte}} que vem como parâmetro \mbox{\Hypertarget{class_aeroporto_a3264cd50bbbe9e88f9a5c5619fd0003b}\label{class_aeroporto_a3264cd50bbbe9e88f9a5c5619fd0003b}} 
+\index{Aeroporto@{Aeroporto}!saveFile@{saveFile}}
+\index{saveFile@{saveFile}!Aeroporto@{Aeroporto}}
+\doxysubsubsection{\texorpdfstring{saveFile()}{saveFile()}}
+{\footnotesize\ttfamily bool Aeroporto\+::save\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+adiciona o nome, a cidade e o país ao \char`\"{}aeroporto\+\_\+all\+\_\+save\char`\"{}.txt \textbackslash{}guarda no ficheiro \char`\"{}aeroporto\+\_\+\{nome\}\+\_\+\{cidade\}\+\_\+\{país\}\+\_\+save.\+txt\char`\"{} as informações \textbackslash{}do aeroporto e dos transportes guardados na sua \mbox{\hyperlink{class_b_s_t}{BST}} \begin{DoxyReturn}{Returns}
+false se não conseguir abrir o ficheiro, ou se não o conseguir criar 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_aeroporto_a096dec4b9cd8bacc5c663a82810925f6}\label{class_aeroporto_a096dec4b9cd8bacc5c663a82810925f6}} 
+\index{Aeroporto@{Aeroporto}!setCidade@{setCidade}}
+\index{setCidade@{setCidade}!Aeroporto@{Aeroporto}}
+\doxysubsubsection{\texorpdfstring{setCidade()}{setCidade()}}
+{\footnotesize\ttfamily void Aeroporto\+::set\+Cidade (\begin{DoxyParamCaption}\item[{string}]{cidade }\end{DoxyParamCaption})}
+
+Setter 
+\begin{DoxyParams}{Parameters}
+{\em cidade} & \textbackslash{}muda a cidade onde o aeroporto se encontra \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_aeroporto_add384df96b8a0e8440e77b2fb5c249fb}\label{class_aeroporto_add384df96b8a0e8440e77b2fb5c249fb}} 
+\index{Aeroporto@{Aeroporto}!setNome@{setNome}}
+\index{setNome@{setNome}!Aeroporto@{Aeroporto}}
+\doxysubsubsection{\texorpdfstring{setNome()}{setNome()}}
+{\footnotesize\ttfamily void Aeroporto\+::set\+Nome (\begin{DoxyParamCaption}\item[{string}]{nome }\end{DoxyParamCaption})}
+
+Setter 
+\begin{DoxyParams}{Parameters}
+{\em nome} & \textbackslash{}muda o nome do aeroporto \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_aeroporto_a153555fdbbb2f5a07798c86f205d5b00}\label{class_aeroporto_a153555fdbbb2f5a07798c86f205d5b00}} 
+\index{Aeroporto@{Aeroporto}!setPais@{setPais}}
+\index{setPais@{setPais}!Aeroporto@{Aeroporto}}
+\doxysubsubsection{\texorpdfstring{setPais()}{setPais()}}
+{\footnotesize\ttfamily void Aeroporto\+::set\+Pais (\begin{DoxyParamCaption}\item[{string}]{pais }\end{DoxyParamCaption})}
+
+Setter 
+\begin{DoxyParams}{Parameters}
+{\em pais} & \textbackslash{}muda o país onde o aeroporto se encontra \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_aeroporto_aa21f2099ed569a1b78ccaf72b6833736}\label{class_aeroporto_aa21f2099ed569a1b78ccaf72b6833736}} 
+\index{Aeroporto@{Aeroporto}!setTransportes@{setTransportes}}
+\index{setTransportes@{setTransportes}!Aeroporto@{Aeroporto}}
+\doxysubsubsection{\texorpdfstring{setTransportes()}{setTransportes()}}
+{\footnotesize\ttfamily void Aeroporto\+::set\+Transportes (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_b_s_t}{BST}}$<$ \mbox{\hyperlink{class_transporte}{Transporte}} $>$ \&}]{transportes }\end{DoxyParamCaption})}
+
+Setter 
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{class_b_s_t}{BST}}} & de objetos \mbox{\hyperlink{class_transporte}{Transporte}} \textbackslash{}muda a arvore que contem os transportes do aeroporto \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+ASUS/\+Desktop/\+Rui/\+FACULDADE/\+FEUP/\+AED/projeto-\/aed-\/main (2)/projeto-\/aed-\/main/Aeroporto.\+h\item 
+C\+:/\+Users/\+ASUS/\+Desktop/\+Rui/\+FACULDADE/\+FEUP/\+AED/projeto-\/aed-\/main (2)/projeto-\/aed-\/main/Aeroporto.\+cpp\end{DoxyCompactItemize}

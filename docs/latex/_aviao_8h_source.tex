@@ -1,0 +1,52 @@
+\hypertarget{_aviao_8h_source}{}\doxysection{C\+:/\+Users/\+ASUS/\+Desktop/\+Rui/\+FACULDADE/\+FEUP/\+AED/projeto-\/aed-\/main (2)/projeto-\/aed-\/main/\+Aviao.h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef MAIN\_CPP\_AVIAO\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define MAIN\_CPP\_AVIAO\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}Voo.h"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}servico.h"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <queue>}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{class }\mbox{\hyperlink{class_aviao}{Aviao}} \{}
+\DoxyCodeLine{12 \textcolor{keyword}{public}:}
+\DoxyCodeLine{13     \mbox{\hyperlink{class_aviao}{Aviao}}();}
+\DoxyCodeLine{14     \mbox{\hyperlink{class_aviao}{Aviao}}(\textcolor{keywordtype}{string} matricula, \textcolor{keywordtype}{int} capacidade);}
+\DoxyCodeLine{15     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_aviao_a14a627911307ac00bfd604b6d2e25a5b}{adicionarPlanoVoo}}(list<Voo> plano);}
+\DoxyCodeLine{16     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_aviao_abc201c41b402c13836c6cd95b0c09b8a}{adicionarVoo}}(\mbox{\hyperlink{class_voo}{Voo}} v);}
+\DoxyCodeLine{17     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_aviao_a06b5afdd19ba40e6ce036faa89b9cfd1}{addServAgendado}}(\mbox{\hyperlink{classservico}{servico}} \mbox{\hyperlink{classservico}{servico}});}
+\DoxyCodeLine{18     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_aviao_aa17b87a0835915246240d36c9d2d9a92}{terminarServico}}();}
+\DoxyCodeLine{19     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_aviao_a6f770d29a44dfbf2a8b04270b6795415}{addServCompleto}}(\mbox{\hyperlink{classservico}{servico}} s);}
+\DoxyCodeLine{20     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_aviao_ac91fc3b1d8e0722f5f061777db70cf71}{addPassageiro}}(\textcolor{keywordtype}{int} numVoo, \mbox{\hyperlink{class_passageiro}{Passageiro}} pass);}
+\DoxyCodeLine{21     \textcolor{keywordtype}{bool} \textcolor{keyword}{const} \mbox{\hyperlink{class_aviao_a236df9c4b04a0d28d64464e2143fe669}{operator < }}(\mbox{\hyperlink{class_aviao}{Aviao}} a2) \textcolor{keyword}{const};}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23     \textcolor{comment}{// Getters}}
+\DoxyCodeLine{24     \textcolor{keywordtype}{string} \mbox{\hyperlink{class_aviao_a80c3658c222299133e4584cfdcd1d00f}{getMatricula}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{25     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_aviao_a93d19d54fb414ba4e04cbb673d9c4071}{getCapacidade}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{26     list<Voo> \mbox{\hyperlink{class_aviao_a674d21673ef4c07fe89a1c25da5ca24b}{getPlanoVoo}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{27     list<servico> \mbox{\hyperlink{class_aviao_a89543fa6513ac915ff18195112f8cab4}{getServicosAgendados}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{28     list<servico> \mbox{\hyperlink{class_aviao_a8e81b97ef347fff81efdbf9df835b8fb}{getServicosFeitos}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30     \textcolor{comment}{// Setters}}
+\DoxyCodeLine{31     \textcolor{keywordtype}{void} setPlanoVoo(list<Voo> novoPlano);}
+\DoxyCodeLine{32     \textcolor{keywordtype}{void} setServicosAgendados(list<servico> novosServicos);}
+\DoxyCodeLine{33     \textcolor{keywordtype}{void} setServicosCompletos(list<servico> novosServicos);}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35     \textcolor{comment}{// Writer}}
+\DoxyCodeLine{36     \textcolor{keywordtype}{string} \mbox{\hyperlink{class_aviao_a322e7a9a506659b3045dd5ebde3e6d8d}{write}}()\textcolor{keyword}{const};}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 \textcolor{keyword}{private}:}
+\DoxyCodeLine{39     \textcolor{keywordtype}{string} \textcolor{keyword}{const} matricula;}
+\DoxyCodeLine{40     list<Voo> planoVoo;}
+\DoxyCodeLine{41     list<servico> servicosAgendados;}
+\DoxyCodeLine{42     list<servico> servicosFeitos;}
+\DoxyCodeLine{43     \textcolor{keywordtype}{int} \textcolor{keyword}{const} capacidade;}
+\DoxyCodeLine{44 \};}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//MAIN\_CPP\_AVIAO\_H}}
+
+\end{DoxyCode}

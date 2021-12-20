@@ -1,0 +1,297 @@
+\hypertarget{binary_tree_8h_source}{}\doxysection{C\+:/\+Users/\+ASUS/\+Desktop/\+Rui/\+FACULDADE/\+FEUP/\+AED/projeto-\/aed-\/main (2)/projeto-\/aed-\/main/binary\+Tree.h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef \_BINARY\_TREE\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define \_BINARY\_TREE\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <stack>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <queue>}}
+\DoxyCodeLine{7 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{template} <\textcolor{keyword}{class} T> \textcolor{keyword}{class }\mbox{\hyperlink{class_b_t_itr_in}{BTItrIn}};}
+\DoxyCodeLine{10 \textcolor{keyword}{template} <\textcolor{keyword}{class} T> \textcolor{keyword}{class }\mbox{\hyperlink{class_b_t_itr_pre}{BTItrPre}};}
+\DoxyCodeLine{11 \textcolor{keyword}{template} <\textcolor{keyword}{class} T> \textcolor{keyword}{class }\mbox{\hyperlink{class_b_t_itr_post}{BTItrPost}};}
+\DoxyCodeLine{12 \textcolor{keyword}{template} <\textcolor{keyword}{class} T> \textcolor{keyword}{class }\mbox{\hyperlink{class_b_t_itr_level}{BTItrLevel}};}
+\DoxyCodeLine{13 \textcolor{keyword}{template} <\textcolor{keyword}{class} T> \textcolor{keyword}{class }\mbox{\hyperlink{class_binary_tree}{BinaryTree}};}
+\DoxyCodeLine{14 \textcolor{keyword}{class }\mbox{\hyperlink{class_underflow}{Underflow}} \{ \};}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{keyword}{template} <\textcolor{keyword}{class} T>}
+\DoxyCodeLine{17 \textcolor{keyword}{class }\mbox{\hyperlink{class_b_t_node}{BTNode}} \{}
+\DoxyCodeLine{18     T element;}
+\DoxyCodeLine{19     \mbox{\hyperlink{class_b_t_node}{BTNode<T>}}* left, * right;}
+\DoxyCodeLine{20     \textcolor{keyword}{friend} \textcolor{keyword}{class }\mbox{\hyperlink{class_binary_tree}{BinaryTree}}<T>;}
+\DoxyCodeLine{21     \textcolor{keyword}{friend} \textcolor{keyword}{class }\mbox{\hyperlink{class_b_t_itr_in}{BTItrIn}}<T>;}
+\DoxyCodeLine{22     \textcolor{keyword}{friend} \textcolor{keyword}{class }\mbox{\hyperlink{class_b_t_itr_pre}{BTItrPre}}<T>;}
+\DoxyCodeLine{23     \textcolor{keyword}{friend} \textcolor{keyword}{class }\mbox{\hyperlink{class_b_t_itr_post}{BTItrPost}}<T>;}
+\DoxyCodeLine{24     \textcolor{keyword}{friend} \textcolor{keyword}{class }\mbox{\hyperlink{class_b_t_itr_level}{BTItrLevel}}<T>;}
+\DoxyCodeLine{25 \textcolor{keyword}{public}:}
+\DoxyCodeLine{26     \mbox{\hyperlink{class_b_t_node}{BTNode}}(\textcolor{keyword}{const} T\& el, \mbox{\hyperlink{class_b_t_node}{BTNode<T>}}* l = 0, \mbox{\hyperlink{class_b_t_node}{BTNode<T>}}* r = 0): element(el), left(l), right(r) \{ \}}
+\DoxyCodeLine{27 \};}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 \textcolor{keyword}{template} <\textcolor{keyword}{class} T>}
+\DoxyCodeLine{30 \textcolor{keyword}{class }\mbox{\hyperlink{class_binary_tree}{BinaryTree}} \{}
+\DoxyCodeLine{31     \mbox{\hyperlink{class_b_t_node}{BTNode<T>}} *root;}
+\DoxyCodeLine{32     \textcolor{keywordtype}{void} makeEmpty (\mbox{\hyperlink{class_b_t_node}{BTNode<T>}} *n);}
+\DoxyCodeLine{33     \mbox{\hyperlink{class_b_t_node}{BTNode<T>}}* copySubtree(\textcolor{keyword}{const} \mbox{\hyperlink{class_b_t_node}{BTNode<T>}}* n) \textcolor{keyword}{const};}
+\DoxyCodeLine{34     \textcolor{keywordtype}{void} outputPreorder(ostream\& out, \textcolor{keyword}{const} \mbox{\hyperlink{class_b_t_node}{BTNode<T>}}* n) \textcolor{keyword}{const};}
+\DoxyCodeLine{35     \textcolor{keyword}{friend} \textcolor{keyword}{class }\mbox{\hyperlink{class_b_t_itr_in}{BTItrIn}}<T>;}
+\DoxyCodeLine{36     \textcolor{keyword}{friend} \textcolor{keyword}{class }\mbox{\hyperlink{class_b_t_itr_pre}{BTItrPre}}<T>;}
+\DoxyCodeLine{37     \textcolor{keyword}{friend} \textcolor{keyword}{class }\mbox{\hyperlink{class_b_t_itr_post}{BTItrPost}}<T>;}
+\DoxyCodeLine{38     \textcolor{keyword}{friend} \textcolor{keyword}{class }\mbox{\hyperlink{class_b_t_itr_level}{BTItrLevel}}<T>;}
+\DoxyCodeLine{39  \textcolor{keyword}{public}:}
+\DoxyCodeLine{40     \mbox{\hyperlink{class_binary_tree}{BinaryTree}}() \{ root = 0; \}}
+\DoxyCodeLine{41     \mbox{\hyperlink{class_binary_tree}{BinaryTree}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_binary_tree}{BinaryTree<T>}}\& t);}
+\DoxyCodeLine{42     \mbox{\hyperlink{class_binary_tree}{BinaryTree}}(\textcolor{keyword}{const} T\& el);}
+\DoxyCodeLine{43     \mbox{\hyperlink{class_binary_tree}{BinaryTree}}(\textcolor{keyword}{const} T\& el, \textcolor{keyword}{const} \mbox{\hyperlink{class_binary_tree}{BinaryTree<T>}}\& l, \textcolor{keyword}{const} \mbox{\hyperlink{class_binary_tree}{BinaryTree<T>}}\& r);}
+\DoxyCodeLine{44     \mbox{\hyperlink{class_binary_tree}{\string~BinaryTree}}() \{ makeEmpty(); \}}
+\DoxyCodeLine{45     \textcolor{keyword}{const} \mbox{\hyperlink{class_binary_tree}{BinaryTree<T>}}\& operator= (\textcolor{keyword}{const} \mbox{\hyperlink{class_binary_tree}{BinaryTree<T>}}\& rhs);}
+\DoxyCodeLine{46     \textcolor{keywordtype}{bool} isEmpty () \textcolor{keyword}{const};}
+\DoxyCodeLine{47     T\& getRoot () \textcolor{keyword}{const};}
+\DoxyCodeLine{48     \textcolor{keywordtype}{void} makeEmpty();}
+\DoxyCodeLine{49     \textcolor{keywordtype}{void} outputPreorder(ostream \&out) \textcolor{keyword}{const};}
+\DoxyCodeLine{50 \};}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53 \textcolor{keyword}{template} <\textcolor{keyword}{class} T>}
+\DoxyCodeLine{54 \mbox{\hyperlink{class_binary_tree}{BinaryTree<T>::BinaryTree}}(\textcolor{keyword}{const} T\& el) \{}
+\DoxyCodeLine{55     root = \textcolor{keyword}{new} \mbox{\hyperlink{class_b_t_node}{BTNode<T>}}(el);}
+\DoxyCodeLine{56 \}}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58 \textcolor{keyword}{template} <\textcolor{keyword}{class} T>}
+\DoxyCodeLine{59 \mbox{\hyperlink{class_binary_tree}{BinaryTree<T>::BinaryTree}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_binary_tree}{BinaryTree<T>}}\& t) \{}
+\DoxyCodeLine{60     root = copySubtree(t.root);}
+\DoxyCodeLine{61 \}}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63 \textcolor{keyword}{template} <\textcolor{keyword}{class} T>}
+\DoxyCodeLine{64 \mbox{\hyperlink{class_b_t_node}{BTNode<T>}}* \mbox{\hyperlink{class_binary_tree}{BinaryTree<T>::copySubtree}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_b_t_node}{BTNode<T>}}* n)\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{65     \textcolor{keywordflow}{if} (n) \{}
+\DoxyCodeLine{66         \mbox{\hyperlink{class_b_t_node}{BTNode<T>}}* node = \textcolor{keyword}{new} \mbox{\hyperlink{class_b_t_node}{BTNode<T>}}(n-\/>element, copySubtree(n-\/>left), copySubtree(n-\/>right));}
+\DoxyCodeLine{67         \textcolor{keywordflow}{return} node;}
+\DoxyCodeLine{68     \}}
+\DoxyCodeLine{69     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{70 \}}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72 \textcolor{keyword}{template} <\textcolor{keyword}{class} T>}
+\DoxyCodeLine{73 \mbox{\hyperlink{class_binary_tree}{BinaryTree<T>::BinaryTree}}(\textcolor{keyword}{const} T\& el, \textcolor{keyword}{const} \mbox{\hyperlink{class_binary_tree}{BinaryTree<T>}}\& l, \textcolor{keyword}{const} \mbox{\hyperlink{class_binary_tree}{BinaryTree<T>}}\& r) \{}
+\DoxyCodeLine{74     root = \textcolor{keyword}{new} \mbox{\hyperlink{class_b_t_node}{BTNode<T>}}(el, copySubtree(l.root), copySubtree(r.root));}
+\DoxyCodeLine{75 \}}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77 \textcolor{keyword}{template} <\textcolor{keyword}{class} T>}
+\DoxyCodeLine{78 \textcolor{keyword}{const} \mbox{\hyperlink{class_binary_tree}{BinaryTree<T>}}\& \mbox{\hyperlink{class_binary_tree}{BinaryTree<T>::operator= }}(\textcolor{keyword}{const} \mbox{\hyperlink{class_binary_tree}{BinaryTree<T>}}\& rhs) \{}
+\DoxyCodeLine{79     \textcolor{keywordflow}{if} (\textcolor{keyword}{this} != \& rhs) \{}
+\DoxyCodeLine{80         makeEmpty();}
+\DoxyCodeLine{81         root = copySubtree(rhs.root);}
+\DoxyCodeLine{82     \}}
+\DoxyCodeLine{83     \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{84 \}}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86 \textcolor{keyword}{template} <\textcolor{keyword}{class} T>}
+\DoxyCodeLine{87 \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_binary_tree}{BinaryTree<T>::isEmpty}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{88     \textcolor{keywordflow}{return} (root == 0) ? true : \textcolor{keyword}{false};}
+\DoxyCodeLine{89 \}}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91 \textcolor{keyword}{template} <\textcolor{keyword}{class} T>}
+\DoxyCodeLine{92 T\& \mbox{\hyperlink{class_binary_tree}{BinaryTree<T>::getRoot}} ()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{93     \textcolor{keywordflow}{if} (root)}
+\DoxyCodeLine{94         \textcolor{keywordflow}{return} root-\/>element;}
+\DoxyCodeLine{95     \textcolor{keywordflow}{throw} \mbox{\hyperlink{class_underflow}{Underflow}}();}
+\DoxyCodeLine{96 \}}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98 \textcolor{keyword}{template} <\textcolor{keyword}{class} T>}
+\DoxyCodeLine{99 \textcolor{keywordtype}{void} \mbox{\hyperlink{class_binary_tree}{BinaryTree<T>::makeEmpty}}() \{}
+\DoxyCodeLine{100     makeEmpty(root);}
+\DoxyCodeLine{101 \}}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{103 }
+\DoxyCodeLine{104 \textcolor{keyword}{template} <\textcolor{keyword}{class} T>}
+\DoxyCodeLine{105 \textcolor{keywordtype}{void} \mbox{\hyperlink{class_binary_tree}{BinaryTree<T>::makeEmpty}}(\mbox{\hyperlink{class_b_t_node}{BTNode<T>}}* n) \{}
+\DoxyCodeLine{106     \textcolor{keywordflow}{if} (n) \{}
+\DoxyCodeLine{107         makeEmpty(n-\/>left);}
+\DoxyCodeLine{108         makeEmpty(n-\/>right);}
+\DoxyCodeLine{109         \textcolor{keyword}{delete} n;}
+\DoxyCodeLine{110     \}}
+\DoxyCodeLine{111 \}}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{113 \textcolor{keyword}{template} <\textcolor{keyword}{class} T>}
+\DoxyCodeLine{114 \textcolor{keywordtype}{void} \mbox{\hyperlink{class_binary_tree}{BinaryTree<T>::outputPreorder}}(ostream\& out)\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{115     outputPreorder(out, root);}
+\DoxyCodeLine{116 \}}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{118 \textcolor{keyword}{template} <\textcolor{keyword}{class} T>}
+\DoxyCodeLine{119 \textcolor{keywordtype}{void} \mbox{\hyperlink{class_binary_tree}{BinaryTree<T>::outputPreorder}}(ostream\& out, \textcolor{keyword}{const} \mbox{\hyperlink{class_b_t_node}{BTNode<T>}}* n)\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{120     out << \textcolor{charliteral}{'('};}
+\DoxyCodeLine{121     \textcolor{keywordflow}{if} (n) \{}
+\DoxyCodeLine{122         out <<  n-\/>element << \textcolor{charliteral}{' '};}
+\DoxyCodeLine{123         outputPreorder(out, n-\/>left);}
+\DoxyCodeLine{124         out << \textcolor{charliteral}{' '};}
+\DoxyCodeLine{125         outputPreorder(out, n-\/>right);}
+\DoxyCodeLine{126     \}}
+\DoxyCodeLine{127     out << \textcolor{charliteral}{')'};}
+\DoxyCodeLine{128 \}}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{130 \textcolor{keyword}{template} <\textcolor{keyword}{class} T>}
+\DoxyCodeLine{131 ostream\& operator<<(ostream\& out, \textcolor{keyword}{const} \mbox{\hyperlink{class_binary_tree}{BinaryTree<T>}}\& t) \{}
+\DoxyCodeLine{132     t.outputPreorder(out);}
+\DoxyCodeLine{133     \textcolor{keywordflow}{return} out;}
+\DoxyCodeLine{134 \}}
+\DoxyCodeLine{135 }
+\DoxyCodeLine{136 }
+\DoxyCodeLine{137 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Iterators  -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{138 }
+\DoxyCodeLine{139 \textcolor{comment}{// Postorder iterator}}
+\DoxyCodeLine{140 \textcolor{keyword}{template} <\textcolor{keyword}{class} T>}
+\DoxyCodeLine{141 \textcolor{keyword}{class }\mbox{\hyperlink{class_b_t_itr_post}{BTItrPost}} \{}
+\DoxyCodeLine{142     stack<BTNode<T> *> itrStack;}
+\DoxyCodeLine{143     stack<bool> visitStack;}
+\DoxyCodeLine{144     \textcolor{keywordtype}{void} slideDown(\mbox{\hyperlink{class_b_t_node}{BTNode<T>}}* n);}
+\DoxyCodeLine{145 \textcolor{keyword}{public}:}
+\DoxyCodeLine{146     \mbox{\hyperlink{class_b_t_itr_post}{BTItrPost}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_binary_tree}{BinaryTree<T>}}\& t);}
+\DoxyCodeLine{147     \textcolor{keywordtype}{void} advance();}
+\DoxyCodeLine{148     T\& retrieve()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} itrStack.top()-\/>element; \}}
+\DoxyCodeLine{149     \textcolor{keywordtype}{bool} isAtEnd()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} itrStack.empty(); \}}
+\DoxyCodeLine{150 \};}
+\DoxyCodeLine{151 }
+\DoxyCodeLine{152 \textcolor{keyword}{template} <\textcolor{keyword}{class} T>}
+\DoxyCodeLine{153 \mbox{\hyperlink{class_b_t_itr_post}{BTItrPost<T>::BTItrPost}} (\textcolor{keyword}{const} \mbox{\hyperlink{class_binary_tree}{BinaryTree<T>}}\& t) \{}
+\DoxyCodeLine{154     \textcolor{keywordflow}{if} (!t.isEmpty())}
+\DoxyCodeLine{155         slideDown(t.root);}
+\DoxyCodeLine{156 \}}
+\DoxyCodeLine{157 }
+\DoxyCodeLine{158 \textcolor{keyword}{template} <\textcolor{keyword}{class} T>}
+\DoxyCodeLine{159 \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_t_itr_post}{BTItrPost<T>::advance}} () \{}
+\DoxyCodeLine{160     itrStack.pop();}
+\DoxyCodeLine{161     visitStack.pop();}
+\DoxyCodeLine{162     \textcolor{keywordflow}{if} (!itrStack.empty() \&\& (visitStack.top() == \textcolor{keyword}{false})) \{}
+\DoxyCodeLine{163         visitStack.pop();}
+\DoxyCodeLine{164         visitStack.push(\textcolor{keyword}{true});}
+\DoxyCodeLine{165         slideDown(itrStack.top()-\/>right);}
+\DoxyCodeLine{166     \}}
+\DoxyCodeLine{167 \}}
+\DoxyCodeLine{168 }
+\DoxyCodeLine{169 \textcolor{keyword}{template} <\textcolor{keyword}{class} T>}
+\DoxyCodeLine{170 \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_t_itr_post}{BTItrPost<T>::slideDown}}(\mbox{\hyperlink{class_b_t_node}{BTNode<T>}}* n) \{}
+\DoxyCodeLine{171     \textcolor{keywordflow}{while} (n) \{}
+\DoxyCodeLine{172         itrStack.push(n);}
+\DoxyCodeLine{173         \textcolor{keywordflow}{if} (n-\/>left) \{}
+\DoxyCodeLine{174             visitStack.push(\textcolor{keyword}{false});}
+\DoxyCodeLine{175             n = n-\/>left;}
+\DoxyCodeLine{176         \}}
+\DoxyCodeLine{177         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (n-\/>right) \{}
+\DoxyCodeLine{178             visitStack.push(\textcolor{keyword}{true});}
+\DoxyCodeLine{179             n = n-\/>right;}
+\DoxyCodeLine{180         \}}
+\DoxyCodeLine{181         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{182             visitStack.push(\textcolor{keyword}{true});}
+\DoxyCodeLine{183             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{184         \}}
+\DoxyCodeLine{185     \}}
+\DoxyCodeLine{186 \}}
+\DoxyCodeLine{187 }
+\DoxyCodeLine{188 }
+\DoxyCodeLine{189 \textcolor{comment}{// Preorder iterator}}
+\DoxyCodeLine{190 \textcolor{keyword}{template} <\textcolor{keyword}{class} T>}
+\DoxyCodeLine{191 \textcolor{keyword}{class }\mbox{\hyperlink{class_b_t_itr_pre}{BTItrPre}} \{}
+\DoxyCodeLine{192     stack<BTNode<T> *> itrStack;}
+\DoxyCodeLine{193 \textcolor{keyword}{public}:}
+\DoxyCodeLine{194     \mbox{\hyperlink{class_b_t_itr_pre}{BTItrPre}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_binary_tree}{BinaryTree<T>}}\& t);}
+\DoxyCodeLine{195     \textcolor{keywordtype}{void} advance();}
+\DoxyCodeLine{196     T\& retrieve()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} itrStack.top()-\/>element; \}}
+\DoxyCodeLine{197     \textcolor{keywordtype}{bool} isAtEnd()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} itrStack.empty(); \}}
+\DoxyCodeLine{198 \};}
+\DoxyCodeLine{199 }
+\DoxyCodeLine{200 \textcolor{keyword}{template} <\textcolor{keyword}{class} T>}
+\DoxyCodeLine{201 \mbox{\hyperlink{class_b_t_itr_pre}{BTItrPre<T>::BTItrPre}} (\textcolor{keyword}{const} \mbox{\hyperlink{class_binary_tree}{BinaryTree<T>}}\& t) \{}
+\DoxyCodeLine{202     \textcolor{keywordflow}{if} (!t.isEmpty())}
+\DoxyCodeLine{203         itrStack.push(t.root);}
+\DoxyCodeLine{204 \}}
+\DoxyCodeLine{205 }
+\DoxyCodeLine{206 \textcolor{keyword}{template} <\textcolor{keyword}{class} T>}
+\DoxyCodeLine{207 \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_t_itr_pre}{BTItrPre<T>::advance}}() \{}
+\DoxyCodeLine{208     \mbox{\hyperlink{class_b_t_node}{BTNode<T>}}* actual = itrStack.top();}
+\DoxyCodeLine{209     \mbox{\hyperlink{class_b_t_node}{BTNode<T>}}* next = actual-\/>left;}
+\DoxyCodeLine{210     \textcolor{keywordflow}{if} (next)}
+\DoxyCodeLine{211         itrStack.push(next);}
+\DoxyCodeLine{212     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{213         \textcolor{keywordflow}{while} (!itrStack.empty()) \{}
+\DoxyCodeLine{214             actual = itrStack.top();}
+\DoxyCodeLine{215             itrStack.pop();}
+\DoxyCodeLine{216             next = actual -\/> right;}
+\DoxyCodeLine{217             \textcolor{keywordflow}{if} (next) \{}
+\DoxyCodeLine{218                 itrStack.push(next);}
+\DoxyCodeLine{219                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{220             \}}
+\DoxyCodeLine{221         \}}
+\DoxyCodeLine{222     \}}
+\DoxyCodeLine{223 \}}
+\DoxyCodeLine{224 }
+\DoxyCodeLine{225 }
+\DoxyCodeLine{226 \textcolor{comment}{// Inorder iterator}}
+\DoxyCodeLine{227 \textcolor{keyword}{template} <\textcolor{keyword}{class} T>}
+\DoxyCodeLine{228 \textcolor{keyword}{class }\mbox{\hyperlink{class_b_t_itr_in}{BTItrIn}} \{}
+\DoxyCodeLine{229     stack<BTNode<T> *> itrStack;}
+\DoxyCodeLine{230     \textcolor{keywordtype}{void} slideLeft(\mbox{\hyperlink{class_b_t_node}{BTNode<T>}}* n);}
+\DoxyCodeLine{231 \textcolor{keyword}{public}:}
+\DoxyCodeLine{232     \mbox{\hyperlink{class_b_t_itr_in}{BTItrIn}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_binary_tree}{BinaryTree<T>}}\& t);}
+\DoxyCodeLine{233     \textcolor{keywordtype}{void} advance();}
+\DoxyCodeLine{234     T\& retrieve()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} itrStack.top()-\/>element; \}}
+\DoxyCodeLine{235     \textcolor{keywordtype}{bool} isAtEnd()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} itrStack.empty(); \}}
+\DoxyCodeLine{236 \};}
+\DoxyCodeLine{237 }
+\DoxyCodeLine{238 \textcolor{keyword}{template} <\textcolor{keyword}{class} T>}
+\DoxyCodeLine{239 \mbox{\hyperlink{class_b_t_itr_in}{BTItrIn<T>::BTItrIn}} (\textcolor{keyword}{const} \mbox{\hyperlink{class_binary_tree}{BinaryTree<T>}}\& t) \{}
+\DoxyCodeLine{240     \textcolor{keywordflow}{if} (!t.isEmpty())}
+\DoxyCodeLine{241         slideLeft(t.root);}
+\DoxyCodeLine{242 \}}
+\DoxyCodeLine{243 }
+\DoxyCodeLine{244 \textcolor{keyword}{template} <\textcolor{keyword}{class} T>}
+\DoxyCodeLine{245 \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_t_itr_in}{BTItrIn<T>::slideLeft}}(\mbox{\hyperlink{class_b_t_node}{BTNode<T>}}* n) \{}
+\DoxyCodeLine{246     \textcolor{keywordflow}{while} (n) \{}
+\DoxyCodeLine{247         itrStack.push(n);}
+\DoxyCodeLine{248         n = n-\/>left;}
+\DoxyCodeLine{249     \}}
+\DoxyCodeLine{250 \}}
+\DoxyCodeLine{251 }
+\DoxyCodeLine{252 \textcolor{keyword}{template} <\textcolor{keyword}{class} T>}
+\DoxyCodeLine{253 \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_t_itr_in}{BTItrIn<T>::advance}}() \{}
+\DoxyCodeLine{254     \mbox{\hyperlink{class_b_t_node}{BTNode<T>}}* actual = itrStack.top();}
+\DoxyCodeLine{255     itrStack.pop();}
+\DoxyCodeLine{256     \mbox{\hyperlink{class_b_t_node}{BTNode<T>}}* next = actual-\/>right;}
+\DoxyCodeLine{257     \textcolor{keywordflow}{if} (next)}
+\DoxyCodeLine{258         slideLeft(next);}
+\DoxyCodeLine{259 \}}
+\DoxyCodeLine{260 }
+\DoxyCodeLine{261 }
+\DoxyCodeLine{262 \textcolor{comment}{// Bylevel iterator}}
+\DoxyCodeLine{263 \textcolor{keyword}{template} <\textcolor{keyword}{class} T>}
+\DoxyCodeLine{264 \textcolor{keyword}{class }\mbox{\hyperlink{class_b_t_itr_level}{BTItrLevel}} \{}
+\DoxyCodeLine{265     queue<BTNode<T> *> itrQueue;}
+\DoxyCodeLine{266 \textcolor{keyword}{public}:}
+\DoxyCodeLine{267     \mbox{\hyperlink{class_b_t_itr_level}{BTItrLevel}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_binary_tree}{BinaryTree<T>}}\& t);}
+\DoxyCodeLine{268     \textcolor{keywordtype}{void} advance();}
+\DoxyCodeLine{269     T\& retrieve()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} itrQueue.front()-\/>element; \}}
+\DoxyCodeLine{270     \textcolor{keywordtype}{bool} isAtEnd()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} itrQueue.empty(); \}}
+\DoxyCodeLine{271 \};}
+\DoxyCodeLine{272 }
+\DoxyCodeLine{273 \textcolor{keyword}{template} <\textcolor{keyword}{class} T>}
+\DoxyCodeLine{274 \mbox{\hyperlink{class_b_t_itr_level}{BTItrLevel<T>::BTItrLevel}} (\textcolor{keyword}{const} \mbox{\hyperlink{class_binary_tree}{BinaryTree<T>}}\& t) \{}
+\DoxyCodeLine{275     \textcolor{keywordflow}{if} (!t.isEmpty())}
+\DoxyCodeLine{276         itrQueue.push(t.root);}
+\DoxyCodeLine{277 \}}
+\DoxyCodeLine{278 }
+\DoxyCodeLine{279 \textcolor{keyword}{template} <\textcolor{keyword}{class} T>}
+\DoxyCodeLine{280 \textcolor{keywordtype}{void} \mbox{\hyperlink{class_b_t_itr_level}{BTItrLevel<T>::advance}}() \{}
+\DoxyCodeLine{281     \mbox{\hyperlink{class_b_t_node}{BTNode<T>}}* actual = itrQueue.front();}
+\DoxyCodeLine{282     itrQueue.pop();}
+\DoxyCodeLine{283     \mbox{\hyperlink{class_b_t_node}{BTNode<T>}}* next = actual-\/>left;}
+\DoxyCodeLine{284     \textcolor{keywordflow}{if} (next)}
+\DoxyCodeLine{285         itrQueue.push(next);}
+\DoxyCodeLine{286     next = actual-\/>right;}
+\DoxyCodeLine{287     \textcolor{keywordflow}{if} (next)}
+\DoxyCodeLine{288         itrQueue.push(next);}
+\DoxyCodeLine{289 \}}
+\DoxyCodeLine{290 }
+\DoxyCodeLine{291 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{292 }
+
+\end{DoxyCode}

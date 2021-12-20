@@ -1,0 +1,149 @@
+\hypertarget{classservico}{}\doxysection{servico Class Reference}
+\label{classservico}\index{servico@{servico}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classservico_a24711820163460b428cf6a8b4ce13cca}{servico}} (int id, string tipo, string funcionario, \mbox{\hyperlink{class_date}{Date}} data)
+\item 
+string \mbox{\hyperlink{classservico_a2020d2e6c06a9b1235be835845ff45e3}{get\+Tipo}} () const
+\item 
+\mbox{\hyperlink{class_date}{Date}} \mbox{\hyperlink{classservico_a3944029d2e745721d84d79f729166c6b}{get\+Data}} () const
+\item 
+string \mbox{\hyperlink{classservico_a9334bd8fd2d9149af0d2c1f0143225a8}{get\+Funcionario}} () const
+\item 
+int \mbox{\hyperlink{classservico_aec7f4817ef997484d2843d6b42976f13}{get\+ID}} () const
+\item 
+bool const \mbox{\hyperlink{classservico_a6d99f77a0daed1affe62b603096ea901}{operator$<$}} (\mbox{\hyperlink{classservico}{servico}} s2) const
+\item 
+void \mbox{\hyperlink{classservico_a64d151f6c2d3e0164b2701199cc28c48}{set\+Tipo}} (string novo\+Tipo)
+\item 
+void \mbox{\hyperlink{classservico_ab98f66925300969ce15c1d5b97d04197}{set\+Funcionario}} (string funcionario)
+\item 
+string \mbox{\hyperlink{classservico_a252afcb1ad2eb828b11f809a30d73fc4}{write}} () const
+\item 
+\mbox{\Hypertarget{classservico_abc9f15430390df42b65c7939101833ec}\label{classservico_abc9f15430390df42b65c7939101833ec}} 
+bool {\bfseries save\+File} ()
+\item 
+\mbox{\Hypertarget{classservico_ab036721043d435cb2cf687463c022b1e}\label{classservico_ab036721043d435cb2cf687463c022b1e}} 
+bool {\bfseries load\+File} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classservico_a24711820163460b428cf6a8b4ce13cca}\label{classservico_a24711820163460b428cf6a8b4ce13cca}} 
+\index{servico@{servico}!servico@{servico}}
+\index{servico@{servico}!servico@{servico}}
+\doxysubsubsection{\texorpdfstring{servico()}{servico()}}
+{\footnotesize\ttfamily servico\+::servico (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{string}]{servico,  }\item[{string}]{funcionario,  }\item[{\mbox{\hyperlink{class_date}{Date}}}]{data }\end{DoxyParamCaption})}
+
+Construtor 
+\begin{DoxyParams}{Parameters}
+{\em servico} & para o tipo de serviço efetuado \\
+\hline
+{\em funcionario} & que é o funcionário encarregue do servico \\
+\hline
+{\em data} & agendada para a aplicação do serviço \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classservico_a3944029d2e745721d84d79f729166c6b}\label{classservico_a3944029d2e745721d84d79f729166c6b}} 
+\index{servico@{servico}!getData@{getData}}
+\index{getData@{getData}!servico@{servico}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_date}{Date}} servico\+::get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em data} & agendada para a aplicação do serviço \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classservico_a9334bd8fd2d9149af0d2c1f0143225a8}\label{classservico_a9334bd8fd2d9149af0d2c1f0143225a8}} 
+\index{servico@{servico}!getFuncionario@{getFuncionario}}
+\index{getFuncionario@{getFuncionario}!servico@{servico}}
+\doxysubsubsection{\texorpdfstring{getFuncionario()}{getFuncionario()}}
+{\footnotesize\ttfamily string servico\+::get\+Funcionario (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em funcionario} & encarregue do serviço \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classservico_aec7f4817ef997484d2843d6b42976f13}\label{classservico_aec7f4817ef997484d2843d6b42976f13}} 
+\index{servico@{servico}!getID@{getID}}
+\index{getID@{getID}!servico@{servico}}
+\doxysubsubsection{\texorpdfstring{getID()}{getID()}}
+{\footnotesize\ttfamily int servico\+::get\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em id} & que é o numero que identifica o serviço \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classservico_a2020d2e6c06a9b1235be835845ff45e3}\label{classservico_a2020d2e6c06a9b1235be835845ff45e3}} 
+\index{servico@{servico}!getTipo@{getTipo}}
+\index{getTipo@{getTipo}!servico@{servico}}
+\doxysubsubsection{\texorpdfstring{getTipo()}{getTipo()}}
+{\footnotesize\ttfamily string servico\+::get\+Tipo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em tipo} & de servico \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classservico_a6d99f77a0daed1affe62b603096ea901}\label{classservico_a6d99f77a0daed1affe62b603096ea901}} 
+\index{servico@{servico}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!servico@{servico}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool const servico\+::operator$<$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classservico}{servico}}}]{s2 }\end{DoxyParamCaption}) const}
+
+Operator Operador \char`\"{}$<$\char`\"{} que ordena os servicos de ordem crescente de id \mbox{\Hypertarget{classservico_ab98f66925300969ce15c1d5b97d04197}\label{classservico_ab98f66925300969ce15c1d5b97d04197}} 
+\index{servico@{servico}!setFuncionario@{setFuncionario}}
+\index{setFuncionario@{setFuncionario}!servico@{servico}}
+\doxysubsubsection{\texorpdfstring{setFuncionario()}{setFuncionario()}}
+{\footnotesize\ttfamily void servico\+::set\+Funcionario (\begin{DoxyParamCaption}\item[{string}]{funcionario }\end{DoxyParamCaption})}
+
+Setter 
+\begin{DoxyParams}{Parameters}
+{\em funcionario} & que é o novo funcionário encarregue de executar o serviço \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classservico_a64d151f6c2d3e0164b2701199cc28c48}\label{classservico_a64d151f6c2d3e0164b2701199cc28c48}} 
+\index{servico@{servico}!setTipo@{setTipo}}
+\index{setTipo@{setTipo}!servico@{servico}}
+\doxysubsubsection{\texorpdfstring{setTipo()}{setTipo()}}
+{\footnotesize\ttfamily void servico\+::set\+Tipo (\begin{DoxyParamCaption}\item[{string}]{novo\+Tipo }\end{DoxyParamCaption})}
+
+Setter 
+\begin{DoxyParams}{Parameters}
+{\em novo\+Tipo} & que é o novo tipo de serviço, igual ou diferente ao anterior \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classservico_a252afcb1ad2eb828b11f809a30d73fc4}\label{classservico_a252afcb1ad2eb828b11f809a30d73fc4}} 
+\index{servico@{servico}!write@{write}}
+\index{write@{write}!servico@{servico}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily string servico\+::write (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Writer \begin{DoxyReturn}{Returns}
+de uma string com os atributos do ID -\/ Funcionario -\/ Tipo -\/ YYYY-\/\+MM-\/\+DD 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+ASUS/\+Desktop/\+Rui/\+FACULDADE/\+FEUP/\+AED/projeto-\/aed-\/main (2)/projeto-\/aed-\/main/servico.\+h\item 
+C\+:/\+Users/\+ASUS/\+Desktop/\+Rui/\+FACULDADE/\+FEUP/\+AED/projeto-\/aed-\/main (2)/projeto-\/aed-\/main/servico.\+cpp\end{DoxyCompactItemize}

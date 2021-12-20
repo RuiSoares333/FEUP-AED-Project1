@@ -1,0 +1,108 @@
+\hypertarget{class_time}{}\doxysection{Time Class Reference}
+\label{class_time}\index{Time@{Time}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_time_a4245e409c7347d1d671858962c2ca3b5}{Time}} ()
+\item 
+\mbox{\hyperlink{class_time_a12379f2fe13339f4a2edd116cc11f9dd}{Time}} (int hora, int minuto)
+\item 
+void \mbox{\hyperlink{class_time_a759c04ad503b354ea33f51a425a563e7}{set\+Hora}} (int hora)
+\item 
+void \mbox{\hyperlink{class_time_a2f080a74d5b678e373f61dc53a84c896}{set\+Minuto}} (int minuto)
+\item 
+int \mbox{\hyperlink{class_time_ae28c5666210e59432d6098b10baca06f}{get\+Hora}} () const
+\item 
+int \mbox{\hyperlink{class_time_a01a87b037dacf5e196bda7ff5fac81e0}{get\+Minuto}} () const
+\item 
+bool const \mbox{\hyperlink{class_time_a79c02c62449b1871a995edaf90ed2aac}{operator$<$}} (const \mbox{\hyperlink{class_time}{Time}} t2) const
+\item 
+bool const \mbox{\hyperlink{class_time_ac70378b2da7d311329caab1e6ff1d532}{operator==}} (const \mbox{\hyperlink{class_time}{Time}} t2) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_time_a4245e409c7347d1d671858962c2ca3b5}\label{class_time_a4245e409c7347d1d671858962c2ca3b5}} 
+\index{Time@{Time}!Time@{Time}}
+\index{Time@{Time}!Time@{Time}}
+\doxysubsubsection{\texorpdfstring{Time()}{Time()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Time\+::\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Construtor \textbackslash{}cria um objeto da classe \mbox{\hyperlink{class_time}{Time}}, \textbackslash{}com valores default hora = 0 e minuto = 0 \mbox{\Hypertarget{class_time_a12379f2fe13339f4a2edd116cc11f9dd}\label{class_time_a12379f2fe13339f4a2edd116cc11f9dd}} 
+\index{Time@{Time}!Time@{Time}}
+\index{Time@{Time}!Time@{Time}}
+\doxysubsubsection{\texorpdfstring{Time()}{Time()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Time\+::\+Time (\begin{DoxyParamCaption}\item[{int}]{hora,  }\item[{int}]{minuto }\end{DoxyParamCaption})}
+
+Construtor 
+\begin{DoxyParams}{Parameters}
+{\em hora} & \\
+\hline
+{\em minuto} & \textbackslash{}se hora \texorpdfstring{$>$}{>} 23 dá a exceção \char`\"{}hora $>$ 23\char`\"{} \textbackslash{}se hora \texorpdfstring{$<$}{<} 0 dá a exceção \char`\"{}hora $<$ 0\char`\"{} \textbackslash{}se minuto \texorpdfstring{$>$}{>} 59 dá a exceção \char`\"{}minuto $>$ 59\char`\"{} \textbackslash{}se minuto \texorpdfstring{$<$}{<} 0 dá a exceção \char`\"{}minuto $<$ \char`\"{} \textbackslash{}cria um objeto da classe \mbox{\hyperlink{class_time}{Time}} com os atributos hora e minuto \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_time_ae28c5666210e59432d6098b10baca06f}\label{class_time_ae28c5666210e59432d6098b10baca06f}} 
+\index{Time@{Time}!getHora@{getHora}}
+\index{getHora@{getHora}!Time@{Time}}
+\doxysubsubsection{\texorpdfstring{getHora()}{getHora()}}
+{\footnotesize\ttfamily int Time\+::get\+Hora (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter 
+\begin{DoxyParams}{Parameters}
+{\em hora} & \textbackslash{}muda o minuto do time \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_time_a01a87b037dacf5e196bda7ff5fac81e0}\label{class_time_a01a87b037dacf5e196bda7ff5fac81e0}} 
+\index{Time@{Time}!getMinuto@{getMinuto}}
+\index{getMinuto@{getMinuto}!Time@{Time}}
+\doxysubsubsection{\texorpdfstring{getMinuto()}{getMinuto()}}
+{\footnotesize\ttfamily int Time\+::get\+Minuto (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter 
+\begin{DoxyParams}{Parameters}
+{\em minuto} & \textbackslash{}muda o minuto do time \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_time_a79c02c62449b1871a995edaf90ed2aac}\label{class_time_a79c02c62449b1871a995edaf90ed2aac}} 
+\index{Time@{Time}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Time@{Time}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool const Time\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_time}{Time}}}]{t2 }\end{DoxyParamCaption}) const}
+
+Operator\texorpdfstring{$<$}{<} \textbackslash{}se as horas forem iguais retorna minuto \texorpdfstring{$<$}{<} t2.\+get\+Minuto() \textbackslash{}caso contrário retorna hora \texorpdfstring{$<$}{<} t2.\+get\+Hora() \mbox{\Hypertarget{class_time_ac70378b2da7d311329caab1e6ff1d532}\label{class_time_ac70378b2da7d311329caab1e6ff1d532}} 
+\index{Time@{Time}!operator==@{operator==}}
+\index{operator==@{operator==}!Time@{Time}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool const Time\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_time}{Time}}}]{t2 }\end{DoxyParamCaption}) const}
+
+Operator Operador \char`\"{}==\char`\"{} que diz se 2 Tempos são iguais \mbox{\Hypertarget{class_time_a759c04ad503b354ea33f51a425a563e7}\label{class_time_a759c04ad503b354ea33f51a425a563e7}} 
+\index{Time@{Time}!setHora@{setHora}}
+\index{setHora@{setHora}!Time@{Time}}
+\doxysubsubsection{\texorpdfstring{setHora()}{setHora()}}
+{\footnotesize\ttfamily void Time\+::set\+Hora (\begin{DoxyParamCaption}\item[{int}]{hora }\end{DoxyParamCaption})}
+
+Setter 
+\begin{DoxyParams}{Parameters}
+{\em hora} & \textbackslash{}muda a hora do time \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_time_a2f080a74d5b678e373f61dc53a84c896}\label{class_time_a2f080a74d5b678e373f61dc53a84c896}} 
+\index{Time@{Time}!setMinuto@{setMinuto}}
+\index{setMinuto@{setMinuto}!Time@{Time}}
+\doxysubsubsection{\texorpdfstring{setMinuto()}{setMinuto()}}
+{\footnotesize\ttfamily void Time\+::set\+Minuto (\begin{DoxyParamCaption}\item[{int}]{minuto }\end{DoxyParamCaption})}
+
+Setter 
+\begin{DoxyParams}{Parameters}
+{\em int} & minuto \textbackslash{}muda minuto do time \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+ASUS/\+Desktop/\+Rui/\+FACULDADE/\+FEUP/\+AED/projeto-\/aed-\/main (2)/projeto-\/aed-\/main/Time.\+h\item 
+C\+:/\+Users/\+ASUS/\+Desktop/\+Rui/\+FACULDADE/\+FEUP/\+AED/projeto-\/aed-\/main (2)/projeto-\/aed-\/main/Time.\+cpp\end{DoxyCompactItemize}

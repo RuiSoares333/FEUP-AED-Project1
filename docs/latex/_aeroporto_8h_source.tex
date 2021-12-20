@@ -1,0 +1,45 @@
+\hypertarget{_aeroporto_8h_source}{}\doxysection{C\+:/\+Users/\+ASUS/\+Desktop/\+Rui/\+FACULDADE/\+FEUP/\+AED/projeto-\/aed-\/main (2)/projeto-\/aed-\/main/\+Aeroporto.h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef PROJETO\_AED\_AEROPORTO\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define PROJETO\_AED\_AEROPORTO\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <sys/stat.h>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}Transporte.h"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}bst.h"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}binaryTree.h"{}}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{class }\mbox{\hyperlink{class_aeroporto}{Aeroporto}} \{}
+\DoxyCodeLine{14 \textcolor{keyword}{public}:}
+\DoxyCodeLine{15     \mbox{\hyperlink{class_aeroporto_ae42f7700c5a73488a1c54f636312c6c8}{Aeroporto}}(\textcolor{keywordtype}{string} nome, \textcolor{keywordtype}{string} pais, \textcolor{keywordtype}{string} cidade);}
+\DoxyCodeLine{16     \mbox{\hyperlink{class_aeroporto_ae42f7700c5a73488a1c54f636312c6c8}{Aeroporto}}();}
+\DoxyCodeLine{17     \textcolor{keywordtype}{string} \mbox{\hyperlink{class_aeroporto_a23f806b5b9765396d4cdee50f0ce6ebd}{getNome}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{18     \textcolor{keywordtype}{string} \mbox{\hyperlink{class_aeroporto_af54dce0996c1e9bf471a3ff1f41d995e}{getPais}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{19     \textcolor{keywordtype}{string} \mbox{\hyperlink{class_aeroporto_a222a4ff75168f6cd658538739ca4cb36}{getCidade}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{20     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_aeroporto_add384df96b8a0e8440e77b2fb5c249fb}{setNome}}(\textcolor{keywordtype}{string} nome);}
+\DoxyCodeLine{21     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_aeroporto_a153555fdbbb2f5a07798c86f205d5b00}{setPais}}(\textcolor{keywordtype}{string} pais);}
+\DoxyCodeLine{22     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_aeroporto_a096dec4b9cd8bacc5c663a82810925f6}{setCidade}}(\textcolor{keywordtype}{string} cidade);}
+\DoxyCodeLine{23     \textcolor{keyword}{const} \mbox{\hyperlink{class_b_s_t}{BST<Transporte>}} \&\mbox{\hyperlink{class_aeroporto_a05f249dc66dfc26318339073864d5af6}{getTransportes}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{24     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_aeroporto_aa21f2099ed569a1b78ccaf72b6833736}{setTransportes}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_b_s_t}{BST<Transporte>}} \&transportes);}
+\DoxyCodeLine{25     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_aeroporto_a7bb6e9709959fc4668414bd7dbd2cba7}{insertTransporte}}(\mbox{\hyperlink{class_transporte}{Transporte}} \&transporte);}
+\DoxyCodeLine{26     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_aeroporto_ae63fa67e715533fa887021aa8029f263}{removeTransporte}}(\mbox{\hyperlink{class_transporte}{Transporte}} \&transporte);}
+\DoxyCodeLine{27     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_aeroporto_a3264cd50bbbe9e88f9a5c5619fd0003b}{saveFile}}();}
+\DoxyCodeLine{28     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_aeroporto_aec225b3ff65c6b3e29a52bc341508dca}{loadFile}}();}
+\DoxyCodeLine{29     \textcolor{keywordtype}{bool} \textcolor{keyword}{const} \mbox{\hyperlink{class_aeroporto_abf2118ceaebedc77d9fa8266b20a63a6}{operator<}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_aeroporto}{Aeroporto}} \&a2) \textcolor{keyword}{const};}
+\DoxyCodeLine{30     \textcolor{keywordtype}{bool} \textcolor{keyword}{const} \mbox{\hyperlink{class_aeroporto_a9194a75edcfe72c88886c163e3b658fc}{operator==}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_aeroporto}{Aeroporto}} \&a2) \textcolor{keyword}{const};}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 \textcolor{keyword}{private}:}
+\DoxyCodeLine{33     \textcolor{keywordtype}{string} nome;}
+\DoxyCodeLine{34     \textcolor{keywordtype}{string} pais;}
+\DoxyCodeLine{35     \textcolor{keywordtype}{string} cidade;}
+\DoxyCodeLine{36     \mbox{\hyperlink{class_b_s_t}{BST<Transporte>}} transportes;}
+\DoxyCodeLine{37 \};}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//PROJETO\_AED\_AEROPORTO\_H}}
+
+\end{DoxyCode}

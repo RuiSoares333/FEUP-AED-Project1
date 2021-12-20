@@ -1,0 +1,39 @@
+\hypertarget{_transporte_8h_source}{}\doxysection{C\+:/\+Users/\+ASUS/\+Desktop/\+Rui/\+FACULDADE/\+FEUP/\+AED/projeto-\/aed-\/main (2)/projeto-\/aed-\/main/\+Transporte.h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef PROJETO\_AED\_TRANSPORTE\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define PROJETO\_AED\_TRANSPORTE\_H}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}time.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}Date.h"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}Time.h"{}}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{class }\mbox{\hyperlink{class_transporte}{Transporte}} \{}
+\DoxyCodeLine{13 \textcolor{keyword}{public}:}
+\DoxyCodeLine{14     \mbox{\hyperlink{class_transporte_a0cbb4b20eea36e3011b8b3208a812778}{Transporte}}(); \textcolor{comment}{//default dist = 9999, tipo = autocarro, default time, default date}}
+\DoxyCodeLine{15     \mbox{\hyperlink{class_transporte_a0cbb4b20eea36e3011b8b3208a812778}{Transporte}}(\textcolor{keywordtype}{int} distancia, \mbox{\hyperlink{class_time}{Time}} time, \textcolor{keywordtype}{string} tipo, \mbox{\hyperlink{class_date}{Date}} date); \textcolor{comment}{//construtor, converte todas as strings tipo para lowercase e remove espacos, throws uma excecao quando o tipo é diferente de "{}metro"{}, "{}comboio"{} ou "{}autocarro"{}}}
+\DoxyCodeLine{16     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_transporte_ad88a59c5e69084b537a15e7127086f33}{setDistancia}}(\textcolor{keywordtype}{int} distancia);}
+\DoxyCodeLine{17     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_transporte_a9523227b8ef88a6152735db3051cfcde}{getDistancia}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{18     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_transporte_aa955b59fa9809ef38e07c6816002a1e7}{setTime}}(\mbox{\hyperlink{class_time}{Time}} time);}
+\DoxyCodeLine{19     \mbox{\hyperlink{class_time}{Time}} \mbox{\hyperlink{class_transporte_a01587e3bc1db4bd589cd462357f64551}{getTime}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{20     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_transporte_ac00df8a1514c2c49b94a2626134eb4d0}{setTipo}}(\textcolor{keywordtype}{string} tipo);}
+\DoxyCodeLine{21     \textcolor{keywordtype}{string} \mbox{\hyperlink{class_transporte_a04c8bd64450c121a0c67a0eadf96053c}{getTipo}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{22     \textcolor{keywordtype}{bool} \textcolor{keyword}{const} \mbox{\hyperlink{class_transporte_ac9bf2d28d5089e0ca4787e597dcce3eb}{operator<}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_transporte}{Transporte}} t2) \textcolor{keyword}{const};}
+\DoxyCodeLine{23     \textcolor{keyword}{const} \mbox{\hyperlink{class_date}{Date}} \&\mbox{\hyperlink{class_transporte_a7f7de1f92d6fdac0b4882148fa50d44f}{getDate}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{24     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_transporte_af5676f9fb9fb8dbe02ba27ab3dfd3000}{setDate}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_date}{Date}} \&date);}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{keyword}{private}:}
+\DoxyCodeLine{27     \textcolor{keywordtype}{int} distancia;}
+\DoxyCodeLine{28     \mbox{\hyperlink{class_time}{Time}} time;}
+\DoxyCodeLine{29     \textcolor{keywordtype}{string} tipo;}
+\DoxyCodeLine{30     \mbox{\hyperlink{class_date}{Date}} date;}
+\DoxyCodeLine{31 \};}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//PROJETO\_AED\_TRANSPORTE\_H}}
+
+\end{DoxyCode}

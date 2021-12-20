@@ -1,0 +1,546 @@
+\hypertarget{class_base_dados}{}\doxysection{Base\+Dados Class Reference}
+\label{class_base_dados}\index{BaseDados@{BaseDados}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_base_dados_a82c555569669e165b5d1eae42ecc581b}{load\+All}} ()
+\item 
+bool \mbox{\hyperlink{class_base_dados_a1a58b24e51a327c5a01affd9348e7ceb}{load\+Airports}} ()
+\item 
+void \mbox{\hyperlink{class_base_dados_a3b35ed86f57d18acc09cf0afa3546bfc}{load\+Servicos}} ()
+\item 
+void \mbox{\hyperlink{class_base_dados_a6f145922cc655d36a6ad39211f4e6106}{load\+Avioes}} ()
+\item 
+bool \mbox{\hyperlink{class_base_dados_adb769655d0b293e878b7086cae8f2628}{load\+Voos}} ()
+\item 
+void \mbox{\hyperlink{class_base_dados_a43714e8b8d4025005120070a394d4784}{sort\+Servicos}} ()
+\item 
+void \mbox{\hyperlink{class_base_dados_adc28a2a85f566c4eeadbcb76f262b471}{sort\+Avioes}} ()
+\item 
+void \mbox{\hyperlink{class_base_dados_a38b06ef9b0f95a5d5d09e56e0e59ef48}{sort\+Voos}} ()
+\item 
+void \mbox{\hyperlink{class_base_dados_a8fed9d7cbfc6b94a924e30d8613d1fc6}{airport\+Sort}} ()
+\item 
+\mbox{\Hypertarget{class_base_dados_ac74e53391dd805ae8b642e63948f39a9}\label{class_base_dados_ac74e53391dd805ae8b642e63948f39a9}} 
+void {\bfseries draw\+Servicos} () const
+\item 
+void \mbox{\hyperlink{class_base_dados_a84c1627231e481150da4021b2ed87665}{draw\+Avioes}} (list$<$ \mbox{\hyperlink{class_aviao}{Aviao}} $>$ lista) const
+\item 
+void \mbox{\hyperlink{class_base_dados_aa018b28dc2e1c5b8d8f6e3b453b803a6}{draw\+Avioes\+Cap}} () const
+\item 
+void \mbox{\hyperlink{class_base_dados_a773b11664d3d81c22df33ab121d0765f}{draw\+Avioes\+Voo}} () const
+\item 
+void \mbox{\hyperlink{class_base_dados_ae7610610d6a0b0db5ad324adb7d55fd5}{draw\+Avioes\+Ser\+Ag}} () const
+\item 
+void \mbox{\hyperlink{class_base_dados_a56637d6b70c7b137ac6819505c53175f}{draw\+Avioes\+Ser\+Ter}} () const
+\item 
+void \mbox{\hyperlink{class_base_dados_a272b7023e72ca71e983605ec53699d05}{draw\+Voos}} (list$<$ \mbox{\hyperlink{class_voo}{Voo}} $>$ aux\+Voos) const
+\item 
+void \mbox{\hyperlink{class_base_dados_aba84ca9319256a2db8774e243715bb7b}{draw\+Voos\+Data}} () const
+\item 
+void \mbox{\hyperlink{class_base_dados_adae6ab588f76fc8a799e8ad7b223663d}{draw\+Voos\+Duracao}} () const
+\item 
+void \mbox{\hyperlink{class_base_dados_a814912b64d772e99f19f2d8accc41446}{draw\+Voos\+Passageiros}} () const
+\item 
+void \mbox{\hyperlink{class_base_dados_a3ae19eac59e6d1c97fcd9618f6bed559}{draw\+Parcial\+Voos\+Data}} (\mbox{\hyperlink{class_date}{Date}} d1, \mbox{\hyperlink{class_date}{Date}} d2) const
+\item 
+void \mbox{\hyperlink{class_base_dados_a0fed78a43bee97be6ae48baa162dc631}{transport\+Draw}} (\mbox{\hyperlink{class_aeroporto}{Aeroporto}} \&aeroporto)
+\item 
+void \mbox{\hyperlink{class_base_dados_a992292c0c59607e39ec263de1454a823}{transporte\+Draw\+Parcial}} (\mbox{\hyperlink{class_aeroporto}{Aeroporto}} \&aeroporto, \mbox{\hyperlink{class_date}{Date}} d1, \mbox{\hyperlink{class_date}{Date}} d2, \mbox{\hyperlink{class_time}{Time}} t1, \mbox{\hyperlink{class_time}{Time}} t2)
+\item 
+void \mbox{\hyperlink{class_base_dados_ae580d4c9fbf6db28c1ea7a08fccf00f4}{airport\+Draw}} ()
+\item 
+void \mbox{\hyperlink{class_base_dados_a1dfcee0e14528d87963e3e2e6e4069ef}{servicos\+Draw}} (string tipo)
+\item 
+list$<$ \mbox{\hyperlink{class_aeroporto}{Aeroporto}} $>$ \mbox{\hyperlink{class_base_dados_affcc7bfcf0a6a0a26c2e5f53c7711f22}{get\+Aeroportos}} () const
+\item 
+list$<$ \mbox{\hyperlink{classservico}{servico}} $>$ \mbox{\hyperlink{class_base_dados_a24d74f7044a9415c70a91eddda3cb492}{get\+Servicos}} () const
+\item 
+list$<$ \mbox{\hyperlink{class_aviao}{Aviao}} $>$ \mbox{\hyperlink{class_base_dados_abeea2460fb515ba1fb381fae64946ea3}{get\+Avioes}} () const
+\item 
+list$<$ \mbox{\hyperlink{class_voo}{Voo}} $>$ \mbox{\hyperlink{class_base_dados_a4fa09bd6b87dc755628f4d88cc1eacab}{get\+Voos}} () const
+\item 
+void \mbox{\hyperlink{class_base_dados_a9fb994dd2316ab7c1ab290fd1bc2f447}{save\+All}} ()
+\item 
+bool \mbox{\hyperlink{class_base_dados_aeba4c5aca5c28c8909253d88283e3809}{save\+Airports}} ()
+\item 
+void \mbox{\hyperlink{class_base_dados_aecc9ed2d333a94b5d9df0d98774db8c8}{save\+Servicos}} ()
+\item 
+void \mbox{\hyperlink{class_base_dados_a7c29acfcc750b0e7e16cdb4a92099124}{save\+Avioes}} ()
+\item 
+bool \mbox{\hyperlink{class_base_dados_aef2f17a5507654d16bf9bc4d407fbe75}{save\+Voos}} ()
+\item 
+void \mbox{\hyperlink{class_base_dados_a48ec7232f74de4bae57bbac89815d5d7}{add\+Airport}} (\mbox{\hyperlink{class_aeroporto}{Aeroporto}} aeroporto)
+\item 
+void \mbox{\hyperlink{class_base_dados_a1eff7078e269e56beb2cb5a724ee3c1d}{add\+Servico}} (\mbox{\hyperlink{classservico}{servico}} \mbox{\hyperlink{classservico}{servico}})
+\item 
+void \mbox{\hyperlink{class_base_dados_a6787562dbd1c1db69eecf441ef8f5eb2}{add\+Aviao}} (\mbox{\hyperlink{class_aviao}{Aviao}} a)
+\item 
+void \mbox{\hyperlink{class_base_dados_a685b5a18564678d4c75e7ce4bc5f8a33}{add\+Voo}} (\mbox{\hyperlink{class_voo}{Voo}} v)
+\item 
+bool \mbox{\hyperlink{class_base_dados_ad70db6e417e1041fdb877f1cccc3382d}{add\+Transporte}} (\mbox{\hyperlink{class_aeroporto}{Aeroporto}} aero, \mbox{\hyperlink{class_transporte}{Transporte}} trans)
+\item 
+bool \mbox{\hyperlink{class_base_dados_a5236f696a9064d731521a820e8145578}{remove\+Airport}} (\mbox{\hyperlink{class_aeroporto}{Aeroporto}} aeroporto)
+\item 
+void \mbox{\hyperlink{class_base_dados_ac9086374f2be649ff5c3013227d63876}{remove\+Aviao}} (string matricula)
+\item 
+bool \mbox{\hyperlink{class_base_dados_a9d5de3df93bd913fe4fd61eda0e8719a}{remove\+Voo}} (int num\+Voo)
+\item 
+bool \mbox{\hyperlink{class_base_dados_ae60e1c6b709a5e6e3aa4753593f3a8e7}{remove\+Transporte}} (\mbox{\hyperlink{class_aeroporto}{Aeroporto}} \&aeroporto, \mbox{\hyperlink{class_transporte}{Transporte}} transporte)
+\item 
+bool \mbox{\hyperlink{class_base_dados_aff3c244810d26517d856cb3cffc574a1}{update\+Airport}} (\mbox{\hyperlink{class_aeroporto}{Aeroporto}} aeroporto, string nome, string cidade, string pais)
+\item 
+bool \mbox{\hyperlink{class_base_dados_ada46f3366c594bbfa2c809511c59874b}{update\+Transporte}} (\mbox{\hyperlink{class_aeroporto}{Aeroporto}} aeroporto, \mbox{\hyperlink{class_transporte}{Transporte}} transporte, int distancia, string tipo, \mbox{\hyperlink{class_time}{Time}} time, \mbox{\hyperlink{class_date}{Date}} date)
+\item 
+bool \mbox{\hyperlink{class_base_dados_ac7a43386ff62a9db0821f03e6d5b4c3b}{update\+Aviao\+Voo}} (string matricula, \mbox{\hyperlink{class_voo}{Voo}} voo)
+\item 
+bool \mbox{\hyperlink{class_base_dados_a4cd97a8b6c742f6eb0cff88315a6939c}{update\+Aviao\+Servico\+Criar}} (string matricula, \mbox{\hyperlink{classservico}{servico}} ser)
+\item 
+bool \mbox{\hyperlink{class_base_dados_abf5e4578bd6fb402c8bd9a06ee65f24b}{update\+Aviao\+Servico\+Terminar}} (string matricula)
+\item 
+bool \mbox{\hyperlink{class_base_dados_ae2225a807c07411c2726644e0046fc69}{update\+Voo}} (int num\+Voo\+\_\+s, int num\+Voo\+\_\+p, \mbox{\hyperlink{class_date}{Date}} data, float duracao, \mbox{\hyperlink{class_transporte_bagagem}{Transporte\+Bagagem}} t, \mbox{\hyperlink{class_aeroporto}{Aeroporto}} a1, \mbox{\hyperlink{class_aeroporto}{Aeroporto}} a2, list$<$ \mbox{\hyperlink{class_passageiro}{Passageiro}} $>$ passageiros)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_base_dados_a48ec7232f74de4bae57bbac89815d5d7}\label{class_base_dados_a48ec7232f74de4bae57bbac89815d5d7}} 
+\index{BaseDados@{BaseDados}!addAirport@{addAirport}}
+\index{addAirport@{addAirport}!BaseDados@{BaseDados}}
+\doxysubsubsection{\texorpdfstring{addAirport()}{addAirport()}}
+{\footnotesize\ttfamily void Base\+Dados\+::add\+Airport (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_aeroporto}{Aeroporto}}}]{aeroporto }\end{DoxyParamCaption})}
+
+Adder Adiciona um
+\begin{DoxyParams}{Parameters}
+{\em aeroporto} & à lista\\
+\hline
+{\em aeroportos} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_base_dados_a6787562dbd1c1db69eecf441ef8f5eb2}\label{class_base_dados_a6787562dbd1c1db69eecf441ef8f5eb2}} 
+\index{BaseDados@{BaseDados}!addAviao@{addAviao}}
+\index{addAviao@{addAviao}!BaseDados@{BaseDados}}
+\doxysubsubsection{\texorpdfstring{addAviao()}{addAviao()}}
+{\footnotesize\ttfamily void Base\+Dados\+::add\+Aviao (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_aviao}{Aviao}}}]{a }\end{DoxyParamCaption})}
+
+Adder Adiciona um
+\begin{DoxyParams}{Parameters}
+{\em aviao} & à lista de Aviões \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_base_dados_a1eff7078e269e56beb2cb5a724ee3c1d}\label{class_base_dados_a1eff7078e269e56beb2cb5a724ee3c1d}} 
+\index{BaseDados@{BaseDados}!addServico@{addServico}}
+\index{addServico@{addServico}!BaseDados@{BaseDados}}
+\doxysubsubsection{\texorpdfstring{addServico()}{addServico()}}
+{\footnotesize\ttfamily void Base\+Dados\+::add\+Servico (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classservico}{servico}}}]{s }\end{DoxyParamCaption})}
+
+Adder Adiciona um
+\begin{DoxyParams}{Parameters}
+{\em servico} & à lista\\
+\hline
+{\em servicos} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_base_dados_ad70db6e417e1041fdb877f1cccc3382d}\label{class_base_dados_ad70db6e417e1041fdb877f1cccc3382d}} 
+\index{BaseDados@{BaseDados}!addTransporte@{addTransporte}}
+\index{addTransporte@{addTransporte}!BaseDados@{BaseDados}}
+\doxysubsubsection{\texorpdfstring{addTransporte()}{addTransporte()}}
+{\footnotesize\ttfamily bool Base\+Dados\+::add\+Transporte (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_aeroporto}{Aeroporto}}}]{aeroporto,  }\item[{\mbox{\hyperlink{class_transporte}{Transporte}}}]{trans }\end{DoxyParamCaption})}
+
+Adder Adiciona um
+\begin{DoxyParams}{Parameters}
+{\em transporte} & a um\\
+\hline
+{\em aeroporto} & na lista\\
+\hline
+{\em aeroportos} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_base_dados_a685b5a18564678d4c75e7ce4bc5f8a33}\label{class_base_dados_a685b5a18564678d4c75e7ce4bc5f8a33}} 
+\index{BaseDados@{BaseDados}!addVoo@{addVoo}}
+\index{addVoo@{addVoo}!BaseDados@{BaseDados}}
+\doxysubsubsection{\texorpdfstring{addVoo()}{addVoo()}}
+{\footnotesize\ttfamily void Base\+Dados\+::add\+Voo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_voo}{Voo}}}]{v }\end{DoxyParamCaption})}
+
+Adder Adiciona um
+\begin{DoxyParams}{Parameters}
+{\em voo} & à lista\\
+\hline
+{\em voos} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_base_dados_ae580d4c9fbf6db28c1ea7a08fccf00f4}\label{class_base_dados_ae580d4c9fbf6db28c1ea7a08fccf00f4}} 
+\index{BaseDados@{BaseDados}!airportDraw@{airportDraw}}
+\index{airportDraw@{airportDraw}!BaseDados@{BaseDados}}
+\doxysubsubsection{\texorpdfstring{airportDraw()}{airportDraw()}}
+{\footnotesize\ttfamily void Base\+Dados\+::airport\+Draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Drawer Imprime todos os Aeroportos \mbox{\Hypertarget{class_base_dados_a8fed9d7cbfc6b94a924e30d8613d1fc6}\label{class_base_dados_a8fed9d7cbfc6b94a924e30d8613d1fc6}} 
+\index{BaseDados@{BaseDados}!airportSort@{airportSort}}
+\index{airportSort@{airportSort}!BaseDados@{BaseDados}}
+\doxysubsubsection{\texorpdfstring{airportSort()}{airportSort()}}
+{\footnotesize\ttfamily void Base\+Dados\+::airport\+Sort (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Sorter Ordena todos os aeroportos \mbox{\Hypertarget{class_base_dados_a84c1627231e481150da4021b2ed87665}\label{class_base_dados_a84c1627231e481150da4021b2ed87665}} 
+\index{BaseDados@{BaseDados}!drawAvioes@{drawAvioes}}
+\index{drawAvioes@{drawAvioes}!BaseDados@{BaseDados}}
+\doxysubsubsection{\texorpdfstring{drawAvioes()}{drawAvioes()}}
+{\footnotesize\ttfamily void Base\+Dados\+::draw\+Avioes (\begin{DoxyParamCaption}\item[{list$<$ \mbox{\hyperlink{class_aviao}{Aviao}} $>$}]{lista }\end{DoxyParamCaption}) const}
+
+Drawer Imprime todos os avioes no sistema com uma dada ordenação numa
+\begin{DoxyParams}{Parameters}
+{\em lista} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_base_dados_aa018b28dc2e1c5b8d8f6e3b453b803a6}\label{class_base_dados_aa018b28dc2e1c5b8d8f6e3b453b803a6}} 
+\index{BaseDados@{BaseDados}!drawAvioesCap@{drawAvioesCap}}
+\index{drawAvioesCap@{drawAvioesCap}!BaseDados@{BaseDados}}
+\doxysubsubsection{\texorpdfstring{drawAvioesCap()}{drawAvioesCap()}}
+{\footnotesize\ttfamily void Base\+Dados\+::draw\+Avioes\+Cap (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Drawer Imprime todos os Aviões ordenados por ordem crescente de capacidade \mbox{\Hypertarget{class_base_dados_ae7610610d6a0b0db5ad324adb7d55fd5}\label{class_base_dados_ae7610610d6a0b0db5ad324adb7d55fd5}} 
+\index{BaseDados@{BaseDados}!drawAvioesSerAg@{drawAvioesSerAg}}
+\index{drawAvioesSerAg@{drawAvioesSerAg}!BaseDados@{BaseDados}}
+\doxysubsubsection{\texorpdfstring{drawAvioesSerAg()}{drawAvioesSerAg()}}
+{\footnotesize\ttfamily void Base\+Dados\+::draw\+Avioes\+Ser\+Ag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Drawer Imprime todos os Avioes de acordo com o número de Serviços Agendados \mbox{\Hypertarget{class_base_dados_a56637d6b70c7b137ac6819505c53175f}\label{class_base_dados_a56637d6b70c7b137ac6819505c53175f}} 
+\index{BaseDados@{BaseDados}!drawAvioesSerTer@{drawAvioesSerTer}}
+\index{drawAvioesSerTer@{drawAvioesSerTer}!BaseDados@{BaseDados}}
+\doxysubsubsection{\texorpdfstring{drawAvioesSerTer()}{drawAvioesSerTer()}}
+{\footnotesize\ttfamily void Base\+Dados\+::draw\+Avioes\+Ser\+Ter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Drawer Imprime todos os Avioes de acordo com o número de Serviços Terminados \mbox{\Hypertarget{class_base_dados_a773b11664d3d81c22df33ab121d0765f}\label{class_base_dados_a773b11664d3d81c22df33ab121d0765f}} 
+\index{BaseDados@{BaseDados}!drawAvioesVoo@{drawAvioesVoo}}
+\index{drawAvioesVoo@{drawAvioesVoo}!BaseDados@{BaseDados}}
+\doxysubsubsection{\texorpdfstring{drawAvioesVoo()}{drawAvioesVoo()}}
+{\footnotesize\ttfamily void Base\+Dados\+::draw\+Avioes\+Voo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Drawer Desenha todos Avioes por ordem crescente de número de voos agendados \mbox{\Hypertarget{class_base_dados_a3ae19eac59e6d1c97fcd9618f6bed559}\label{class_base_dados_a3ae19eac59e6d1c97fcd9618f6bed559}} 
+\index{BaseDados@{BaseDados}!drawParcialVoosData@{drawParcialVoosData}}
+\index{drawParcialVoosData@{drawParcialVoosData}!BaseDados@{BaseDados}}
+\doxysubsubsection{\texorpdfstring{drawParcialVoosData()}{drawParcialVoosData()}}
+{\footnotesize\ttfamily void Base\+Dados\+::draw\+Parcial\+Voos\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_date}{Date}}}]{d1,  }\item[{\mbox{\hyperlink{class_date}{Date}}}]{d2 }\end{DoxyParamCaption}) const}
+
+Drawer Imprime Todos os Voos no intervalo entre duas Datas \mbox{\Hypertarget{class_base_dados_a272b7023e72ca71e983605ec53699d05}\label{class_base_dados_a272b7023e72ca71e983605ec53699d05}} 
+\index{BaseDados@{BaseDados}!drawVoos@{drawVoos}}
+\index{drawVoos@{drawVoos}!BaseDados@{BaseDados}}
+\doxysubsubsection{\texorpdfstring{drawVoos()}{drawVoos()}}
+{\footnotesize\ttfamily void Base\+Dados\+::draw\+Voos (\begin{DoxyParamCaption}\item[{list$<$ \mbox{\hyperlink{class_voo}{Voo}} $>$}]{aux\+Voos }\end{DoxyParamCaption}) const}
+
+Drawer Imprime todos os Voos numa lista ordenada
+\begin{DoxyParams}{Parameters}
+{\em aux\+Voos} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_base_dados_aba84ca9319256a2db8774e243715bb7b}\label{class_base_dados_aba84ca9319256a2db8774e243715bb7b}} 
+\index{BaseDados@{BaseDados}!drawVoosData@{drawVoosData}}
+\index{drawVoosData@{drawVoosData}!BaseDados@{BaseDados}}
+\doxysubsubsection{\texorpdfstring{drawVoosData()}{drawVoosData()}}
+{\footnotesize\ttfamily void Base\+Dados\+::draw\+Voos\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Drawer Imprime Todos os Voos por ordem crescente de Data \mbox{\Hypertarget{class_base_dados_adae6ab588f76fc8a799e8ad7b223663d}\label{class_base_dados_adae6ab588f76fc8a799e8ad7b223663d}} 
+\index{BaseDados@{BaseDados}!drawVoosDuracao@{drawVoosDuracao}}
+\index{drawVoosDuracao@{drawVoosDuracao}!BaseDados@{BaseDados}}
+\doxysubsubsection{\texorpdfstring{drawVoosDuracao()}{drawVoosDuracao()}}
+{\footnotesize\ttfamily void Base\+Dados\+::draw\+Voos\+Duracao (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Drawer Imprime Todos os Voos por ordem crescente de duracao \mbox{\Hypertarget{class_base_dados_a814912b64d772e99f19f2d8accc41446}\label{class_base_dados_a814912b64d772e99f19f2d8accc41446}} 
+\index{BaseDados@{BaseDados}!drawVoosPassageiros@{drawVoosPassageiros}}
+\index{drawVoosPassageiros@{drawVoosPassageiros}!BaseDados@{BaseDados}}
+\doxysubsubsection{\texorpdfstring{drawVoosPassageiros()}{drawVoosPassageiros()}}
+{\footnotesize\ttfamily void Base\+Dados\+::draw\+Voos\+Passageiros (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Drawer Imprime Todos os Voos por ordem crescente de número de passageiros \mbox{\Hypertarget{class_base_dados_affcc7bfcf0a6a0a26c2e5f53c7711f22}\label{class_base_dados_affcc7bfcf0a6a0a26c2e5f53c7711f22}} 
+\index{BaseDados@{BaseDados}!getAeroportos@{getAeroportos}}
+\index{getAeroportos@{getAeroportos}!BaseDados@{BaseDados}}
+\doxysubsubsection{\texorpdfstring{getAeroportos()}{getAeroportos()}}
+{\footnotesize\ttfamily list$<$ \mbox{\hyperlink{class_aeroporto}{Aeroporto}} $>$ Base\+Dados\+::get\+Aeroportos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em aeroportos} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_base_dados_abeea2460fb515ba1fb381fae64946ea3}\label{class_base_dados_abeea2460fb515ba1fb381fae64946ea3}} 
+\index{BaseDados@{BaseDados}!getAvioes@{getAvioes}}
+\index{getAvioes@{getAvioes}!BaseDados@{BaseDados}}
+\doxysubsubsection{\texorpdfstring{getAvioes()}{getAvioes()}}
+{\footnotesize\ttfamily list$<$ \mbox{\hyperlink{class_aviao}{Aviao}} $>$ Base\+Dados\+::get\+Avioes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em avioes} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_base_dados_a24d74f7044a9415c70a91eddda3cb492}\label{class_base_dados_a24d74f7044a9415c70a91eddda3cb492}} 
+\index{BaseDados@{BaseDados}!getServicos@{getServicos}}
+\index{getServicos@{getServicos}!BaseDados@{BaseDados}}
+\doxysubsubsection{\texorpdfstring{getServicos()}{getServicos()}}
+{\footnotesize\ttfamily list$<$ \mbox{\hyperlink{classservico}{servico}} $>$ Base\+Dados\+::get\+Servicos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em servicos} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_base_dados_a4fa09bd6b87dc755628f4d88cc1eacab}\label{class_base_dados_a4fa09bd6b87dc755628f4d88cc1eacab}} 
+\index{BaseDados@{BaseDados}!getVoos@{getVoos}}
+\index{getVoos@{getVoos}!BaseDados@{BaseDados}}
+\doxysubsubsection{\texorpdfstring{getVoos()}{getVoos()}}
+{\footnotesize\ttfamily list$<$ \mbox{\hyperlink{class_voo}{Voo}} $>$ Base\+Dados\+::get\+Voos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em voos} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_base_dados_a1a58b24e51a327c5a01affd9348e7ceb}\label{class_base_dados_a1a58b24e51a327c5a01affd9348e7ceb}} 
+\index{BaseDados@{BaseDados}!loadAirports@{loadAirports}}
+\index{loadAirports@{loadAirports}!BaseDados@{BaseDados}}
+\doxysubsubsection{\texorpdfstring{loadAirports()}{loadAirports()}}
+{\footnotesize\ttfamily bool Base\+Dados\+::load\+Airports (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Loader Carrega todos os Aeroportos para o Sistema \mbox{\Hypertarget{class_base_dados_a82c555569669e165b5d1eae42ecc581b}\label{class_base_dados_a82c555569669e165b5d1eae42ecc581b}} 
+\index{BaseDados@{BaseDados}!loadAll@{loadAll}}
+\index{loadAll@{loadAll}!BaseDados@{BaseDados}}
+\doxysubsubsection{\texorpdfstring{loadAll()}{loadAll()}}
+{\footnotesize\ttfamily void Base\+Dados\+::load\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Loader Funcao que chama todas as outras funções que carregam as informações para a base de dados \mbox{\Hypertarget{class_base_dados_a6f145922cc655d36a6ad39211f4e6106}\label{class_base_dados_a6f145922cc655d36a6ad39211f4e6106}} 
+\index{BaseDados@{BaseDados}!loadAvioes@{loadAvioes}}
+\index{loadAvioes@{loadAvioes}!BaseDados@{BaseDados}}
+\doxysubsubsection{\texorpdfstring{loadAvioes()}{loadAvioes()}}
+{\footnotesize\ttfamily void Base\+Dados\+::load\+Avioes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Loader Carrega todos os Avioes para o sistema \mbox{\Hypertarget{class_base_dados_a3b35ed86f57d18acc09cf0afa3546bfc}\label{class_base_dados_a3b35ed86f57d18acc09cf0afa3546bfc}} 
+\index{BaseDados@{BaseDados}!loadServicos@{loadServicos}}
+\index{loadServicos@{loadServicos}!BaseDados@{BaseDados}}
+\doxysubsubsection{\texorpdfstring{loadServicos()}{loadServicos()}}
+{\footnotesize\ttfamily void Base\+Dados\+::load\+Servicos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Loader Carrega todos os Serviços para o sistema \mbox{\Hypertarget{class_base_dados_adb769655d0b293e878b7086cae8f2628}\label{class_base_dados_adb769655d0b293e878b7086cae8f2628}} 
+\index{BaseDados@{BaseDados}!loadVoos@{loadVoos}}
+\index{loadVoos@{loadVoos}!BaseDados@{BaseDados}}
+\doxysubsubsection{\texorpdfstring{loadVoos()}{loadVoos()}}
+{\footnotesize\ttfamily bool Base\+Dados\+::load\+Voos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Loader Carrega todos os Voos para o sistema \mbox{\Hypertarget{class_base_dados_a5236f696a9064d731521a820e8145578}\label{class_base_dados_a5236f696a9064d731521a820e8145578}} 
+\index{BaseDados@{BaseDados}!removeAirport@{removeAirport}}
+\index{removeAirport@{removeAirport}!BaseDados@{BaseDados}}
+\doxysubsubsection{\texorpdfstring{removeAirport()}{removeAirport()}}
+{\footnotesize\ttfamily bool Base\+Dados\+::remove\+Airport (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_aeroporto}{Aeroporto}}}]{aeroporto }\end{DoxyParamCaption})}
+
+Remover Remove o
+\begin{DoxyParams}{Parameters}
+{\em aeroporto} & da lista\\
+\hline
+{\em aeroportos} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_base_dados_ac9086374f2be649ff5c3013227d63876}\label{class_base_dados_ac9086374f2be649ff5c3013227d63876}} 
+\index{BaseDados@{BaseDados}!removeAviao@{removeAviao}}
+\index{removeAviao@{removeAviao}!BaseDados@{BaseDados}}
+\doxysubsubsection{\texorpdfstring{removeAviao()}{removeAviao()}}
+{\footnotesize\ttfamily void Base\+Dados\+::remove\+Aviao (\begin{DoxyParamCaption}\item[{string}]{matricula }\end{DoxyParamCaption})}
+
+Remover Remove um
+\begin{DoxyParams}{Parameters}
+{\em aviao} & da lista\\
+\hline
+{\em avioes} & de acordo com a sua\\
+\hline
+{\em matricula} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_base_dados_ae60e1c6b709a5e6e3aa4753593f3a8e7}\label{class_base_dados_ae60e1c6b709a5e6e3aa4753593f3a8e7}} 
+\index{BaseDados@{BaseDados}!removeTransporte@{removeTransporte}}
+\index{removeTransporte@{removeTransporte}!BaseDados@{BaseDados}}
+\doxysubsubsection{\texorpdfstring{removeTransporte()}{removeTransporte()}}
+{\footnotesize\ttfamily bool Base\+Dados\+::remove\+Transporte (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_aeroporto}{Aeroporto}} \&}]{aeroporto,  }\item[{\mbox{\hyperlink{class_transporte}{Transporte}}}]{transporte }\end{DoxyParamCaption})}
+
+Remover Remove um
+\begin{DoxyParams}{Parameters}
+{\em transporte} & de um\\
+\hline
+{\em aeroporto} & na lista\\
+\hline
+{\em aeroportos} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_base_dados_a9d5de3df93bd913fe4fd61eda0e8719a}\label{class_base_dados_a9d5de3df93bd913fe4fd61eda0e8719a}} 
+\index{BaseDados@{BaseDados}!removeVoo@{removeVoo}}
+\index{removeVoo@{removeVoo}!BaseDados@{BaseDados}}
+\doxysubsubsection{\texorpdfstring{removeVoo()}{removeVoo()}}
+{\footnotesize\ttfamily bool Base\+Dados\+::remove\+Voo (\begin{DoxyParamCaption}\item[{int}]{num\+Voo }\end{DoxyParamCaption})}
+
+Remover Remove um
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{class_voo}{Voo}}} & de acordo com o seu id(\\
+\hline
+{\em num\+Voo)} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_base_dados_aeba4c5aca5c28c8909253d88283e3809}\label{class_base_dados_aeba4c5aca5c28c8909253d88283e3809}} 
+\index{BaseDados@{BaseDados}!saveAirports@{saveAirports}}
+\index{saveAirports@{saveAirports}!BaseDados@{BaseDados}}
+\doxysubsubsection{\texorpdfstring{saveAirports()}{saveAirports()}}
+{\footnotesize\ttfamily bool Base\+Dados\+::save\+Airports (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Saver Guarda todos os Aeroportos para o ficheiro aeroporto\+\_\+all\+\_\+save.\+txt \mbox{\Hypertarget{class_base_dados_a9fb994dd2316ab7c1ab290fd1bc2f447}\label{class_base_dados_a9fb994dd2316ab7c1ab290fd1bc2f447}} 
+\index{BaseDados@{BaseDados}!saveAll@{saveAll}}
+\index{saveAll@{saveAll}!BaseDados@{BaseDados}}
+\doxysubsubsection{\texorpdfstring{saveAll()}{saveAll()}}
+{\footnotesize\ttfamily void Base\+Dados\+::save\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Saver Função que chama todas as outras funções que guardam as infomações da base de dados nos ficheiros \mbox{\Hypertarget{class_base_dados_a7c29acfcc750b0e7e16cdb4a92099124}\label{class_base_dados_a7c29acfcc750b0e7e16cdb4a92099124}} 
+\index{BaseDados@{BaseDados}!saveAvioes@{saveAvioes}}
+\index{saveAvioes@{saveAvioes}!BaseDados@{BaseDados}}
+\doxysubsubsection{\texorpdfstring{saveAvioes()}{saveAvioes()}}
+{\footnotesize\ttfamily void Base\+Dados\+::save\+Avioes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Saver Guarda todos os Avioes para o sistema \mbox{\Hypertarget{class_base_dados_aecc9ed2d333a94b5d9df0d98774db8c8}\label{class_base_dados_aecc9ed2d333a94b5d9df0d98774db8c8}} 
+\index{BaseDados@{BaseDados}!saveServicos@{saveServicos}}
+\index{saveServicos@{saveServicos}!BaseDados@{BaseDados}}
+\doxysubsubsection{\texorpdfstring{saveServicos()}{saveServicos()}}
+{\footnotesize\ttfamily void Base\+Dados\+::save\+Servicos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Saver Guarda todos os Servicos dentro do ficheiro servicos\+\_\+all\+\_\+save.\+txt \mbox{\Hypertarget{class_base_dados_aef2f17a5507654d16bf9bc4d407fbe75}\label{class_base_dados_aef2f17a5507654d16bf9bc4d407fbe75}} 
+\index{BaseDados@{BaseDados}!saveVoos@{saveVoos}}
+\index{saveVoos@{saveVoos}!BaseDados@{BaseDados}}
+\doxysubsubsection{\texorpdfstring{saveVoos()}{saveVoos()}}
+{\footnotesize\ttfamily bool Base\+Dados\+::save\+Voos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Saver Guarda todos os Voos no ficheiro voo\+\_\+all\+\_\+save.\+txt \mbox{\Hypertarget{class_base_dados_a1dfcee0e14528d87963e3e2e6e4069ef}\label{class_base_dados_a1dfcee0e14528d87963e3e2e6e4069ef}} 
+\index{BaseDados@{BaseDados}!servicosDraw@{servicosDraw}}
+\index{servicosDraw@{servicosDraw}!BaseDados@{BaseDados}}
+\doxysubsubsection{\texorpdfstring{servicosDraw()}{servicosDraw()}}
+{\footnotesize\ttfamily void Base\+Dados\+::servicos\+Draw (\begin{DoxyParamCaption}\item[{string}]{tipo }\end{DoxyParamCaption})}
+
+Drawer Imprime todos os Serviços do tipo
+\begin{DoxyParams}{Parameters}
+{\em tipo} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_base_dados_adc28a2a85f566c4eeadbcb76f262b471}\label{class_base_dados_adc28a2a85f566c4eeadbcb76f262b471}} 
+\index{BaseDados@{BaseDados}!sortAvioes@{sortAvioes}}
+\index{sortAvioes@{sortAvioes}!BaseDados@{BaseDados}}
+\doxysubsubsection{\texorpdfstring{sortAvioes()}{sortAvioes()}}
+{\footnotesize\ttfamily void Base\+Dados\+::sort\+Avioes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Sorter Dá sort à lista que contem todos os avioes \mbox{\Hypertarget{class_base_dados_a43714e8b8d4025005120070a394d4784}\label{class_base_dados_a43714e8b8d4025005120070a394d4784}} 
+\index{BaseDados@{BaseDados}!sortServicos@{sortServicos}}
+\index{sortServicos@{sortServicos}!BaseDados@{BaseDados}}
+\doxysubsubsection{\texorpdfstring{sortServicos()}{sortServicos()}}
+{\footnotesize\ttfamily void Base\+Dados\+::sort\+Servicos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Sorter Dá sort à lista que contem todos os servicos \mbox{\Hypertarget{class_base_dados_a38b06ef9b0f95a5d5d09e56e0e59ef48}\label{class_base_dados_a38b06ef9b0f95a5d5d09e56e0e59ef48}} 
+\index{BaseDados@{BaseDados}!sortVoos@{sortVoos}}
+\index{sortVoos@{sortVoos}!BaseDados@{BaseDados}}
+\doxysubsubsection{\texorpdfstring{sortVoos()}{sortVoos()}}
+{\footnotesize\ttfamily void Base\+Dados\+::sort\+Voos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Sorter Dá sort à lista que contem todos os voos \mbox{\Hypertarget{class_base_dados_a0fed78a43bee97be6ae48baa162dc631}\label{class_base_dados_a0fed78a43bee97be6ae48baa162dc631}} 
+\index{BaseDados@{BaseDados}!transportDraw@{transportDraw}}
+\index{transportDraw@{transportDraw}!BaseDados@{BaseDados}}
+\doxysubsubsection{\texorpdfstring{transportDraw()}{transportDraw()}}
+{\footnotesize\ttfamily void Base\+Dados\+::transport\+Draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_aeroporto}{Aeroporto}} \&}]{aeroporto }\end{DoxyParamCaption})}
+
+Drawer Imprime todos os
+\begin{DoxyParams}{Parameters}
+{\em transportes} & de um\\
+\hline
+{\em aeroporto} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_base_dados_a992292c0c59607e39ec263de1454a823}\label{class_base_dados_a992292c0c59607e39ec263de1454a823}} 
+\index{BaseDados@{BaseDados}!transporteDrawParcial@{transporteDrawParcial}}
+\index{transporteDrawParcial@{transporteDrawParcial}!BaseDados@{BaseDados}}
+\doxysubsubsection{\texorpdfstring{transporteDrawParcial()}{transporteDrawParcial()}}
+{\footnotesize\ttfamily void Base\+Dados\+::transporte\+Draw\+Parcial (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_aeroporto}{Aeroporto}} \&}]{aeroporto,  }\item[{\mbox{\hyperlink{class_date}{Date}}}]{d1,  }\item[{\mbox{\hyperlink{class_date}{Date}}}]{d2,  }\item[{\mbox{\hyperlink{class_time}{Time}}}]{t1,  }\item[{\mbox{\hyperlink{class_time}{Time}}}]{t2 }\end{DoxyParamCaption})}
+
+Drawer Desenha todos os
+\begin{DoxyParams}{Parameters}
+{\em transportes} & de um\\
+\hline
+{\em aeroporto} & entre\\
+\hline
+{\em d1} & e\\
+\hline
+{\em d2} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_base_dados_aff3c244810d26517d856cb3cffc574a1}\label{class_base_dados_aff3c244810d26517d856cb3cffc574a1}} 
+\index{BaseDados@{BaseDados}!updateAirport@{updateAirport}}
+\index{updateAirport@{updateAirport}!BaseDados@{BaseDados}}
+\doxysubsubsection{\texorpdfstring{updateAirport()}{updateAirport()}}
+{\footnotesize\ttfamily bool Base\+Dados\+::update\+Airport (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_aeroporto}{Aeroporto}}}]{aeroporto,  }\item[{string}]{nome,  }\item[{string}]{cidade,  }\item[{string}]{pais }\end{DoxyParamCaption})}
+
+Updater Atualiza os Parametros de Um \mbox{\hyperlink{class_aeroporto}{Aeroporto}} \mbox{\Hypertarget{class_base_dados_a4cd97a8b6c742f6eb0cff88315a6939c}\label{class_base_dados_a4cd97a8b6c742f6eb0cff88315a6939c}} 
+\index{BaseDados@{BaseDados}!updateAviaoServicoCriar@{updateAviaoServicoCriar}}
+\index{updateAviaoServicoCriar@{updateAviaoServicoCriar}!BaseDados@{BaseDados}}
+\doxysubsubsection{\texorpdfstring{updateAviaoServicoCriar()}{updateAviaoServicoCriar()}}
+{\footnotesize\ttfamily bool Base\+Dados\+::update\+Aviao\+Servico\+Criar (\begin{DoxyParamCaption}\item[{string}]{matricula,  }\item[{\mbox{\hyperlink{classservico}{servico}}}]{ser }\end{DoxyParamCaption})}
+
+Adder Adiciona Um servico Agendado a aviao segundo a sua
+\begin{DoxyParams}{Parameters}
+{\em matricula} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_base_dados_abf5e4578bd6fb402c8bd9a06ee65f24b}\label{class_base_dados_abf5e4578bd6fb402c8bd9a06ee65f24b}} 
+\index{BaseDados@{BaseDados}!updateAviaoServicoTerminar@{updateAviaoServicoTerminar}}
+\index{updateAviaoServicoTerminar@{updateAviaoServicoTerminar}!BaseDados@{BaseDados}}
+\doxysubsubsection{\texorpdfstring{updateAviaoServicoTerminar()}{updateAviaoServicoTerminar()}}
+{\footnotesize\ttfamily bool Base\+Dados\+::update\+Aviao\+Servico\+Terminar (\begin{DoxyParamCaption}\item[{string}]{matricula }\end{DoxyParamCaption})}
+
+Updater Coloca o Servico Agendado mais recente para os servicos feitos de um aviao pela sua
+\begin{DoxyParams}{Parameters}
+{\em matricula} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_base_dados_ac7a43386ff62a9db0821f03e6d5b4c3b}\label{class_base_dados_ac7a43386ff62a9db0821f03e6d5b4c3b}} 
+\index{BaseDados@{BaseDados}!updateAviaoVoo@{updateAviaoVoo}}
+\index{updateAviaoVoo@{updateAviaoVoo}!BaseDados@{BaseDados}}
+\doxysubsubsection{\texorpdfstring{updateAviaoVoo()}{updateAviaoVoo()}}
+{\footnotesize\ttfamily bool Base\+Dados\+::update\+Aviao\+Voo (\begin{DoxyParamCaption}\item[{string}]{matricula,  }\item[{\mbox{\hyperlink{class_voo}{Voo}}}]{voo }\end{DoxyParamCaption})}
+
+Adder Adiciona um
+\begin{DoxyParams}{Parameters}
+{\em voo} & a um\\
+\hline
+{\em aviao} & na lista\\
+\hline
+{\em avioes} & de acordo com a sua\\
+\hline
+{\em matricula} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_base_dados_ada46f3366c594bbfa2c809511c59874b}\label{class_base_dados_ada46f3366c594bbfa2c809511c59874b}} 
+\index{BaseDados@{BaseDados}!updateTransporte@{updateTransporte}}
+\index{updateTransporte@{updateTransporte}!BaseDados@{BaseDados}}
+\doxysubsubsection{\texorpdfstring{updateTransporte()}{updateTransporte()}}
+{\footnotesize\ttfamily bool Base\+Dados\+::update\+Transporte (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_aeroporto}{Aeroporto}}}]{aeroporto,  }\item[{\mbox{\hyperlink{class_transporte}{Transporte}}}]{transporte,  }\item[{int}]{distancia,  }\item[{string}]{tipo,  }\item[{\mbox{\hyperlink{class_time}{Time}}}]{time,  }\item[{\mbox{\hyperlink{class_date}{Date}}}]{date }\end{DoxyParamCaption})}
+
+Updater Atualiza os Parametros de Um \mbox{\hyperlink{class_transporte}{Transporte}} \mbox{\Hypertarget{class_base_dados_ae2225a807c07411c2726644e0046fc69}\label{class_base_dados_ae2225a807c07411c2726644e0046fc69}} 
+\index{BaseDados@{BaseDados}!updateVoo@{updateVoo}}
+\index{updateVoo@{updateVoo}!BaseDados@{BaseDados}}
+\doxysubsubsection{\texorpdfstring{updateVoo()}{updateVoo()}}
+{\footnotesize\ttfamily bool Base\+Dados\+::update\+Voo (\begin{DoxyParamCaption}\item[{int}]{num\+Voo\+\_\+s,  }\item[{int}]{num\+Voo\+\_\+p,  }\item[{\mbox{\hyperlink{class_date}{Date}}}]{data,  }\item[{float}]{duracao,  }\item[{\mbox{\hyperlink{class_transporte_bagagem}{Transporte\+Bagagem}}}]{t,  }\item[{\mbox{\hyperlink{class_aeroporto}{Aeroporto}}}]{a1,  }\item[{\mbox{\hyperlink{class_aeroporto}{Aeroporto}}}]{a2,  }\item[{list$<$ \mbox{\hyperlink{class_passageiro}{Passageiro}} $>$}]{passageiros }\end{DoxyParamCaption})}
+
+Updater Atualiza os Parametros de Um \mbox{\hyperlink{class_voo}{Voo}} 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+ASUS/\+Desktop/\+Rui/\+FACULDADE/\+FEUP/\+AED/projeto-\/aed-\/main (2)/projeto-\/aed-\/main/Base\+Dados.\+h\item 
+C\+:/\+Users/\+ASUS/\+Desktop/\+Rui/\+FACULDADE/\+FEUP/\+AED/projeto-\/aed-\/main (2)/projeto-\/aed-\/main/Base\+Dados.\+cpp\end{DoxyCompactItemize}

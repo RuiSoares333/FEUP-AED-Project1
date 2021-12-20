@@ -1,0 +1,93 @@
+\hypertarget{_base_dados_8h_source}{}\doxysection{C\+:/\+Users/\+ASUS/\+Desktop/\+Rui/\+FACULDADE/\+FEUP/\+AED/projeto-\/aed-\/main (2)/projeto-\/aed-\/main/\+Base\+Dados.h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by ASUS on 18/12/2021.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef PROJETO\_AED\_BASEDADOS\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define PROJETO\_AED\_BASEDADOS\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}Aeroporto.h"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}servico.h"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}Aviao.h"{}}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}Voo.h"{}}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <iomanip>}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keyword}{class }\mbox{\hyperlink{class_base_dados}{BaseDados}} \{}
+\DoxyCodeLine{15 \textcolor{keyword}{public}:}
+\DoxyCodeLine{16     \textcolor{comment}{// Loaders}}
+\DoxyCodeLine{17     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_base_dados_a82c555569669e165b5d1eae42ecc581b}{loadAll}}();}
+\DoxyCodeLine{18     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_base_dados_a1a58b24e51a327c5a01affd9348e7ceb}{loadAirports}}();}
+\DoxyCodeLine{19     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_base_dados_a3b35ed86f57d18acc09cf0afa3546bfc}{loadServicos}}();}
+\DoxyCodeLine{20     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_base_dados_a6f145922cc655d36a6ad39211f4e6106}{loadAvioes}}();}
+\DoxyCodeLine{21     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_base_dados_adb769655d0b293e878b7086cae8f2628}{loadVoos}}();}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23     \textcolor{comment}{// Sorters}}
+\DoxyCodeLine{24     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_base_dados_a43714e8b8d4025005120070a394d4784}{sortServicos}}();}
+\DoxyCodeLine{25     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_base_dados_adc28a2a85f566c4eeadbcb76f262b471}{sortAvioes}}();}
+\DoxyCodeLine{26     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_base_dados_a38b06ef9b0f95a5d5d09e56e0e59ef48}{sortVoos}}();}
+\DoxyCodeLine{27     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_base_dados_a8fed9d7cbfc6b94a924e30d8613d1fc6}{airportSort}}();}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29     \textcolor{comment}{// Drawers}}
+\DoxyCodeLine{30     \textcolor{keywordtype}{void} drawServicos() \textcolor{keyword}{const};}
+\DoxyCodeLine{31     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_base_dados_a84c1627231e481150da4021b2ed87665}{drawAvioes}}(list<Aviao> lista) \textcolor{keyword}{const};}
+\DoxyCodeLine{32     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_base_dados_aa018b28dc2e1c5b8d8f6e3b453b803a6}{drawAvioesCap}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{33     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_base_dados_a773b11664d3d81c22df33ab121d0765f}{drawAvioesVoo}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{34     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_base_dados_ae7610610d6a0b0db5ad324adb7d55fd5}{drawAvioesSerAg}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{35     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_base_dados_a56637d6b70c7b137ac6819505c53175f}{drawAvioesSerTer}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{36     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_base_dados_a272b7023e72ca71e983605ec53699d05}{drawVoos}}(list<Voo> auxVoos) \textcolor{keyword}{const};}
+\DoxyCodeLine{37     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_base_dados_aba84ca9319256a2db8774e243715bb7b}{drawVoosData}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{38     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_base_dados_adae6ab588f76fc8a799e8ad7b223663d}{drawVoosDuracao}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{39     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_base_dados_a814912b64d772e99f19f2d8accc41446}{drawVoosPassageiros}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{40     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_base_dados_a3ae19eac59e6d1c97fcd9618f6bed559}{drawParcialVoosData}}(\mbox{\hyperlink{class_date}{Date}} d1, \mbox{\hyperlink{class_date}{Date}} d2) \textcolor{keyword}{const};}
+\DoxyCodeLine{41     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_base_dados_a0fed78a43bee97be6ae48baa162dc631}{transportDraw}}(\mbox{\hyperlink{class_aeroporto}{Aeroporto}} \&aeroporto);}
+\DoxyCodeLine{42     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_base_dados_a992292c0c59607e39ec263de1454a823}{transporteDrawParcial}}(\mbox{\hyperlink{class_aeroporto}{Aeroporto}} \&aeroporto, \mbox{\hyperlink{class_date}{Date}} d1, \mbox{\hyperlink{class_date}{Date}} d2, \mbox{\hyperlink{class_time}{Time}} t1, \mbox{\hyperlink{class_time}{Time}} t2);}
+\DoxyCodeLine{43     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_base_dados_ae580d4c9fbf6db28c1ea7a08fccf00f4}{airportDraw}}();}
+\DoxyCodeLine{44     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_base_dados_a1dfcee0e14528d87963e3e2e6e4069ef}{servicosDraw}}(\textcolor{keywordtype}{string} tipo);}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46     \textcolor{comment}{// Getters}}
+\DoxyCodeLine{47     list <Aeroporto> \mbox{\hyperlink{class_base_dados_affcc7bfcf0a6a0a26c2e5f53c7711f22}{getAeroportos}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{48     list <servico> \mbox{\hyperlink{class_base_dados_a24d74f7044a9415c70a91eddda3cb492}{getServicos}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{49     list <Aviao> \mbox{\hyperlink{class_base_dados_abeea2460fb515ba1fb381fae64946ea3}{getAvioes}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{50     list <Voo> \mbox{\hyperlink{class_base_dados_a4fa09bd6b87dc755628f4d88cc1eacab}{getVoos}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52     \textcolor{comment}{// Savers}}
+\DoxyCodeLine{53     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_base_dados_a9fb994dd2316ab7c1ab290fd1bc2f447}{saveAll}}();}
+\DoxyCodeLine{54     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_base_dados_aeba4c5aca5c28c8909253d88283e3809}{saveAirports}}();}
+\DoxyCodeLine{55     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_base_dados_aecc9ed2d333a94b5d9df0d98774db8c8}{saveServicos}}();}
+\DoxyCodeLine{56     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_base_dados_a7c29acfcc750b0e7e16cdb4a92099124}{saveAvioes}}();}
+\DoxyCodeLine{57     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_base_dados_aef2f17a5507654d16bf9bc4d407fbe75}{saveVoos}}();}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59     \textcolor{comment}{// Adders}}
+\DoxyCodeLine{60     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_base_dados_a48ec7232f74de4bae57bbac89815d5d7}{addAirport}}(\mbox{\hyperlink{class_aeroporto}{Aeroporto}} aeroporto);}
+\DoxyCodeLine{61     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_base_dados_a1eff7078e269e56beb2cb5a724ee3c1d}{addServico}}(\mbox{\hyperlink{classservico}{servico}} \mbox{\hyperlink{classservico}{servico}});}
+\DoxyCodeLine{62     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_base_dados_a6787562dbd1c1db69eecf441ef8f5eb2}{addAviao}}(\mbox{\hyperlink{class_aviao}{Aviao}} a);}
+\DoxyCodeLine{63     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_base_dados_a685b5a18564678d4c75e7ce4bc5f8a33}{addVoo}}(\mbox{\hyperlink{class_voo}{Voo}} v);}
+\DoxyCodeLine{64     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_base_dados_ad70db6e417e1041fdb877f1cccc3382d}{addTransporte}}(\mbox{\hyperlink{class_aeroporto}{Aeroporto}} aero, \mbox{\hyperlink{class_transporte}{Transporte}} trans);}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66     \textcolor{comment}{// Removers}}
+\DoxyCodeLine{67     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_base_dados_a5236f696a9064d731521a820e8145578}{removeAirport}}(\mbox{\hyperlink{class_aeroporto}{Aeroporto}} aeroporto);}
+\DoxyCodeLine{68     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_base_dados_ac9086374f2be649ff5c3013227d63876}{removeAviao}}(\textcolor{keywordtype}{string} matricula);}
+\DoxyCodeLine{69     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_base_dados_a9d5de3df93bd913fe4fd61eda0e8719a}{removeVoo}}(\textcolor{keywordtype}{int} numVoo);}
+\DoxyCodeLine{70     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_base_dados_ae60e1c6b709a5e6e3aa4753593f3a8e7}{removeTransporte}}(\mbox{\hyperlink{class_aeroporto}{Aeroporto}} \&aeroporto, \mbox{\hyperlink{class_transporte}{Transporte}} transporte);}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72     \textcolor{comment}{// Updaters}}
+\DoxyCodeLine{73     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_base_dados_aff3c244810d26517d856cb3cffc574a1}{updateAirport}}(\mbox{\hyperlink{class_aeroporto}{Aeroporto}} aeroporto, \textcolor{keywordtype}{string} nome, \textcolor{keywordtype}{string} cidade, \textcolor{keywordtype}{string} pais);}
+\DoxyCodeLine{74     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_base_dados_ada46f3366c594bbfa2c809511c59874b}{updateTransporte}}(\mbox{\hyperlink{class_aeroporto}{Aeroporto}} aeroporto, \mbox{\hyperlink{class_transporte}{Transporte}} transporte, \textcolor{keywordtype}{int} distancia, \textcolor{keywordtype}{string} tipo, \mbox{\hyperlink{class_time}{Time}} time, \mbox{\hyperlink{class_date}{Date}} date);}
+\DoxyCodeLine{75     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_base_dados_ac7a43386ff62a9db0821f03e6d5b4c3b}{updateAviaoVoo}}(\textcolor{keywordtype}{string} matricula, \mbox{\hyperlink{class_voo}{Voo}} voo); \textcolor{comment}{//sem querer apaguei isto srry -\/ lucas no worries -\/ rui}}
+\DoxyCodeLine{76     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_base_dados_a4cd97a8b6c742f6eb0cff88315a6939c}{updateAviaoServicoCriar}}(\textcolor{keywordtype}{string} matricula, \mbox{\hyperlink{classservico}{servico}} ser);}
+\DoxyCodeLine{77     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_base_dados_abf5e4578bd6fb402c8bd9a06ee65f24b}{updateAviaoServicoTerminar}}(\textcolor{keywordtype}{string} matricula);}
+\DoxyCodeLine{78     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_base_dados_ae2225a807c07411c2726644e0046fc69}{updateVoo}}(\textcolor{keywordtype}{int} numVoo\_s, \textcolor{keywordtype}{int} numVoo\_p, \mbox{\hyperlink{class_date}{Date}} data, \textcolor{keywordtype}{float} duracao, \mbox{\hyperlink{class_transporte_bagagem}{TransporteBagagem}} t, \mbox{\hyperlink{class_aeroporto}{Aeroporto}} a1, \mbox{\hyperlink{class_aeroporto}{Aeroporto}} a2, list<Passageiro> passageiros);}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80 \textcolor{keyword}{private}:}
+\DoxyCodeLine{81     list<Aeroporto> aeroportos;}
+\DoxyCodeLine{82     list<servico> servicos;}
+\DoxyCodeLine{83     list<Aviao> avioes;}
+\DoxyCodeLine{84     list<Voo> voos;}
+\DoxyCodeLine{85 \};}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//PROJETO\_AED\_BASEDADOS\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,42 @@
+\hypertarget{_transporte_bagagem_8h_source}{}\doxysection{C\+:/\+Users/\+ASUS/\+Desktop/\+Rui/\+FACULDADE/\+FEUP/\+AED/projeto-\/aed-\/main (2)/projeto-\/aed-\/main/\+Transporte\+Bagagem.h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by PC on 14/12/2021.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef PROJETO\_AED\_CARRINHO\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define PROJETO\_AED\_CARRINHO\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}Bagagem.h"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <stack>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <queue>}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{keyword}{class }\mbox{\hyperlink{class_transporte_bagagem}{TransporteBagagem}} \{}
+\DoxyCodeLine{17 \textcolor{keyword}{public}:}
+\DoxyCodeLine{18     \mbox{\hyperlink{class_transporte_bagagem_ade1aa0e0f79e483ea65e7eff597d771b}{TransporteBagagem}}();}
+\DoxyCodeLine{19     \mbox{\hyperlink{class_transporte_bagagem_ade1aa0e0f79e483ea65e7eff597d771b}{TransporteBagagem}}(\textcolor{keywordtype}{int} c, \textcolor{keywordtype}{int} n, \textcolor{keywordtype}{int} m);}
+\DoxyCodeLine{20     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_transporte_bagagem_a86d86fa76f1708f7f71addc708d6545b}{getC}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{21     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_transporte_bagagem_a59c02305e86cf7883bddbebb1447d366}{setC}}(\textcolor{keywordtype}{int} c);}
+\DoxyCodeLine{22     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_transporte_bagagem_aa567a8f1cb584b15a5a090bc6839e43d}{getN}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{23     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_transporte_bagagem_ad553753314537f0edb3461835e5893ab}{setN}}(\textcolor{keywordtype}{int} n);}
+\DoxyCodeLine{24     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_transporte_bagagem_a81e3804cf069c63054bd3114aacdea22}{getM}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{25     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_transporte_bagagem_a930d0f2b25b1a421dabff3e203a48bd6}{setM}}(\textcolor{keywordtype}{int} m);}
+\DoxyCodeLine{26     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_transporte_bagagem_a7c7ae27f8973ea7ac538f87122a04ffa}{addBagagemTapete}}(\mbox{\hyperlink{class_bagagem}{Bagagem}} bagagem);}
+\DoxyCodeLine{27     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_transporte_bagagem_a85de0943764ff4147c40b70739a695fb}{addBagagensCarrinho}}(); \textcolor{comment}{//adiciona as bagagens ao carrinho, retorna true se for possivel, se nao retorna false}}
+\DoxyCodeLine{28 \textcolor{keyword}{private}:}
+\DoxyCodeLine{29     \textcolor{keywordtype}{int} c; \textcolor{comment}{//nº de carruagens}}
+\DoxyCodeLine{30     \textcolor{keywordtype}{int} n; \textcolor{comment}{//nº de pilhas}}
+\DoxyCodeLine{31     \textcolor{keywordtype}{int} m; \textcolor{comment}{//tamanho das pilhas}}
+\DoxyCodeLine{32     vector<vector<stack<Bagagem>>> carrinho;}
+\DoxyCodeLine{33     queue<Bagagem> tapete;}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 \};}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//PROJETO\_AED\_CARRINHO\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,174 @@
+\hypertarget{class_transporte}{}\doxysection{Transporte Class Reference}
+\label{class_transporte}\index{Transporte@{Transporte}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_transporte_a0cbb4b20eea36e3011b8b3208a812778}{Transporte}} ()
+\item 
+\mbox{\hyperlink{class_transporte_a9cc33409240700528e5172c8698b45e0}{Transporte}} (int distancia, \mbox{\hyperlink{class_time}{Time}} time, string tipo, \mbox{\hyperlink{class_date}{Date}} date)
+\item 
+void \mbox{\hyperlink{class_transporte_ad88a59c5e69084b537a15e7127086f33}{set\+Distancia}} (int distancia)
+\item 
+int \mbox{\hyperlink{class_transporte_a9523227b8ef88a6152735db3051cfcde}{get\+Distancia}} () const
+\item 
+void \mbox{\hyperlink{class_transporte_aa955b59fa9809ef38e07c6816002a1e7}{set\+Time}} (\mbox{\hyperlink{class_time}{Time}} time)
+\item 
+\mbox{\hyperlink{class_time}{Time}} \mbox{\hyperlink{class_transporte_a01587e3bc1db4bd589cd462357f64551}{get\+Time}} () const
+\item 
+void \mbox{\hyperlink{class_transporte_ac00df8a1514c2c49b94a2626134eb4d0}{set\+Tipo}} (string tipo)
+\item 
+string \mbox{\hyperlink{class_transporte_a04c8bd64450c121a0c67a0eadf96053c}{get\+Tipo}} () const
+\item 
+bool const \mbox{\hyperlink{class_transporte_ac9bf2d28d5089e0ca4787e597dcce3eb}{operator$<$}} (const \mbox{\hyperlink{class_transporte}{Transporte}} t2) const
+\item 
+const \mbox{\hyperlink{class_date}{Date}} \& \mbox{\hyperlink{class_transporte_a7f7de1f92d6fdac0b4882148fa50d44f}{get\+Date}} () const
+\item 
+void \mbox{\hyperlink{class_transporte_af5676f9fb9fb8dbe02ba27ab3dfd3000}{set\+Date}} (const \mbox{\hyperlink{class_date}{Date}} \&date)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_transporte_a0cbb4b20eea36e3011b8b3208a812778}\label{class_transporte_a0cbb4b20eea36e3011b8b3208a812778}} 
+\index{Transporte@{Transporte}!Transporte@{Transporte}}
+\index{Transporte@{Transporte}!Transporte@{Transporte}}
+\doxysubsubsection{\texorpdfstring{Transporte()}{Transporte()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Transporte\+::\+Transporte (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Construtor \textbackslash{}cria um objeto da classe \mbox{\hyperlink{class_transporte}{Transporte}}, \textbackslash{}com os valores default de distância = 9999, tipo = \char`\"{}autocarro\char`\"{}, date e time \mbox{\Hypertarget{class_transporte_a9cc33409240700528e5172c8698b45e0}\label{class_transporte_a9cc33409240700528e5172c8698b45e0}} 
+\index{Transporte@{Transporte}!Transporte@{Transporte}}
+\index{Transporte@{Transporte}!Transporte@{Transporte}}
+\doxysubsubsection{\texorpdfstring{Transporte()}{Transporte()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Transporte\+::\+Transporte (\begin{DoxyParamCaption}\item[{int}]{distancia,  }\item[{\mbox{\hyperlink{class_time}{Time}}}]{time,  }\item[{string}]{tipo,  }\item[{\mbox{\hyperlink{class_date}{Date}}}]{date }\end{DoxyParamCaption})}
+
+Construtor 
+\begin{DoxyParams}{Parameters}
+{\em distância} & \\
+\hline
+{\em time} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyParagraph}{âmetro String tipo}
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{âmetro Date date}
+\textbackslash{}converte o tipo para letra minúscula e remove espaços \textbackslash{}após este passo, se o tipo for diferente de \char`\"{}metro\char`\"{}, \char`\"{}autocarro\char`\"{} e \char`\"{}comboio\char`\"{} dá a exceção\+: "{}\mbox{\hyperlink{class_transporte}{Transporte}} não é do tipo\+: carro, autocarro ou metro"{} \textbackslash{}cria um objeto da classe \mbox{\hyperlink{class_transporte}{Transporte}} com os parametros distância, time, tipo e date 
+\end{DoxyParagraph}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_transporte_a7f7de1f92d6fdac0b4882148fa50d44f}\label{class_transporte_a7f7de1f92d6fdac0b4882148fa50d44f}} 
+\index{Transporte@{Transporte}!getDate@{getDate}}
+\index{getDate@{getDate}!Transporte@{Transporte}}
+\doxysubsubsection{\texorpdfstring{getDate()}{getDate()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_date}{Date}} \& Transporte\+::get\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em data} & do transporte \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_transporte_a9523227b8ef88a6152735db3051cfcde}\label{class_transporte_a9523227b8ef88a6152735db3051cfcde}} 
+\index{Transporte@{Transporte}!getDistancia@{getDistancia}}
+\index{getDistancia@{getDistancia}!Transporte@{Transporte}}
+\doxysubsubsection{\texorpdfstring{getDistancia()}{getDistancia()}}
+{\footnotesize\ttfamily int Transporte\+::get\+Distancia (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em distancia} & do transporte ao aeroporto \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_transporte_a01587e3bc1db4bd589cd462357f64551}\label{class_transporte_a01587e3bc1db4bd589cd462357f64551}} 
+\index{Transporte@{Transporte}!getTime@{getTime}}
+\index{getTime@{getTime}!Transporte@{Transporte}}
+\doxysubsubsection{\texorpdfstring{getTime()}{getTime()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_time}{Time}} Transporte\+::get\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em tempo} & do transporte \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_transporte_a04c8bd64450c121a0c67a0eadf96053c}\label{class_transporte_a04c8bd64450c121a0c67a0eadf96053c}} 
+\index{Transporte@{Transporte}!getTipo@{getTipo}}
+\index{getTipo@{getTipo}!Transporte@{Transporte}}
+\doxysubsubsection{\texorpdfstring{getTipo()}{getTipo()}}
+{\footnotesize\ttfamily string Transporte\+::get\+Tipo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em tipo} & do transporte \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_transporte_ac9bf2d28d5089e0ca4787e597dcce3eb}\label{class_transporte_ac9bf2d28d5089e0ca4787e597dcce3eb}} 
+\index{Transporte@{Transporte}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Transporte@{Transporte}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool const Transporte\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_transporte}{Transporte}}}]{t2 }\end{DoxyParamCaption}) const}
+
+Operator\texorpdfstring{$<$}{<} \textbackslash{}se as datas forem iguais retorna time \texorpdfstring{$<$}{<} t2.\+get\+Time() \textbackslash{}caso contrário retorna data \texorpdfstring{$<$}{<} t2.\+get\+Date() \mbox{\Hypertarget{class_transporte_af5676f9fb9fb8dbe02ba27ab3dfd3000}\label{class_transporte_af5676f9fb9fb8dbe02ba27ab3dfd3000}} 
+\index{Transporte@{Transporte}!setDate@{setDate}}
+\index{setDate@{setDate}!Transporte@{Transporte}}
+\doxysubsubsection{\texorpdfstring{setDate()}{setDate()}}
+{\footnotesize\ttfamily void Transporte\+::set\+Date (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{date }\end{DoxyParamCaption})}
+
+Setter Muda o
+\begin{DoxyParams}{Parameters}
+{\em data} & para uma nova data \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_transporte_ad88a59c5e69084b537a15e7127086f33}\label{class_transporte_ad88a59c5e69084b537a15e7127086f33}} 
+\index{Transporte@{Transporte}!setDistancia@{setDistancia}}
+\index{setDistancia@{setDistancia}!Transporte@{Transporte}}
+\doxysubsubsection{\texorpdfstring{setDistancia()}{setDistancia()}}
+{\footnotesize\ttfamily void Transporte\+::set\+Distancia (\begin{DoxyParamCaption}\item[{int}]{distancia }\end{DoxyParamCaption})}
+
+Setter 
+\begin{DoxyParams}{Parameters}
+{\em int} & distancia \textbackslash{}muda \\
+\hline
+{\em distancia} & do transporte ao aeroporto \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_transporte_aa955b59fa9809ef38e07c6816002a1e7}\label{class_transporte_aa955b59fa9809ef38e07c6816002a1e7}} 
+\index{Transporte@{Transporte}!setTime@{setTime}}
+\index{setTime@{setTime}!Transporte@{Transporte}}
+\doxysubsubsection{\texorpdfstring{setTime()}{setTime()}}
+{\footnotesize\ttfamily void Transporte\+::set\+Time (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_time}{Time}}}]{time }\end{DoxyParamCaption})}
+
+Setter 
+\begin{DoxyParams}{Parameters}
+{\em time} & \textbackslash{}muda \\
+\hline
+{\em time} & do transporte \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_transporte_ac00df8a1514c2c49b94a2626134eb4d0}\label{class_transporte_ac00df8a1514c2c49b94a2626134eb4d0}} 
+\index{Transporte@{Transporte}!setTipo@{setTipo}}
+\index{setTipo@{setTipo}!Transporte@{Transporte}}
+\doxysubsubsection{\texorpdfstring{setTipo()}{setTipo()}}
+{\footnotesize\ttfamily void Transporte\+::set\+Tipo (\begin{DoxyParamCaption}\item[{string}]{tipo }\end{DoxyParamCaption})}
+
+Setter 
+\begin{DoxyParams}{Parameters}
+{\em tipo} & \textbackslash{}converte o tipo para letra minúscula e remove espaços \textbackslash{}após este passo, se o tipo for diferente de \char`\"{}metro\char`\"{}, \char`\"{}autocarro\char`\"{} e \char`\"{}comboio\char`\"{} dá a exceção\+: "{}\mbox{\hyperlink{class_transporte}{Transporte}} não é do tipo\+: carro, autocarro ou metro"{} \textbackslash{}muda o tipo do transporte \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+ASUS/\+Desktop/\+Rui/\+FACULDADE/\+FEUP/\+AED/projeto-\/aed-\/main (2)/projeto-\/aed-\/main/Transporte.\+h\item 
+C\+:/\+Users/\+ASUS/\+Desktop/\+Rui/\+FACULDADE/\+FEUP/\+AED/projeto-\/aed-\/main (2)/projeto-\/aed-\/main/Transporte.\+cpp\end{DoxyCompactItemize}

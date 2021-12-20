@@ -1,0 +1,45 @@
+\hypertarget{servico_8h_source}{}\doxysection{C\+:/\+Users/\+ASUS/\+Desktop/\+Rui/\+FACULDADE/\+FEUP/\+AED/projeto-\/aed-\/main (2)/projeto-\/aed-\/main/servico.h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef PROJETO\_AED\_SERVICOS\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define PROJETO\_AED\_SERVICOS\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}Date.h"{}}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{class }\mbox{\hyperlink{classservico}{servico}} \{}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{public}:}
+\DoxyCodeLine{13     \mbox{\hyperlink{classservico_a24711820163460b428cf6a8b4ce13cca}{servico}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id}, \textcolor{keywordtype}{string} tipo, \textcolor{keywordtype}{string} funcionario, \mbox{\hyperlink{class_date}{Date}} data);}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15     \textcolor{comment}{// Getters}}
+\DoxyCodeLine{16     \textcolor{keywordtype}{string} \mbox{\hyperlink{classservico_a2020d2e6c06a9b1235be835845ff45e3}{getTipo}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{17     \mbox{\hyperlink{class_date}{Date}} \mbox{\hyperlink{classservico_a3944029d2e745721d84d79f729166c6b}{getData}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{18     \textcolor{keywordtype}{string} \mbox{\hyperlink{classservico_a9334bd8fd2d9149af0d2c1f0143225a8}{getFuncionario}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{19     \textcolor{keywordtype}{int} \mbox{\hyperlink{classservico_aec7f4817ef997484d2843d6b42976f13}{getID}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21     \textcolor{keywordtype}{bool} \textcolor{keyword}{const} \mbox{\hyperlink{classservico_a6d99f77a0daed1affe62b603096ea901}{operator < }}(\mbox{\hyperlink{classservico}{servico}} s2) \textcolor{keyword}{const};}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23     \textcolor{comment}{// Setters}}
+\DoxyCodeLine{24     \textcolor{keywordtype}{void} \mbox{\hyperlink{classservico_a64d151f6c2d3e0164b2701199cc28c48}{setTipo}}(\textcolor{keywordtype}{string} novoTipo);}
+\DoxyCodeLine{25     \textcolor{keywordtype}{void} \mbox{\hyperlink{classservico_ab98f66925300969ce15c1d5b97d04197}{setFuncionario}}(\textcolor{keywordtype}{string} funcionario);}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27     \textcolor{comment}{// Writer}}
+\DoxyCodeLine{28     \textcolor{keywordtype}{string} \mbox{\hyperlink{classservico_a252afcb1ad2eb828b11f809a30d73fc4}{write}}() \textcolor{keyword}{const} ;}
+\DoxyCodeLine{29     \textcolor{keywordtype}{bool} saveFile ();}
+\DoxyCodeLine{30     \textcolor{keywordtype}{bool} loadFile ();}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 \textcolor{keyword}{private}:}
+\DoxyCodeLine{33     \textcolor{keywordtype}{int} id;}
+\DoxyCodeLine{34     \textcolor{keywordtype}{string} tipo; }
+\DoxyCodeLine{35     \mbox{\hyperlink{class_date}{Date}} data; }
+\DoxyCodeLine{36     \textcolor{keywordtype}{string} funcionario; }
+\DoxyCodeLine{37 \};}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//PROJETO\_AED\_SERVICOS\_H}}
+
+\end{DoxyCode}
