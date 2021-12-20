@@ -13,6 +13,8 @@ servico::servico(int id, string servico, string funcionario, Date data){
     this->data = data;
 }
 
+/// Operator
+/// Operador "<" que ordena os servicos de ordem crescente de id
 bool const servico::operator <(servico s2) const {
     return id < s2.getID();
 }
@@ -53,8 +55,8 @@ void servico::setTipo(string novoTipo) {
     tipo = novoTipo;
 }
 
-///// Writer
-///// \return de uma string com os atributos do ID - Funcionario - Tipo - YYYY-MM-DD
+/// Writer
+/// \return de uma string com os atributos do ID - Funcionario - Tipo - YYYY-MM-DD
 string servico::write() const {
     stringstream oss;
     oss << "ID: " << id << " - Funcionario: " << funcionario << " - Tipo: "<< tipo << " - Data: " << data.getYear() << "-" << data.getMonth() << "-" << data.getDay() << endl;
