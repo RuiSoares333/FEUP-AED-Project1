@@ -18,6 +18,13 @@ Passageiro::Passageiro(string nome, int id, vector<Bilhete> bilhetes, vector<Bag
     this->bilhetes = bilhetes;
     this->bagagens = bagagens;
 }
+
+/// Operator
+/// Operador "<" que ordena passageriso por ordem crescente de id
+bool const Passageiro::operator < (Passageiro p1) const {
+    return id < p1.getId();
+}
+
 /// Getter
 /// \return retorna o nome do passageiro
 string Passageiro::getNome () const {
