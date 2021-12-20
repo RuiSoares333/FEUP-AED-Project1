@@ -15,10 +15,7 @@ public:
     float getAltura() const;
     float getPeso() const;
 private:
-    float comprimento;
-
-private:
-    //em centimetros
+    float comprimento; //em centimetros
     float largura; //em centimetros
     float altura; //em centimetros
     float peso; //em kg
