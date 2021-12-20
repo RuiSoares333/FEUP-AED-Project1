@@ -22,6 +22,7 @@ public:
     int getId () const;
     vector<Bilhete> getBilhetes() const;
     vector<Bagagem> getBagagens() const;
+    bool const operator < (Passageiro p1) const;
 private:
     string nome;
     int id;
