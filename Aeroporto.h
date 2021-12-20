@@ -13,6 +13,7 @@ using namespace std;
 class Aeroporto {
 public:
     Aeroporto(string nome, string pais, string cidade);
+    Aeroporto();
     string getNome() const;
     string getPais() const;
     string getCidade() const;
