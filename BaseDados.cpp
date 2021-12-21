@@ -455,7 +455,7 @@ void BaseDados::saveServicos() {
     save_all << servicos.size() << endl;
     if (save_all.is_open()) {
         for(auto ser : servicos){
-            save_all << ser.getID() << " " << ser.getFuncionario() << " " << ser.getTipo() << " " <<  ser.getData().getYear() << " " << ser.getData().getMonth() << " " << ser.getData().getDay() << endl;
+            save_all << ser.getID() << " " << ser.getFuncionario() << " " << ser.getTipo() << " " <<  ser.getData().getDay() << " " << ser.getData().getMonth() << " " << ser.getData().getYear() << endl;
         }
     }
 
