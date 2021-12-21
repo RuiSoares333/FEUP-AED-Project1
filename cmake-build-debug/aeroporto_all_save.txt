@@ -1,5 +1,5 @@
+Internacional_de_faro Faro Portugal
+Humberto_delgado Lisboa Portugal
+Francisco_sa_carneiro Porto Portugal
+London_Heathrow London UK
 nome cidade pais
-nome Porto pais
-aeronome aerocidade aeropais
-outronome outracidade outropais
-aero aeroCidade aeroPais
